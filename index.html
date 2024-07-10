@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://kit.fontawesome.com/22f994e04b.js" crossorigin="anonymous"></script>
+    <script src="js/animação.js" defer></script>
 </head>
 
 <body>
@@ -168,27 +169,18 @@
         <div class="interface">
             <h6 class="titulo">FALE <span>COMIGO!</span></h6>
             <div class="container">
-                <article>
-                    <a href="mailto:walyssonribeiro3@gmail.com">
-                        <i class="bi bi-envelope"></i>
-                        <h6>E-mail</h6>
-                        <p>walyssonribeiro3@gmail.com</p>
-                    </a>
-                </article>
-                <article>
-                    <a href="https://www.linkedin.com/in/walysson-ribeiro-a92ba3260/" target="_blank">
-                        <i class="bi bi-linkedin"></i>
-                        <h6>Linkedin</h6>
-                        <p>Walysson Ribeiro Rosa</p>
-                    </a>
-                </article>
-                <article>
-                    <a href="https://github.com/oCrazyoff" target="_blank">
-                        <i class="bi bi-github"></i>
-                        <h6>Git Hub</h6>
-                        <p>oCrazyoff</p>
-                    </a>
-                </article>
+                <i class="fa-regular fa-comments"></i>
+                <form id="formulario" action="https://api.staticforms.xyz/submit" method="POST">
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required>
+                    <label for="message">Mensagem:</label>
+                    <textarea name="message"></textarea required>
+                    <input type="hidden" name="accessKey" value="2cfdb8a0-1027-4846-bc61-71495b4e425a">
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:3000/obrigado.html">
+                    <button id="btn-enviar" type="submit">Enviar</button>
+                </form>
             </div>
         </div>
     </section>

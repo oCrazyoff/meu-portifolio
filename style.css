@@ -141,6 +141,15 @@ header .menu nav a:hover::after {
     height: 350px;
 }
 
+#hero .avatar {
+    background-color: #FFD60A;
+    border-radius: 50%;
+}
+
+#hero .avatar img {
+    border-radius: 50%;
+}
+
 #hero .txt-hero {
     width: 60%;
 }
@@ -207,15 +216,6 @@ header .menu nav a:hover::after {
 
 #hero .txt-hero button:hover::after {
     width: 100%;
-}
-
-#hero .avatar {
-    background-color: #FFD60A;
-    border-radius: 50%;
-}
-
-#hero .avatar img {
-    border-radius: 50%;
 }
 
 /* skills */
@@ -346,53 +346,119 @@ header .menu nav a:hover::after {
 /* contato */
 #contato {
     background: radial-gradient(circle, rgba(51, 53, 51, 1) 44%, rgba(32, 32, 32, 1) 88%);
+    scroll-margin-top: 4em;
 }
 
 #contato .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 5em;
 }
 
-#contato .container article {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .5em;
-    border-radius: 5px;
-    width: 20em;
-    height: 10em;
-    background-color: #0000003d;
-    transition: .2s;
-}
-
-#contato .container article:hover {
-    outline: 2px solid #FFD60A;
-}
-
-#contato .container a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-#contato .container article i {
-    font-size: 50px;
+#contato .container i {
+    font-size: 15em;
     color: #FFD60A;
 }
 
-#contato .container article h6 {
-    font-size: 30px;
-    color: white;
-    font-weight: 600;
+#contato .container form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
-#contato .container article p {
-    font-size: 15px;
+#contato .container label {
     color: white;
+    font-size: 20px;
+    margin-bottom: .2em;
+}
+
+#contato .container textarea {
+    min-height: 7em;
+    resize: vertical;
+}
+
+#contato .container input,
+textarea {
+    margin-bottom: 1em;
+    padding: .5em;
+    border: none;
+    background-color: #585858;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    font-size: 18px;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus,
+button:focus {
+    outline: 1px solid #FFD60A;
+}
+
+#contato .container button {
+    height: 3em;
+    border-radius: 5px;
+    background-color: #FFD60A;
+    border: none;
+    cursor: pointer;
+    height: 2em;
+    font-size: 20px;
+    transition: .2s;
+    position: relative;
+}
+
+#contato .container button:hover {
+    background-color: transparent;
+    border: 2px solid #FFD60A;
+    color: #FFD60A;
+}
+
+#contato .container button.loading {
+    background-color: #816f16;
+    cursor: not-allowed;
+    border: none;
+    outline: none;
+}
+
+#contato .container button.loading::after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid white;
+    border-top: 4px solid green;
+    position: absolute;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#contato .container button.success {
+    background-color: green;
+    border: none;
+    outline: none;
+}
+
+#contato .container button.success::after {
+    content: "✓";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 30px;
+    transform: translate(-50%, -50%);
 }
 
 /* footer */
@@ -401,6 +467,78 @@ footer {
     padding: .5em;
     color: white;
     text-align: center;
+}
+
+/* obrigado */
+#obrigado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333533;
+    height: 100vh;
+}
+
+#obrigado .interface {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#obrigado .container {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    background-color: #20202094;
+    border-radius: 1em;
+}
+
+#obrigado .container .txt-obrigado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+#obrigado .container .txt-obrigado p {
+    font-size: 30px;
+    color: white;
+}
+
+#obrigado .container button {
+    font-size: 30px;
+    padding: .5em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333533;
+    border: 2px solid white;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+}
+
+#obrigado .container button::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffd60ab9;
+    transition: .3s;
+}
+
+#obrigado .container button:hover::after {
+    content: "VOLTAR";
+    height: 100%;
+    top: 0;
 }
 
 /* responsividade */
@@ -516,9 +654,22 @@ footer {
     /* contato */
     #contato .container {
         flex-direction: column;
+        gap: 1em;
     }
 
-    #contato .container article {
+    #contato .container i{
+        font-size: 10em;
+    }
+
+    #contato .container form {
         width: 100%;
+    }
+
+    #contato .container button{
+        margin-bottom: 1em;
+    }
+
+    #contato .container label{
+        text-align: center;
     }
 }
