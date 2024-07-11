@@ -454,6 +454,7 @@ button:focus {
 
 #contato .container button.success::after {
     content: "✓";
+    color: black;
     position: absolute;
     left: 50%;
     top: 50%;
