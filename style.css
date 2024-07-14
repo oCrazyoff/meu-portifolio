@@ -46,11 +46,12 @@ html {
     gap: 1em;
     padding: 1em 0;
     cursor: default;
+    flex-wrap: wrap;
 }
 
 .tags p {
     color: white;
-    border-radius: 50px;
+    border-radius: 55px;
     padding: 1%;
     font-weight: 600;
 }
@@ -75,12 +76,16 @@ html {
     background-color: rgb(122, 36, 202);
 }
 
-.tags #git{
-    background-color: rgb(255, 61, 13);
+.tags #git {
+    background-color: rgb(255, 17, 0);
 }
 
 .tags #github {
     background-color: #1f1c1c;
+}
+
+.tags #sform {
+    background-color: rgb(255, 81, 81);
 }
 
 /* cabeçalho */
@@ -565,7 +570,6 @@ footer {
     .tags {
         width: 100%;
         gap: .5em;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
@@ -640,20 +644,22 @@ footer {
     }
 
     /* projetos */
-    #projetos .container{
+    #projetos .container {
         gap: 1.5em;
         margin-bottom: 2em;
     }
+
     #projetos .container article {
         flex-direction: column;
         background-color: #b4b4b4;
-        gap: .5em;
+        gap: 0;
         border-radius: 5px;
     }
 
     #projetos .container article img {
         width: 100%;
         height: 100%;
+        border-radius: 5px 5px 0 0;
     }
 
     #projetos .container article:nth-child(2) {
