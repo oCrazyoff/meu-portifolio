@@ -640,11 +640,11 @@ footer {
         background-color: #b4b4b4;
         gap: 1em;
         border-radius: 5px;
-        padding: 1em;
     }
 
     #projetos .container article img {
-        height: 10em;
+        width: 100%;
+        height: 100%;
     }
 
     #projetos .container article:nth-child(2) {
@@ -653,6 +653,7 @@ footer {
 
     #projetos .container .txt-projeto {
         width: 100%;
+        padding: 1em;
     }
 
     #projetos .container .txt-projeto .btn-projetos {
