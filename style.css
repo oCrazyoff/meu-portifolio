@@ -614,6 +614,7 @@ footer {
     #skills .container {
         flex-direction: column;
         height: auto;
+        text-align: center;
     }
 
     #skills .container article {
@@ -631,9 +632,15 @@ footer {
     }
 
     /* projetos */
+    #projetos .container{
+        gap: 1.5em;
+    }
     #projetos .container article {
         flex-direction: column;
+        background-color: #b4b4b4;
         gap: 1em;
+        border-radius: 5px;
+        padding: 1em;
     }
 
     #projetos .container article img {
@@ -658,7 +665,7 @@ footer {
         gap: 1em;
     }
 
-    #contato .container i{
+    #contato .container i {
         font-size: 10em;
     }
 
@@ -666,20 +673,20 @@ footer {
         width: 100%;
     }
 
-    #contato .container button{
+    #contato .container button {
         margin-bottom: 1em;
     }
 
-    #contato .container label{
+    #contato .container label {
         text-align: center;
     }
 
     /* obrigado */
-    #obrigado .container{
+    #obrigado .container {
         width: 100%;
     }
 
-    #obrigado .container p{
+    #obrigado .container p {
         text-align: center;
     }
 }
