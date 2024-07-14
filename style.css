@@ -109,6 +109,10 @@ header .interface {
 
 header .btn-mobile {
     display: none;
+    color: #FFD60A;
+    font-size: 30px;
+    transition: .2s;
+    cursor: pointer;
 }
 
 header .menu nav li {
@@ -583,8 +587,27 @@ footer {
         display: none;
     }
 
-    header .btn-mobile {
+    header .btn-mobile{
         display: block;
+    }
+
+    header .btn-mobile .fechar{
+        display: none;
+    }
+
+    header .menu ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 4em;
+        left: 0;
+        background-color: #585858;
+        height: 0;
+    }
+
+    header .menu.active ul{
+        display: flex;
+        height: 100vh;
     }
 
     /* hero */
