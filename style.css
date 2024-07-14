@@ -75,6 +75,14 @@ html {
     background-color: rgb(122, 36, 202);
 }
 
+.tags #git{
+    background-color: rgb(255, 61, 13);
+}
+
+.tags #github {
+    background-color: #1f1c1c;
+}
+
 /* cabeçalho */
 header {
     position: fixed;
