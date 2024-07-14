@@ -647,7 +647,7 @@ footer {
     #projetos .container article {
         flex-direction: column;
         background-color: #b4b4b4;
-        gap: 1em;
+        gap: .5em;
         border-radius: 5px;
     }
 
@@ -662,7 +662,7 @@ footer {
 
     #projetos .container .txt-projeto {
         width: 100%;
-        padding: 1em;
+        padding: 0 1em;
     }
 
     #projetos .container .txt-projeto .btn-projetos {
