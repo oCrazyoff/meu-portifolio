@@ -769,10 +769,18 @@ footer {
     }
 }
 
-@media (orientation: landscape){
+@media (max-width: 1020px) and (orientation: landscape){
     /* hero */
     #hero{
         margin-top: 4.5em;
         height: auto;
+    }
+}
+@media (max-height: 600px){
+    /* hero */
+    #hero{
+        margin-top: 4.5em;
+        height: auto;
+        margin-bottom: 1em;
     }
 }
