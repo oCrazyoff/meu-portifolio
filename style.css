@@ -107,7 +107,7 @@ header .interface {
     align-items: center;
 }
 
-header .btn-mobile{
+header .btn-mobile {
     display: none;
 }
 
@@ -617,7 +617,7 @@ footer {
         overflow-y: hidden;
     }
 
-    header .menu ul li{
+    header .menu ul li {
         width: 100%;
         text-align: center;
         padding: 1em;
@@ -636,10 +636,13 @@ footer {
     }
 
     /* hero */
+    #hero{
+        margin-top: 4.5em;
+        height: auto;
+    }
     #hero .interface {
         flex-direction: column-reverse;
         justify-content: center;
-        margin-top: 3em;
     }
 
     #hero .avatar img {
@@ -667,10 +670,13 @@ footer {
     #hero .txt-hero button {
         font-size: 20px;
         width: 100%;
-        margin-bottom: 1em;
     }
 
     /* skills */
+    #skills {
+        scroll-margin-top: 4em;
+    }
+
     #skills .container {
         flex-direction: column;
         height: auto;
@@ -692,6 +698,10 @@ footer {
     }
 
     /* projetos */
+    #projetos {
+        scroll-margin-top: 4em;
+    }
+
     #projetos .container {
         gap: 1.5em;
         margin-bottom: 2em;
@@ -724,6 +734,10 @@ footer {
     }
 
     /* contato */
+    #contato {
+        scroll-margin-top: 4em;
+    }
+
     #contato .container {
         flex-direction: column;
         gap: 1em;
