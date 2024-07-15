@@ -582,7 +582,7 @@ footer {
     header .btn-mobile {
         display: block;
         color: #FFD60A;
-        font-size: 30px;
+        font-size: 40px;
         transition: .2s;
         cursor: pointer;
     }
@@ -608,7 +608,8 @@ footer {
         align-items: center;
         transition: .3s;
         z-index: 100;
-        top: 4em;
+        top: 3em;
+        font-size: 20px;
         left: 0;
         width: 100%;
         height: 0;
@@ -621,13 +622,17 @@ footer {
         text-align: center;
         padding: 1em;
         background-color: #202020;
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
     header .menu.active ul {
         height: 100vh;
         visibility: visible;
         overflow-y: auto;
+    }
+
+    header .menu nav a:hover::after {
+        width: 0;
     }
 
     /* hero */
