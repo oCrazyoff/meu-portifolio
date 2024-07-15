@@ -637,12 +637,12 @@ footer {
 
     /* hero */
     #hero{
-        margin-top: 4.5em;
-        height: auto;
+        margin-top: 1em;
     }
     #hero .interface {
         flex-direction: column-reverse;
         justify-content: center;
+        height: 100%;
     }
 
     #hero .avatar img {
@@ -766,5 +766,13 @@ footer {
 
     #obrigado .container p {
         text-align: center;
+    }
+}
+
+@media (orientation: landscape){
+    /* hero */
+    #hero{
+        margin-top: 4.5em;
+        height: auto;
     }
 }
