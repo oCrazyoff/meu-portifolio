@@ -107,12 +107,8 @@ header .interface {
     align-items: center;
 }
 
-header .btn-mobile {
+header .btn-mobile{
     display: none;
-    color: #FFD60A;
-    font-size: 30px;
-    transition: .2s;
-    cursor: pointer;
 }
 
 header .menu nav li {
@@ -583,31 +579,55 @@ footer {
         height: 4em;
     }
 
-    header .menu {
+    header .btn-mobile {
+        display: block;
+        color: #FFD60A;
+        font-size: 30px;
+        transition: .2s;
+        cursor: pointer;
+    }
+
+    header .btn-mobile .fechar {
         display: none;
     }
 
-    header .btn-mobile{
+    header .menu.active .btn-mobile .abrir {
+        display: none;
+    }
+
+    header .menu.active .btn-mobile .fechar {
         display: block;
     }
 
-    header .btn-mobile .fechar{
-        display: none;
-    }
-
-    header .menu ul{
+    header .menu ul {
         display: flex;
         flex-direction: column;
         position: absolute;
+        background-color: #333533;
+        gap: 1em;
+        align-items: center;
+        transition: .3s;
+        z-index: 100;
         top: 4em;
         left: 0;
-        background-color: #585858;
+        width: 100%;
         height: 0;
+        visibility: hidden;
+        overflow-y: hidden;
     }
 
-    header .menu.active ul{
-        display: flex;
+    header .menu ul li{
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+        background-color: #202020;
+        margin-top: 2em;
+    }
+
+    header .menu.active ul {
         height: 100vh;
+        visibility: visible;
+        overflow-y: auto;
     }
 
     /* hero */
