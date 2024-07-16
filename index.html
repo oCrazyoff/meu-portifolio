@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Walysson</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,18 +180,55 @@
         <div class="interface">
             <h6 class="titulo">FALE <span>COMIGO!</span></h6>
             <div class="container">
-                <i class="fa-regular fa-comments"></i>
-                <form id="formulario" action="https://api.staticforms.xyz/submit" method="POST">
-                    <label for="name">Nome:</label>
-                    <input type="text" name="name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" required>
-                    <label for="message">Mensagem:</label>
-                    <textarea name="message"></textarea required>
-                    <input type="hidden" name="accessKey" value="2cfdb8a0-1027-4846-bc61-71495b4e425a">
-                    <input type="hidden" name="redirectTo" value="https://ocrazyoff.github.io/meu-portifolio/obrigado.html">
-                    <button id="btn-enviar" type="submit">Enviar</button>
-                </form>
+                <div class="info">
+                    <h6>Meios de contato</h6>
+                    <p>
+                        Reponderei assim que possivel
+                    </p>
+                    <div class="links">
+                        <ul>
+                            <li>
+                                <a href="https://api.whatsapp.com/send?phone=5516981151983" target="_blank">
+                                    <i class="bi bi-whatsapp"></i>
+                                    <p>(16)98115-1983</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:walyssonribeiro3@gmail.com" target="_blank">
+                                    <i class="bi bi-envelope"></i>
+                                    <p>walyssonribeiro3@gmail.com</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/walysson-ribeiro-a92ba3260/" target="_blank">
+                                    <i class="bi bi-linkedin"></i>
+                                    <p>Walysson Ribeiro Rosa</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/oCrazyoff">
+                                    <i class="bi bi-github"></i>
+                                    <p>oCrazyoff</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="formulario">
+                    <h6>Mande um email</h6>
+                    <form id="formulario" action="https://api.staticforms.xyz/submit" method="POST">
+                        <label for="name">Nome:</label>
+                        <input type="text" name="name" placeholder="Seu nome" required>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" placeholder="Seu email" required>
+                        <label for="message">Mensagem:</label>
+                        <textarea name="message" placeholder="Sua mensagem" required></textarea>
+                        <input type="hidden" name="accessKey" value="2cfdb8a0-1027-4846-bc61-71495b4e425a">
+                        <input type="hidden" name="redirectTo"
+                            value="https://ocrazyoff.github.io/meu-portifolio/obrigado.html">
+                        <button id="btn-enviar" type="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

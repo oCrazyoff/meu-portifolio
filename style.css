@@ -371,23 +371,75 @@ header .menu nav a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5em;
+    height: 25em;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 1em;
 }
 
-#contato .container i {
-    font-size: 15em;
+#contato .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #585858;
+    height: 100%;
+    width: 50%;
+    padding: 1em;
+    border-radius: 5px 0 0 5px;
+}
+
+#contato .info h6,
+#contato .formulario h6 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+}
+
+#contato .info p {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+#contato .info a,
+#contato .info li {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: .2em 0;
+}
+
+#contato .info a i {
     color: #FFD60A;
+}
+
+#contato .container .formulario {
+    background-color: #1f1c1c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    height: 100%;
+    width: 50%;
+    padding: 1em;
+    border-radius: 0 5px 5px 0;
 }
 
 #contato .container form {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
 }
 
 #contato .container label {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: .2em;
 }
 
@@ -399,13 +451,13 @@ header .menu nav a:hover::after {
 #contato .container input,
 textarea {
     margin-bottom: 1em;
-    padding: .5em;
+    padding: .6em;
     border: none;
     background-color: #585858;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 input:hover,
@@ -423,7 +475,7 @@ button:focus {
     border: none;
     cursor: pointer;
     height: 2em;
-    font-size: 20px;
+    font-size: 18px;
     transition: .2s;
     position: relative;
 }
@@ -746,19 +798,24 @@ footer {
 
     #contato .container {
         flex-direction: column;
-        gap: 1em;
+        height: auto;
     }
 
-    #contato .container i {
-        font-size: 10em;
+    #contato .info{
+        height: 25em;
     }
 
-    #contato .container form {
+    #contato .info li p{
+        font-size: 15px;
+    }
+
+    #contato .container .formulario,
+    #contato .info {
         width: 100%;
     }
 
-    #contato .container button {
-        margin-bottom: 1em;
+    #contato .info a {
+        gap: .5em;
     }
 
     #contato .container label {
