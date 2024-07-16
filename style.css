@@ -799,10 +799,17 @@ footer {
     #contato .container {
         flex-direction: column;
         height: auto;
+        border-radius: 5px;
     }
 
     #contato .info{
         height: 25em;
+        border-radius: 5px 5px 0 0;
+    }
+
+    #contato .container .formulario{
+        border-radius: 0 0 5px 5px;
+        gap: 2em;
     }
 
     #contato .info li p{
