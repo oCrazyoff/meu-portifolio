@@ -363,7 +363,7 @@ header .menu nav a:hover::after {
 
 /* contato */
 #contato {
-    background: radial-gradient(circle, rgba(51, 53, 51, 1) 44%, rgba(32, 32, 32, 1) 88%);
+    background-color:  #333533;
     scroll-margin-top: 4em;
 }
 
@@ -440,18 +440,18 @@ header .menu nav a:hover::after {
 #contato .container label {
     color: white;
     font-size: 15px;
-    margin-bottom: .2em;
+    margin-bottom: .1em;
 }
 
 #contato .container textarea {
     min-height: 7em;
-    resize: vertical;
+    resize: none;
 }
 
 #contato .container input,
 textarea {
     margin-bottom: 1em;
-    padding: .6em;
+    padding: .5em;
     border: none;
     background-color: #585858;
     border-radius: 5px;
