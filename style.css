@@ -131,11 +131,7 @@ header .menu nav a::after {
     height: 2px;
     width: 0;
     background-color: white;
-    transition: .2s;
-}
-
-header .menu nav a:hover {
-    font-weight: 500;
+    transition: .2s ease;
 }
 
 header .menu nav a:hover::after {
@@ -363,7 +359,7 @@ header .menu nav a:hover::after {
 
 /* contato */
 #contato {
-    background-color:  #333533;
+    background-color: #333533;
     scroll-margin-top: 4em;
 }
 
@@ -375,6 +371,7 @@ header .menu nav a:hover::after {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 1em;
+    border-radius: 1em;
 }
 
 #contato .info {
@@ -386,7 +383,7 @@ header .menu nav a:hover::after {
     height: 100%;
     width: 50%;
     padding: 1em;
-    border-radius: 5px 0 0 5px;
+    border-radius: 1em 0 0 1em;
 }
 
 #contato .info h6,
@@ -412,6 +409,13 @@ header .menu nav a:hover::after {
     text-decoration: none;
     font-size: 25px;
     margin: .2em 0;
+    transition: .2s ease;
+}
+
+#contato .info a:hover{
+    background-color: #333533;
+    border-radius: 1em;
+    padding: 3%;
 }
 
 #contato .info a i {
@@ -428,7 +432,7 @@ header .menu nav a:hover::after {
     height: 100%;
     width: 50%;
     padding: 1em;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 1em 1em 0;
 }
 
 #contato .container form {
@@ -802,17 +806,17 @@ footer {
         border-radius: 5px;
     }
 
-    #contato .info{
+    #contato .info {
         height: 25em;
         border-radius: 5px 5px 0 0;
     }
 
-    #contato .container .formulario{
+    #contato .container .formulario {
         border-radius: 0 0 5px 5px;
         gap: 2em;
     }
 
-    #contato .info li p{
+    #contato .info li p {
         font-size: 15px;
     }
 
@@ -821,8 +825,17 @@ footer {
         width: 100%;
     }
 
+    #contato .info .links{
+        width: 100%;
+    }
+
     #contato .info a {
-        gap: .5em;
+        gap: .3em;
+        padding: 3%;
+        background-color: #333533;
+        border-radius: 1em;
+        justify-content: center;
+        width: 100%;
     }
 
     #contato .container label {
