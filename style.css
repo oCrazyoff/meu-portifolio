@@ -803,16 +803,16 @@ footer {
     #contato .container {
         flex-direction: column;
         height: auto;
-        border-radius: 5px;
+        border-radius: 1em;
     }
 
     #contato .info {
         height: 25em;
-        border-radius: 5px 5px 0 0;
+        border-radius: 1em 1em 0 0;
     }
 
     #contato .container .formulario {
-        border-radius: 0 0 5px 5px;
+        border-radius: 0 0 1em 1em;
         gap: 2em;
     }
 
