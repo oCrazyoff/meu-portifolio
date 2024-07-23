@@ -432,7 +432,7 @@ header .menu nav a:hover::after {
     color: #FFD60A;
 }
 
-#contato .info a:hover{
+#contato .info a:hover {
     outline: 2px solid #FFD60A;
 }
 
