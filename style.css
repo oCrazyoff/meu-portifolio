@@ -410,24 +410,30 @@ header .menu nav a:hover::after {
     font-size: 20px;
     margin: .2em 0;
     transition: .2s ease;
+    transition-duration: .2s;
+}
+
+#contato .info .links {
+    width: 100%;
+}
+
+#contato .info a {
+    padding: .5em;
+    background-color: #333533;
+    border-radius: 1em;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #contato .info a i {
     color: #FFD60A;
-    background-color: #1f1c1c;
-    border-radius: 1rem;
-    padding: .5em;
-    transition: .1s ease-in-out;
 }
 
-#contato .info a:hover {
-    background-color: #333533;
-    border-radius: 1em;
-    padding: .2em;
-}
-
-#contato .info a:hover i {
-    background-color: transparent;
+#contato .info a:hover{
+    outline: 2px solid #FFD60A;
 }
 
 #contato .container .formulario {
@@ -833,26 +839,8 @@ footer {
         width: 100%;
     }
 
-    #contato .info .links {
-        width: 100%;
-    }
-
     #contato .info a {
         gap: .3em;
-        padding: 3%;
-        background-color: #333533;
-        border-radius: 1em;
-        justify-content: center;
-        width: 100%;
-    }
-
-    #contato .info a i{
-        background-color: transparent;
-        padding: 0;
-    }
-
-    #contato .info a:hover{
-        padding: 3%;
     }
 
     #contato .container label {
