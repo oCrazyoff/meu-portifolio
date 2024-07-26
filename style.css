@@ -157,6 +157,7 @@ header .menu nav a:hover::after {
 #hero .avatar {
     background-color: #FFD60A;
     border-radius: 50%;
+    padding: .5em;
 }
 
 #hero .avatar img {
@@ -692,10 +693,18 @@ footer {
         overflow-y: hidden;
     }
 
-    header .menu ul li {
+    header .menu ul li{
+        width: 100%;
+        margin: 0;
+    }
+
+    header .menu ul a {
         width: 100%;
         text-align: center;
         padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #202020;
         margin-top: 1em;
     }
@@ -703,7 +712,6 @@ footer {
     header .menu.active ul {
         height: 100vh;
         visibility: visible;
-        overflow-y: auto;
     }
 
     header .menu nav a:hover::after {
@@ -712,7 +720,7 @@ footer {
 
     /* hero */
     #hero {
-        margin-top: 1em;
+        margin-top: 1.5em;
     }
 
     #hero .interface {
