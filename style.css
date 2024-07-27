@@ -201,10 +201,7 @@ header .menu nav a:hover::after {
     z-index: 2;
 }
 
-#hero .txt-hero button:hover i {
-    color: black;
-}
-
+#hero .txt-hero button:hover i,
 #hero .txt-hero button:hover span {
     color: black;
 }
@@ -693,7 +690,7 @@ footer {
         overflow-y: hidden;
     }
 
-    header .menu ul li{
+    header .menu ul li {
         width: 100%;
         margin: 0;
     }
