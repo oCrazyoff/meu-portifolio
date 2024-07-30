@@ -495,7 +495,7 @@ header .menu nav a:hover::after {
 #contato .container input,
 textarea {
     margin-bottom: 1em;
-    padding: .5em;
+    padding: .7em;
     border: none;
     background-color: #585858;
     border-radius: 1em;
