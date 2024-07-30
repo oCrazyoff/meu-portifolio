@@ -51,7 +51,7 @@ html {
 
 .tags p {
     color: white;
-    border-radius: 55px;
+    border-radius: 1em;
     padding: 1%;
     font-weight: 600;
 }
@@ -498,7 +498,7 @@ textarea {
     padding: .5em;
     border: none;
     background-color: #585858;
-    border-radius: 5px;
+    border-radius: 1em;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: white;
     font-size: 15px;
@@ -514,12 +514,13 @@ button:focus {
 
 #contato .container button {
     height: 3em;
-    border-radius: 5px;
+    border-radius: 1em;
     background-color: #FFD60A;
     border: none;
     cursor: pointer;
     height: 2em;
     font-size: 18px;
+    font-weight: 600;
     transition: .2s;
     position: relative;
 }
@@ -820,13 +821,13 @@ footer {
         flex-direction: column;
         background-color: #e0e0e0;
         gap: 0;
-        border-radius: 5px;
+        border-radius: 1em;
     }
 
     #projetos .container article img {
         width: 100%;
         height: 100%;
-        border-radius: 5px 5px 0 0;
+        border-radius: 1em 1em 0 0;
     }
 
     #projetos .container article:nth-child(2) {
