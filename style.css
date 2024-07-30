@@ -328,23 +328,51 @@ header .menu nav a:hover::after {
 #projetos .btn-projetos button {
     display: flex;
     gap: .5em;
-    width: 8em;
-    height: 3em;
-    padding: .5em;
+    width: 10em;
+    height: 3.5em;
+    padding: 1em;
+    overflow: hidden;
     cursor: pointer;
-    font-size: 15px;
-    border-radius: 10px;
+    position: relative;
+    border-radius: 1em;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     align-items: center;
     justify-content: space-between;
     border: none;
-    font-weight: 500;
+
     transition: all .2s ease-in;
 }
 
-#projetos .btn-projetos button:hover {
-    outline: 1px solid black;
-    transform: scale(1.1);
+#projetos .btn-projetos button span {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#projetos .btn-projetos button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #1f1c1c;
+    border-radius: 1em;
+    transition: all .2s;
+}
+
+#projetos .btn-projetos button:hover::after {
+    width: 100%;
+}
+
+#projetos .btn-projetos button:hover span,
+#projetos .btn-projetos button:hover i {
+    color: white;
+    z-index: 10;
+}
+
+#projetos .btn-projetos button:focus {
+    outline: 2px solid black;
 }
 
 #projetos .btn-projetos i {
