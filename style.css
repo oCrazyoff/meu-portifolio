@@ -488,14 +488,14 @@ header .menu nav a:hover::after {
 }
 
 #contato .container textarea {
-    min-height: 7em;
+    min-height: 8em;
     resize: none;
 }
 
 #contato .container input,
 textarea {
     margin-bottom: 1em;
-    padding: .7em;
+    padding: .5em;
     border: none;
     background-color: #585858;
     border-radius: 1em;
@@ -879,6 +879,11 @@ footer {
 
     #contato .container label {
         text-align: center;
+    }
+
+    #contato .container form input,
+    #contato .container form input {
+        padding: .8em;
     }
 
     /* obrigado */
