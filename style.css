@@ -720,7 +720,6 @@ footer {
         flex-direction: column;
         position: absolute;
         background-color: #333533;
-        gap: 1em;
         align-items: center;
         transition: .3s;
         z-index: 100;
@@ -736,21 +735,21 @@ footer {
     header .menu ul li {
         width: 100%;
         margin: 0;
+        margin-top: 1em;
     }
 
     header .menu ul a {
         width: 100%;
         text-align: center;
-        padding: 1em;
+        padding: .5em;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: #202020;
-        margin-top: 1em;
     }
 
     header .menu.active ul {
-        height: 100vh;
+        height: 60vw;
         visibility: visible;
     }
 
