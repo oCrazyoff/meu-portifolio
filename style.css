@@ -1,4 +1,14 @@
 /* geral */
+:root {
+    --amarelo: #FFD60A;
+    --preto: #202020;
+    --cinza-claro: #585858b4;
+    --cinza-muito-claro: #e0e0e0;
+    --cinza-escuro: #333533;
+    --borda-redonda: 1em;
+    --borda-quadrada: 5px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +35,7 @@ html {
 }
 
 .titulo span {
-    color: #FFD60A;
+    color: var(--amarelo);
     font-weight: 500;
 }
 
@@ -38,7 +48,7 @@ html {
 }
 
 .logo h1 span {
-    color: #FFD60A;
+    color: var(--amarelo);
 }
 
 .tags {
@@ -100,8 +110,8 @@ header {
     width: 100%;
     height: 5em;
     z-index: 50;
-    background-color: #202020;
-    border-bottom: 5px solid #FFD60A;
+    background-color: var(--preto);
+    border-bottom: 5px solid var(--amarelo);
 }
 
 header .interface {
@@ -151,12 +161,6 @@ header .menu nav a:hover::after {
     animation: subir 20s linear infinite;
 }
 
-#hero .bg span {
-    height: 200px;
-    width: 200px;
-    background-color: #FFD60A;
-}
-
 #hero .interface {
     display: flex;
     justify-content: space-between;
@@ -169,7 +173,7 @@ header .menu nav a:hover::after {
 }
 
 #hero .avatar {
-    background-color: #FFD60A;
+    background-color: var(--amarelo);
     border-radius: 50%;
     padding: .5em;
 }
@@ -189,7 +193,7 @@ header .menu nav a:hover::after {
 }
 
 #hero .txt-hero h2 span {
-    color: #FFD60A;
+    color: var(--amarelo);
     font-size: 70px;
     font-weight: 500;
 }
@@ -201,11 +205,11 @@ header .menu nav a:hover::after {
 #hero .txt-hero button {
     font-size: 25px;
     position: relative;
-    background-color: #202020;
+    background-color: var(--preto);
     color: white;
     border: none;
     padding: .5em;
-    border-radius: 5px;
+    border-radius: var(--borda-quadrada);
     cursor: pointer;
     overflow: hidden;
 }
@@ -222,7 +226,7 @@ header .menu nav a:hover::after {
 
 #hero .txt-hero button i {
     position: relative;
-    color: #FFD60A;
+    color: var(--amarelo);
     z-index: 3;
 }
 
@@ -235,7 +239,7 @@ header .menu nav a:hover::after {
     height: 100%;
     display: block;
     width: 0;
-    background-color: #FFD60A;
+    background-color: var(--amarelo);
     transition: .4s;
 }
 
@@ -261,11 +265,11 @@ header .menu nav a:hover::after {
 
 #skills .container article {
     padding: 1em;
-    border-radius: 1em;
+    border-radius: var(--borda-redonda);
     width: 33%;
     height: 90%;
     transition: .2s;
-    background-color: #5858586e;
+    background-color: var(--cinza-claro);
 }
 
 #skills .container article:hover {
@@ -280,7 +284,7 @@ header .menu nav a:hover::after {
 
 #skills .container i {
     font-size: 50px;
-    color: #FFD60A;
+    color: var(--amarelo);
 }
 
 #skills .txt-skills {
@@ -309,7 +313,7 @@ header .menu nav a:hover::after {
 
 #projetos article img {
     height: 15em;
-    border-radius: 5px;
+    border-radius: var(--borda-quadrada);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -348,12 +352,11 @@ header .menu nav a:hover::after {
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    border-radius: 1em;
+    border-radius: var(--borda-redonda);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     align-items: center;
     justify-content: space-between;
     border: none;
-
     transition: all .2s ease-in;
 }
 
@@ -370,8 +373,7 @@ header .menu nav a:hover::after {
     left: 0;
     height: 100%;
     width: 0;
-    background-color: #1f1c1c;
-    border-radius: 1em;
+    background-color: var(--preto);
     transition: all .2s;
 }
 
@@ -411,7 +413,7 @@ header .menu nav a:hover::after {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 1em;
-    border-radius: 1em;
+    border-radius: var(--borda-redonda);
 }
 
 #contato .info {
@@ -419,11 +421,11 @@ header .menu nav a:hover::after {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #585858;
+    background-color: var(--cinza-claro);
     height: 100%;
     width: 50%;
     padding: 1em;
-    border-radius: 1em 0 0 1em;
+    border-radius: var(--borda-redonda) 0 0 var(--borda-redonda);
 }
 
 #contato .info h6,
@@ -459,8 +461,8 @@ header .menu nav a:hover::after {
 
 #contato .info a {
     padding: .5em;
-    background-color: #333533;
-    border-radius: 1em;
+    background-color: var(--cinza-escuro);
+    border-radius: var(--borda-redonda);
     width: 100%;
     justify-content: center;
     position: relative;
@@ -469,15 +471,15 @@ header .menu nav a:hover::after {
 }
 
 #contato .info a i {
-    color: #FFD60A;
+    color: var(--amarelo);
 }
 
 #contato .info a:hover {
-    outline: 2px solid #FFD60A;
+    outline: 1px solid var(--amarelo);
 }
 
 #contato .container .formulario {
-    background-color: #1f1c1c;
+    background-color: var(--preto);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -486,7 +488,7 @@ header .menu nav a:hover::after {
     height: 100%;
     width: 50%;
     padding: 1em;
-    border-radius: 0 1em 1em 0;
+    border-radius: 0 var(--borda-redonda) var(--borda-redonda) 0;
 }
 
 #contato .container form {
@@ -511,8 +513,8 @@ textarea {
     margin-bottom: 1em;
     padding: .5em;
     border: none;
-    background-color: #585858;
-    border-radius: 1em;
+    background-color: var(--cinza-claro);
+    border-radius: var(--borda-redonda);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: white;
     font-size: 15px;
@@ -523,13 +525,13 @@ input:focus,
 textarea:hover,
 textarea:focus,
 button:focus {
-    outline: 1px solid #FFD60A;
+    outline: 1px solid var(--amarelo);
 }
 
 #contato .container button {
     height: 3em;
-    border-radius: 1em;
-    background-color: #FFD60A;
+    border-radius: var(--borda-redonda);
+    background-color: var(--amarelo);
     border: none;
     cursor: pointer;
     height: 2em;
@@ -541,12 +543,12 @@ button:focus {
 
 #contato .container button:hover {
     background-color: transparent;
-    border: 2px solid #FFD60A;
-    color: #FFD60A;
+    border: 2px solid var(--amarelo);
+    color: var(--amarelo);
 }
 
 #contato .container button.loading {
-    background-color: #816f16;
+    opacity: .5;
     cursor: not-allowed;
     border: none;
     outline: none;
@@ -620,7 +622,7 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #20202094;
-    border-radius: 1em;
+    border-radius: var(--borda-redonda);
 }
 
 #obrigado .container .txt-obrigado {
@@ -641,7 +643,7 @@ footer {
     font-size: 30px;
     padding: .5em 1.5em;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--borda-quadrada);
     cursor: pointer;
     background-color: #333533;
     border: 2px solid white;
@@ -697,7 +699,7 @@ footer {
 
     header .btn-mobile {
         display: block;
-        color: #FFD60A;
+        color: var(--amarelo);
         font-size: 40px;
         transition: .2s;
         cursor: pointer;
@@ -719,7 +721,7 @@ footer {
         display: flex;
         flex-direction: column;
         position: absolute;
-        background-color: #333533;
+        background-color: var(--preto);
         align-items: center;
         transition: .3s;
         z-index: 100;
@@ -735,7 +737,7 @@ footer {
     header .menu ul li {
         width: 100%;
         margin: 0;
-        border: 1px solid #585858;
+        border: 1px solid var(--cinza-claro);
     }
 
     header .menu ul a {
@@ -745,7 +747,6 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #202020;
     }
 
     header .menu.active ul {
@@ -828,15 +829,15 @@ footer {
 
     #projetos .container article {
         flex-direction: column;
-        background-color: #e0e0e0;
+        background-color: var(--cinza-muito-claro);
         gap: 0;
-        border-radius: 1em;
+        border-radius: var(--borda-redonda);
     }
 
     #projetos .container article img {
         width: 100%;
         height: 100%;
-        border-radius: 1em 1em 0 0;
+        border-radius: var(--borda-redonda) var(--borda-redonda) 0 0;
     }
 
     #projetos .container article:nth-child(2) {
@@ -860,16 +861,15 @@ footer {
     #contato .container {
         flex-direction: column;
         height: auto;
-        border-radius: 1em;
     }
 
     #contato .info {
         height: 25em;
-        border-radius: 1em 1em 0 0;
+        border-radius: var(--borda-redonda) var(--borda-redonda) 0 0;
     }
 
     #contato .container .formulario {
-        border-radius: 0 0 1em 1em;
+        border-radius: 0 0 var(--borda-redonda) var(--borda-redonda);
         gap: 2em;
     }
 
