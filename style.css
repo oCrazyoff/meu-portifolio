@@ -723,11 +723,11 @@ footer {
         align-items: center;
         transition: .3s;
         z-index: 100;
-        top: 3em;
+        top: 3.2em;
         font-size: 20px;
-        left: 0;
-        width: 100%;
-        height: 0;
+        right: 0;
+        width: 0;
+        height: auto;
         visibility: hidden;
         overflow-y: hidden;
     }
@@ -749,7 +749,7 @@ footer {
     }
 
     header .menu.active ul {
-        height: 60vw;
+        width: 100%;
         visibility: visible;
     }
 
