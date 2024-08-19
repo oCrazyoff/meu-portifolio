@@ -133,19 +133,35 @@ header .menu nav li {
 header .menu nav a {
     color: white;
     text-decoration: none;
+    position: relative;
 }
 
 header .menu nav a::after {
     content: "";
     display: block;
+    position: absolute;
     height: 2px;
     width: 0;
+    right: 50%;
     background-color: white;
     transition: .2s ease;
 }
 
-header .menu nav a:hover::after {
-    width: 100%;
+header .menu nav a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 0;
+    top: 100%;
+    left: 50%;
+    background-color: white;
+    transition: .2s ease;
+}
+
+header .menu nav a:hover::after,
+header .menu nav a:hover::before {
+    width: 50%;
 }
 
 /* hero */
@@ -743,7 +759,7 @@ footer {
     header .menu ul a {
         width: 100%;
         text-align: center;
-        padding: 1em;
+        padding: .7em;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -754,7 +770,8 @@ footer {
         visibility: visible;
     }
 
-    header .menu nav a:hover::after {
+    header .menu nav a:hover::after,
+    header .menu nav a:hover::before {
         width: 0;
     }
 
