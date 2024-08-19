@@ -143,6 +143,7 @@ header .menu nav a::after {
     height: 2px;
     width: 0;
     right: 50%;
+    top: 100%;
     background-color: white;
     transition: .2s ease;
 }
