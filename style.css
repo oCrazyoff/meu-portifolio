@@ -748,6 +748,8 @@ footer {
         height: auto;
         visibility: hidden;
         overflow-y: hidden;
+        border-radius: var(--borda-redonda);
+        margin: .5em;
     }
 
     header .menu ul li {
@@ -759,14 +761,14 @@ footer {
     header .menu ul a {
         width: 100%;
         text-align: center;
-        padding: .7em;
+        padding: .6em;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     header .menu.active ul {
-        width: 80%;
+        width: 50%;
         visibility: visible;
     }
 
