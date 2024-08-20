@@ -1,5 +1,6 @@
 /* geral */
 :root {
+    --branco: #ffffff;
     --amarelo: #FFD60A;
     --preto: #202020;
     --cinza-claro: #585858b4;
@@ -30,7 +31,7 @@ html {
 .titulo {
     font-size: 40px;
     margin: 1em 0;
-    color: white;
+    color: var(--branco);
     text-align: center;
 }
 
@@ -43,7 +44,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--branco);
     font-size: 40px;
 }
 
@@ -64,7 +65,7 @@ html {
 }
 
 .tags p {
-    color: white;
+    color: var(--branco);
     border-radius: 1em;
     padding: 1%;
     font-weight: 600;
@@ -136,7 +137,7 @@ header .menu nav li {
 }
 
 header .menu nav a {
-    color: white;
+    color: var(--branco);
     text-decoration: none;
     position: relative;
 }
@@ -149,7 +150,7 @@ header .menu nav a::after {
     width: 0;
     right: 50%;
     top: 100%;
-    background-color: white;
+    background-color: var(--branco);
     transition: .2s ease;
 }
 
@@ -161,7 +162,7 @@ header .menu nav a::before {
     width: 0;
     top: 100%;
     left: 50%;
-    background-color: white;
+    background-color: var(--branco);
     transition: .2s ease;
 }
 
@@ -228,7 +229,7 @@ header .menu nav a:hover::before {
     font-size: 25px;
     position: relative;
     background-color: var(--preto);
-    color: white;
+    color: var(--branco);
     border: none;
     padding: .5em;
     border-radius: var(--borda-quadrada);
@@ -282,7 +283,7 @@ header .menu nav a:hover::before {
     height: 20em;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--branco);
 }
 
 #skills .container article {
@@ -405,7 +406,7 @@ header .menu nav a:hover::before {
 
 #projetos .btn-projetos button:hover span,
 #projetos .btn-projetos button:hover i {
-    color: white;
+    color: var(--branco);
     z-index: 10;
 }
 
@@ -455,12 +456,12 @@ header .menu nav a:hover::before {
     font-size: 30px;
     text-align: center;
     font-weight: 600;
-    color: white;
+    color: var(--branco);
 }
 
 #contato .info p {
     font-size: 20px;
-    color: white;
+    color: var(--branco);
     text-align: center;
 }
 
@@ -469,7 +470,7 @@ header .menu nav a:hover::before {
     display: flex;
     align-items: center;
     gap: 1em;
-    color: white;
+    color: var(--branco);
     text-decoration: none;
     font-size: 20px;
     margin: .2em 0;
@@ -520,7 +521,7 @@ header .menu nav a:hover::before {
 }
 
 #contato .container label {
-    color: white;
+    color: var(--branco);
     font-size: 15px;
     margin-bottom: .1em;
 }
@@ -538,7 +539,7 @@ textarea {
     background-color: var(--cinza-claro);
     border-radius: var(--borda-redonda);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    color: white;
+    color: var(--branco);
     font-size: 15px;
 }
 
@@ -658,7 +659,7 @@ footer {
 
 #obrigado .container .txt-obrigado p {
     font-size: 30px;
-    color: white;
+    color: var(--branco);
 }
 
 #obrigado .container button {
@@ -668,8 +669,8 @@ footer {
     border-radius: var(--borda-quadrada);
     cursor: pointer;
     background-color: #333533;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid var(--branco);
+    color: var(--branco);
     position: relative;
     overflow: hidden;
     transition: .5s;
