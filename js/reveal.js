@@ -1,12 +1,6 @@
-window.revelar = ScrollReveal({ reset: true })
-
-revelar.reveal('.efeito', {
-    duration: 2000,
-    distance: '30px'
-})
-
-revelar.reveal('.avatar.efeito', {
-    duration: 2000,
-    distance: '30px',
-    delay: 500
-})
+ScrollReveal().reveal('.efeito', {
+    duration: 1000,
+    interval: 200,
+    distance: '50px',
+    once: true
+});
