@@ -707,10 +707,14 @@ footer {
 
     header .btn-mobile {
         display: block;
+        position: absolute;
+        top: 5%;
+        right: 5%;
         color: var(--amarelo);
         font-size: 40px;
         transition: .2s;
         cursor: pointer;
+        z-index: 100;
     }
 
     header .menu.active .btn-mobile .abrir {
@@ -730,7 +734,7 @@ footer {
         transition: .3s;
         z-index: 50;
         font-size: 20px;
-        top: 2.5em;
+        top: 0;
         right: 0;
         width: 0;
         height: 100vh;
