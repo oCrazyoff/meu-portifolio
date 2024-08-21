@@ -835,19 +835,25 @@ footer {
 
     #projetos .container {
         gap: 1.5em;
-        margin-bottom: 2em;
+        flex-direction: row;
+        padding: 1em;
+        width: auto;
+        height: 100%;
+        overflow-x: auto;
     }
 
     #projetos .container article {
+        width: 100%;
+        min-height: 100%;
         flex-direction: column;
+        justify-content: space-between;
         background-color: var(--cinza-muito-claro);
         gap: 0;
         border-radius: var(--borda-redonda);
     }
 
     #projetos .container article img {
-        width: 100%;
-        height: 100%;
+        height: 10em;
         border-radius: var(--borda-redonda) var(--borda-redonda) 0 0;
     }
 
