@@ -837,13 +837,12 @@ footer {
         gap: 1.5em;
         flex-direction: row;
         padding: 1em;
-        width: auto;
         height: 100%;
         overflow-x: auto;
     }
 
     #projetos .container article {
-        width: 100%;
+        width: auto;
         min-height: 100%;
         flex-direction: column;
         justify-content: space-between;
