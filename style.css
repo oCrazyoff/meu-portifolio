@@ -708,7 +708,7 @@ footer {
     header .btn-mobile {
         display: block;
         position: absolute;
-        top: 5%;
+        top: 10%;
         right: 5%;
         color: var(--amarelo);
         font-size: 40px;
