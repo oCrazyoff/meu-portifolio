@@ -52,7 +52,7 @@ html {
     color: var(--amarelo);
 }
 
-.efeito{
+.efeito {
     visibility: hidden;
 }
 
@@ -127,7 +127,8 @@ header .interface {
     align-items: center;
 }
 
-header .btn-mobile {
+header .btn-mobile,
+header .btn-mobile .fechar {
     display: none;
 }
 
@@ -712,10 +713,6 @@ footer {
         cursor: pointer;
     }
 
-    header .btn-mobile .fechar {
-        display: none;
-    }
-
     header .menu.active .btn-mobile .abrir {
         display: none;
     }
@@ -748,16 +745,16 @@ footer {
     }
 
     header .menu ul a {
+        display: flex;
         width: 100%;
         text-align: center;
         padding: .6em;
-        display: flex;
         align-items: center;
         justify-content: center;
         transition: .2s ease;
     }
 
-    header .menu ul a:hover{
+    header .menu ul a:hover {
         background-color: var(--cinza-claro);
     }
 
@@ -822,7 +819,7 @@ footer {
         height: 16rem;
     }
 
-    #skills .container article h4{
+    #skills .container article h4 {
         font-size: 27px;
     }
 
@@ -923,7 +920,6 @@ footer {
 
     /* hero */
     #hero {
-        margin-top: 4.5em;
         height: auto;
     }
 }
@@ -932,8 +928,7 @@ footer {
 
     /* hero */
     #hero {
-        margin-top: 4.5em;
         height: auto;
-        margin-bottom: 1em;
+        margin: 1em 0;
     }
 }
