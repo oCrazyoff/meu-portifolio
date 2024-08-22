@@ -528,18 +528,6 @@ textarea {
     font-size: 15px;
 }
 
-#contato .container #file {
-    background-color: transparent;
-    box-shadow: none;
-    margin: 1%;
-    padding: 0;
-}
-
-#contato .container #file:focus,
-#contato .container #file:hover {
-    outline: 0;
-}
-
 input:hover,
 input:focus,
 textarea:hover,
