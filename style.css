@@ -417,7 +417,7 @@ header .menu nav a:hover::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25em;
+    height: 30em;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 1em;
@@ -526,6 +526,18 @@ textarea {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: var(--branco);
     font-size: 15px;
+}
+
+#contato .container #file {
+    background-color: transparent;
+    box-shadow: none;
+    margin: 1%;
+    padding: 0;
+}
+
+#contato .container #file:focus,
+#contato .container #file:hover {
+    outline: 0;
 }
 
 input:hover,
@@ -837,7 +849,7 @@ footer {
         scroll-margin-top: 4em;
     }
 
-    #projetos .interface{
+    #projetos .interface {
         padding: 0;
     }
 
