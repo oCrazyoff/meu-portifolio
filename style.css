@@ -842,9 +842,9 @@ footer {
     }
 
     #projetos .container {
-        gap: 1.5em;
+        gap: 1em;
         flex-direction: row;
-        padding: 1em;
+        padding: 1em .5em;
         height: 100%;
         overflow-x: auto;
     }
