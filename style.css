@@ -748,6 +748,17 @@ footer {
         overflow-y: hidden;
     }
 
+    header .menu.active ul::before{
+        content: "";
+        background-color: var(--preto);
+        opacity: .5;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+    }
+
     header .menu ul li {
         width: 100%;
         margin: 0;
