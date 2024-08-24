@@ -748,7 +748,7 @@ footer {
         overflow-y: hidden;
     }
 
-    header .menu.active ul::before{
+    header .menu.active ul::before {
         content: "";
         background-color: var(--preto);
         opacity: .5;
