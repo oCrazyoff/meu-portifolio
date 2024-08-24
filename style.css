@@ -138,6 +138,10 @@ header .menu nav li {
 }
 
 header .menu nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
     color: var(--branco);
     text-decoration: none;
     position: relative;
@@ -171,6 +175,7 @@ header .menu nav a:hover::after,
 header .menu nav a:hover::before {
     width: 50%;
 }
+
 
 /* hero */
 #hero {
@@ -751,10 +756,10 @@ footer {
     header .menu ul a {
         display: flex;
         width: 100%;
-        text-align: center;
         padding: .6em;
+        gap: 0;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         transition: .2s ease;
     }
 
@@ -763,7 +768,7 @@ footer {
     }
 
     header .menu.active ul {
-        width: 100%;
+        width: 80%;
         visibility: visible;
     }
 
