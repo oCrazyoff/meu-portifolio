@@ -265,7 +265,6 @@ header .menu nav a:hover::before {
 #sobre {
     scroll-margin-top: 5em;
     background: radial-gradient(circle, rgba(51, 53, 51, 1) 44%, rgba(32, 32, 32, 1) 88%);
-    height: 100vh;
 }
 
 #sobre .titulo {
