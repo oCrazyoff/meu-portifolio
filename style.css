@@ -60,6 +60,7 @@ html {
     display: flex;
     gap: 1em;
     padding: 1em 0;
+    align-items: center;
     cursor: default;
     flex-wrap: wrap;
 }
@@ -80,7 +81,7 @@ html {
 }
 
 .tags #css {
-    background-color: rgb(21, 21, 253);
+    background-color: rgb(20, 20, 204);
 }
 
 .tags #js {
@@ -281,51 +282,49 @@ header .menu nav a:hover::before {
 
 #sobre .container img {
     border-radius: var(--borda-redonda);
-    height: 80vh;
+    height: 85vh;
 }
 
 #sobre .txt-sobre p {
     color: var(--branco);
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
-#sobre .txt-sobre p span{
+#sobre .txt-sobre p span {
     text-transform: uppercase;
     font-weight: 600;
     color: var(--amarelo);
 }
 
-#sobre .btn-social{
-    display: flex;
-    gap: 1em;
-    margin-top: 1em;
+#sobre .txt-sobre button,
+#sobre .txt-sobre button a {
+    all: unset;
+    margin-top: .5em;
 }
 
-#sobre .btn-social button{
-    all: unset;
-    cursor: pointer;
-}
-
-#sobre .btn-social button a{
-    all: unset;
+#sobre .txt-sobre button a {
     display: flex;
+    position: relative;
     justify-content: center;
-    width: 1em;
-    height: 1em;
+    font-weight: 500;
     align-items: center;
-    border-radius: 50%;
-    outline: 2px solid var(--amarelo);
-    padding: .3em;
-    font-size: 35px;
-    color: var(--amarelo);
+    background-color: var(--amarelo);
+    border-radius: var(--borda-quadrada);
+    font-size: 20px;
+    padding:.5em 3em .5em .5em;
+    cursor: pointer;
+    color: var(--preto);
+    overflow: hidden;
     transition: ease .2s;
 }
 
-#sobre .btn-social button a:hover{
-    color: var(--preto);
-    background-color: var(--amarelo);
-    outline: 0;
-    transform: translateY(-20%);
+#sobre .txt-sobre button i {
+    position: absolute;
+    background-color: var(--preto);
+    padding: 1rem;
+    right: 0;
+    font-size: 20px;
+    color: var(--amarelo);
 }
 
 /* projetos */
@@ -857,36 +856,31 @@ footer {
         scroll-margin-top: 4em;
     }
 
-    #sobre .container{
+    #sobre .container {
         flex-direction: column;
         width: 100%;
         gap: 0;
         padding: 1em 0;
     }
 
-    #sobre .txt-sobre{
+    #sobre .txt-sobre {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    #sobre .container img{
+    #sobre .container img {
         height: 15em;
     }
 
-    #sobre .titulo{
+    #sobre .titulo {
         text-align: center;
         width: 80%;
     }
 
-    #sobre .txt-sobre p{
+    #sobre .txt-sobre p {
         text-align: justify;
-    }
-
-    #sobre .btn-social{
-        justify-content: center;
-        align-items: center;
     }
 
     /* projetos */
