@@ -261,7 +261,7 @@ header .menu nav a:hover::before {
     width: 100%;
 }
 
-/* skills */
+/* sobre mim */
 #sobre {
     scroll-margin-top: 5em;
     background: radial-gradient(circle, rgba(51, 53, 51, 1) 44%, rgba(32, 32, 32, 1) 88%);
@@ -296,35 +296,60 @@ header .menu nav a:hover::before {
     color: var(--amarelo);
 }
 
-#sobre .txt-sobre button,
-#sobre .txt-sobre button a {
-    all: unset;
-    margin-top: .5em;
+#sobre .txt-sobre button {
+    border: none;
+    background-color: transparent;
 }
 
 #sobre .txt-sobre button a {
     display: flex;
-    position: relative;
-    justify-content: center;
-    font-weight: 500;
     align-items: center;
-    background-color: var(--amarelo);
+    justify-content: center;
+    gap: .5em;
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: var(--preto);
     border-radius: var(--borda-quadrada);
     font-size: 20px;
-    padding:.5em 3em .5em .5em;
+    padding: 1rem;
     cursor: pointer;
-    color: var(--preto);
+    color: var(--branco);
     overflow: hidden;
     transition: ease .2s;
 }
 
 #sobre .txt-sobre button i {
-    position: absolute;
-    background-color: var(--preto);
-    padding: 1rem;
-    right: 0;
     font-size: 20px;
     color: var(--amarelo);
+    transition: ease .2s;
+}
+
+#sobre .txt-sobre button a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--amarelo);
+    z-index: 0;
+    transition: ease .2s;
+}
+
+#sobre .txt-sobre button a span,
+#sobre .txt-sobre button a i {
+    position: relative;
+    z-index: 1;
+}
+
+#sobre .txt-sobre button a:hover::before {
+    width: 100%;
+}
+
+#sobre .txt-sobre button a:hover,
+#sobre .txt-sobre button a:hover i {
+    color: var(--preto);
 }
 
 /* projetos */
@@ -881,6 +906,14 @@ footer {
 
     #sobre .txt-sobre p {
         text-align: justify;
+    }
+
+    #sobre .txt-sobre button {
+        width: 100%;
+    }
+
+    #sobre .txt-sobre button a {
+        width: 100%;
     }
 
     /* projetos */
