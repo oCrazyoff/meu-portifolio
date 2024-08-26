@@ -210,6 +210,27 @@ header .menu nav a:hover::before {
     color: var(--amarelo);
     font-size: 70px;
     font-weight: 500;
+    padding-bottom: 14px;
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid var(--preto);
+    animation: digitar 4s steps(25) forwards, cursor .5s infinite;
+}
+
+@keyframes digitar {
+    from {
+        max-width: 0%;
+    }
+
+    to {
+        max-width: 100%;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
 }
 
 #hero .txt-hero p {
@@ -266,7 +287,7 @@ header .menu nav a:hover::before {
 /* sobre mim */
 #sobre {
     scroll-margin-top: 5em;
-    background: radial-gradient(circle, rgba(51,53,51,1) 16%, rgba(32,32,32,1) 51%);
+    background: radial-gradient(circle, rgba(51, 53, 51, 1) 16%, rgba(32, 32, 32, 1) 51%);
 }
 
 #sobre .titulo {
