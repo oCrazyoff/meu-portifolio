@@ -226,6 +226,7 @@ header .menu nav a:hover::before {
     border-radius: var(--borda-quadrada);
     cursor: pointer;
     overflow: hidden;
+    transition: .2s;
 }
 
 #hero .txt-hero button span {
@@ -236,6 +237,7 @@ header .menu nav a:hover::before {
 #hero .txt-hero button:hover i,
 #hero .txt-hero button:hover span {
     color: black;
+    transition: ease .2s;
 }
 
 #hero .txt-hero button i {
@@ -254,7 +256,7 @@ header .menu nav a:hover::before {
     display: block;
     width: 0;
     background-color: var(--amarelo);
-    transition: .4s;
+    transition: ease-in .2s;
 }
 
 #hero .txt-hero button:hover::after {
@@ -264,7 +266,7 @@ header .menu nav a:hover::before {
 /* sobre mim */
 #sobre {
     scroll-margin-top: 5em;
-    background: radial-gradient(circle, rgba(51, 53, 51, 1) 44%, rgba(32, 32, 32, 1) 88%);
+    background: radial-gradient(circle, rgba(51,53,51,1) 16%, rgba(32,32,32,1) 51%);
 }
 
 #sobre .titulo {
@@ -293,7 +295,6 @@ header .menu nav a:hover::before {
 #sobre .txt-sobre p span {
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--amarelo);
 }
 
 #sobre .txt-sobre button {
@@ -313,8 +314,8 @@ header .menu nav a:hover::before {
     font-weight: 500;
     background-color: var(--preto);
     border-radius: var(--borda-quadrada);
-    font-size: 20px;
-    padding: 1rem;
+    font-size: 25px;
+    padding: .5em;
     cursor: pointer;
     color: var(--branco);
     overflow: hidden;
