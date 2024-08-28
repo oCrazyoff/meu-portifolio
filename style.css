@@ -213,7 +213,7 @@ header .menu nav a:hover::before {
     display: inline-block;
     overflow: hidden;
     border-right: 3px solid var(--preto);
-    animation: digitar 4s steps(25) forwards, cursor .5s infinite;
+    animation: digitar 4s steps(25) forwards, cursor 1s infinite;
 }
 
 @keyframes digitar {
