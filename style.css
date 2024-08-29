@@ -956,16 +956,14 @@ footer {
     #projetos .container {
         gap: 1em;
         flex-direction: row;
-        padding: 1em .5em;
-        height: 100%;
+        padding: .5em;
+        width: auto;
         overflow-x: auto;
     }
 
     #projetos .container article {
-        width: 25em;
-        height: auto;
+        min-width: 85vw;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 4px 6px -2px;
-        min-height: 100%;
         flex-direction: column;
         justify-content: space-between;
         background-color: var(--cinza-muito-claro);
@@ -974,6 +972,7 @@ footer {
     }
 
     #projetos .container article img {
+        width: 100%;
         height: 10em;
         border-radius: var(--borda-redonda) var(--borda-redonda) 0 0;
     }
@@ -988,7 +987,7 @@ footer {
     }
 
     #projetos .container .txt-projeto .btn-projetos {
-        gap: 1em;
+        gap: .5em;
     }
 
     /* contato */
