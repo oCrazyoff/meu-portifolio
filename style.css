@@ -40,6 +40,10 @@ html {
     font-weight: 500;
 }
 
+.logo a{
+    text-decoration: none;
+}
+
 .logo h1 {
     display: flex;
     justify-content: center;
