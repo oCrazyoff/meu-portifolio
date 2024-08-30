@@ -40,7 +40,7 @@ html {
     font-weight: 500;
 }
 
-.logo a{
+.logo a {
     text-decoration: none;
 }
 
@@ -1047,6 +1047,11 @@ footer {
     /* hero */
     #hero {
         height: auto;
+    }
+
+    /* projetos */
+    #projetos .container article {
+        min-width: 50vw;
     }
 }
 
