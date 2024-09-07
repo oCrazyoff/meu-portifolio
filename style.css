@@ -1062,4 +1062,10 @@ footer {
         height: auto;
         margin: 1em 0;
     }
+
+    /* projetos */
+    #projetos .container article {
+        height: max-content;
+        min-width: 100vw;
+    }
 }
