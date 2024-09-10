@@ -213,7 +213,7 @@ header .menu nav a:hover::before {
     color: var(--amarelo);
     font-size: 70px;
     font-weight: 500;
-    padding-bottom: 14px;
+    padding: 15px 0;
     display: inline-block;
     overflow: hidden;
     border-right: 3px solid var(--preto);
@@ -957,24 +957,26 @@ footer {
         gap: 1em;
         flex-direction: row;
         padding: .5em;
-        width: auto;
         overflow-x: auto;
     }
 
     #projetos .container article {
-        min-width: 85vw;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 4px 6px -2px;
+        box-shadow: rgba(0, 0, 0, 0.253) 0px 0px 4px 3px;
         flex-direction: column;
         justify-content: space-between;
-        background-color: var(--cinza-muito-claro);
+        background-color: var(--branco);
+        padding: .5em;
         gap: 0;
-        border-radius: var(--borda-redonda);
+        border-radius: var(--borda-quadrada);
+        width: 90vw;
+        flex-shrink: 0;
     }
 
     #projetos .container article img {
         width: 100%;
-        height: 10em;
-        border-radius: var(--borda-redonda) var(--borda-redonda) 0 0;
+        height: 10rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: var(--borda-quadrada);
     }
 
     #projetos .container article:nth-child(2) {
@@ -983,11 +985,16 @@ footer {
 
     #projetos .container .txt-projeto {
         width: 100%;
-        padding: 0 1em;
+        padding: 0;
     }
 
-    #projetos .container .txt-projeto .btn-projetos {
+    #projetos .btn-projetos {
         gap: .5em;
+    }
+
+    #projetos .btn-projetos button{
+       height: 3em;
+       width: 8em;
     }
 
     /* contato */
@@ -1050,8 +1057,8 @@ footer {
     }
 
     /* projetos */
-    #projetos .container article {
-        min-width: 40vw;
+    #projetos .container article{
+        width: 50vw;
     }
 }
 
@@ -1061,11 +1068,5 @@ footer {
     #hero {
         height: auto;
         margin: 1em 0;
-    }
-
-    /* projetos */
-    #projetos .container article {
-        height: max-content;
-        min-width: 100vw;
     }
 }
