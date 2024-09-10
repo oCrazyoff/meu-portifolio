@@ -965,7 +965,7 @@ footer {
         flex-direction: column;
         justify-content: space-between;
         background-color: var(--branco);
-        padding: .5em;
+        padding: .7em;
         gap: 0;
         border-radius: var(--borda-quadrada);
         width: 90vw;
@@ -985,6 +985,11 @@ footer {
 
     #projetos .container .txt-projeto {
         width: 100%;
+        padding: 0;
+        margin-top: .5em;
+    }
+
+    #projetos .txt-projeto h5{
         padding: 0;
     }
 
