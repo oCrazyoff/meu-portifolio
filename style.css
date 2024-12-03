@@ -92,8 +92,8 @@ html {
     background-color: rgb(233, 183, 18);
 }
 
-.tags #btrap {
-    background-color: rgb(122, 36, 202);
+.tags #php {
+    background-color: rgb(46, 95, 149);
 }
 
 .tags #git {
@@ -304,11 +304,11 @@ header .menu nav a:hover::before {
     gap: 2em;
     justify-content: center;
     align-items: center;
+    height: 85vh;
 }
 
 #sobre .container img {
     border-radius: var(--borda-redonda);
-    height: 85vh;
 }
 
 #sobre .txt-sobre p {
@@ -339,7 +339,7 @@ header .menu nav a:hover::before {
     background-color: var(--preto);
     border-radius: var(--borda-quadrada);
     font-size: 25px;
-    padding: .5em;
+    padding: .4em;
     cursor: pointer;
     color: var(--branco);
     overflow: hidden;
@@ -906,7 +906,6 @@ footer {
     /* sobre mim */
     #sobre {
         scroll-margin-top: 4em;
-        height: auto;
     }
 
     #sobre .container {
@@ -914,6 +913,7 @@ footer {
         width: 100%;
         gap: 0;
         padding: 1em 0;
+        height: auto;
     }
 
     #sobre .txt-sobre {
@@ -936,10 +936,7 @@ footer {
         text-align: justify;
     }
 
-    #sobre .txt-sobre button {
-        width: 100%;
-    }
-
+    #sobre .txt-sobre button,
     #sobre .txt-sobre button a {
         width: 100%;
     }
@@ -989,7 +986,7 @@ footer {
         margin-top: .5em;
     }
 
-    #projetos .txt-projeto h5{
+    #projetos .txt-projeto h5 {
         padding: 0;
     }
 
@@ -997,9 +994,9 @@ footer {
         gap: .5em;
     }
 
-    #projetos .btn-projetos button{
-       height: 3em;
-       width: 8em;
+    #projetos .btn-projetos button {
+        height: 3em;
+        width: 8em;
     }
 
     /* contato */
@@ -1062,7 +1059,7 @@ footer {
     }
 
     /* projetos */
-    #projetos .container article{
+    #projetos .container article {
         width: 50vw;
     }
 }
