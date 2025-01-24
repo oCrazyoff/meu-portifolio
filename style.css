@@ -332,7 +332,7 @@ header .menu nav a:hover::before {
     justify-content: center;
     gap: .5em;
     position: relative;
-    outline: 1px solid var(--cinza-escuro);
+    outline: 1px solid var(--amarelo);
     text-decoration: none;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     font-weight: 500;
