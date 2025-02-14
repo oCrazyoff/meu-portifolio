@@ -16,7 +16,6 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
     <script src="js/reveal.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -27,6 +26,8 @@
     <script src="https://kit.fontawesome.com/22f994e04b.js" crossorigin="anonymous"></script>
     <script src="js/animação.js" defer></script>
     <script src="js/menu.js" defer></script>
+    <script src="js/carrossel.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JP85XFHNL"></script>
     <script>
@@ -115,84 +116,229 @@
     <section id="projetos">
         <div class="interface">
             <h5 class="titulo">CONHEÇA MEUS <span> PROJETOS!</span></h5>
-            <div class="container efeito">
-                <article>
-                    <img src="images/projeto 1.jpeg" alt="Imagem do primeiro projeto">
-                    <div class="txt-projeto">
-                        <h5>Agência de Viagens</h5>
-                        <p>
-                            Desenvolvi um site modelo para uma agência de viagens, onde aprendi e implementei novas
-                            animações usando JavaScript, aprimorando a experiência do usuário e a interatividade. O site
-                            é totalmente responsivo, garantindo uma navegação perfeita em todas as telas.
-                        </p>
-                        <div class="tags">
-                            <p id="html">HTML</p>
-                            <p id="css">CSS</p>
-                            <p id="js">JAVA SCRIPT</p>
-                            <p id="github">GIT HUB</p>
-                            <p id="git">GIT</p>
-                        </div>
-                        <div class="btn-projetos">
-                            <a href="https://ocrazyoff.github.io/modelo-agencia/" target="_blank"><button><i
-                                        class="bi bi-eye"></i><span>Deploy</span></button></a>
-                            <a href="https://github.com/oCrazyoff/modelo-agencia" target="_blank"><button><i
-                                        class="bi bi-github"></i><span>Git
-                                        Hub</span></button></a>
-                        </div>
+            <div class="carrossel-wrapper">
+                <div id="carrossel" class="carrossel">
+                    <div class="container efeito" id="projetos1">
+                        <article>
+                            <img src="images/projeto 1.jpeg" alt="Imagem do primeiro projeto">
+                            <div class="txt-projeto">
+                                <h5>Agência de Viagens</h5>
+                                <p>
+                                    Desenvolvi um site modelo para uma agência de viagens, onde aprendi e implementei
+                                    novas
+                                    animações usando JavaScript, aprimorando a experiência do usuário e a
+                                    interatividade. O
+                                    site
+                                    é totalmente responsivo, garantindo uma navegação perfeita em todas as telas.
+                                </p>
+                                <div class="tags">
+                                    <p id="html">HTML</p>
+                                    <p id="css">CSS</p>
+                                    <p id="js">JAVA SCRIPT</p>
+                                    <p id="github">GIT HUB</p>
+                                    <p id="git">GIT</p>
+                                </div>
+                                <div class="btn-projetos">
+                                    <a href="https://ocrazyoff.github.io/modelo-agencia/" target="_blank">
+                                        <button>
+                                            <i class="bi bi-eye"></i>
+                                            <span>Deploy</span>
+                                        </button>
+                                    </a>
+                                    <a href="https://github.com/oCrazyoff/modelo-agencia" target="_blank">
+                                        <button>
+                                            <i class="bi bi-github"></i>
+                                            <span>Git
+                                                Hub</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="txt-projeto">
+                                <h5>Modelo de Portifólio</h5>
+                                <p>
+                                    Criei um portfólio modelo como um dos meus primeiros projetos. Aprendi muito durante
+                                    seu
+                                    desenvolvimento, incluindo novas animações e o básico de JavaScript, o que foi
+                                    fundamental
+                                    para minha evolução como desenvolvedor. O site é responsivo e se adapta a qualquer
+                                    dispositivo.
+                                </p>
+                                <div class="tags">
+                                    <p id="html">HTML</p>
+                                    <p id="css">CSS</p>
+                                    <p id="js">JAVA SCRIPT</p>
+                                    <p id="github">GIT HUB</p>
+                                    <p id="subform">SUBMIT FORM</p>
+                                    <p id="git">GIT</p>
+                                </div>
+                                <div class="btn-projetos">
+                                    <a href="https://ocrazyoff.github.io/modelo-portifolio/" target="_blank">
+                                        <button>
+                                            <i class="bi bi-eye"></i>
+                                            <span>Deploy</span>
+                                        </button>
+                                    </a>
+                                    <a href="https://github.com/oCrazyoff/modelo-portifolio" target="_blank">
+                                        <button><i class="bi bi-github"></i>
+                                            <span>Git Hub</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="images/projeto 2.jpeg" alt="Imagem do segundo projeto">
+                        </article>
+                        <article>
+                            <img src="images/projeto 3.jpeg" alt="Imagem do terceiro projeto">
+                            <div class="txt-projeto">
+                                <h5>Meu Portifólio</h5>
+                                <p>
+                                    No meu próprio portfólio, apliquei todos os conhecimentos adquiridos em vários
+                                    projetos
+                                    e
+                                    estudos, demonstrando minhas habilidades em front-end e a evolução contínua do meu
+                                    trabalho.
+                                    O portfólio é completamente responsivo, oferecendo uma experiência consistente em
+                                    todas
+                                    as
+                                    telas.
+                                </p>
+                                <div class="tags">
+                                    <p id="html">HTML</p>
+                                    <p id="css">CSS</p>
+                                    <p id="git">GIT</p>
+                                    <p id="github">GIT HUB</p>
+                                    <p id="js">JAVA SCRIPT</p>
+                                    <p id="sform">STATIC FORM</p>
+                                </div>
+                                <div class="btn-projetos">
+                                    <a href="https://github.com/oCrazyoff/meu-portifolio" target="_blank">
+                                        <button><i class="bi bi-github"></i>
+                                            <span>Git Hub</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article>
-                    <div class="txt-projeto">
-                        <h5>Modelo de Portifólio</h5>
-                        <p>
-                            Criei um portfólio modelo como um dos meus primeiros projetos. Aprendi muito durante seu
-                            desenvolvimento, incluindo novas animações e o básico de JavaScript, o que foi fundamental
-                            para minha evolução como desenvolvedor. O site é responsivo e se adapta a qualquer
-                            dispositivo.
-                        </p>
-                        <div class="tags">
-                            <p id="html">HTML</p>
-                            <p id="css">CSS</p>
-                            <p id="js">JAVA SCRIPT</p>
-                            <p id="github">GIT HUB</p>
-                            <p id="subform">SUBMIT FORM</p>
-                            <p id="git">GIT</p>
-                        </div>
-                        <div class="btn-projetos">
-                            <a href="https://ocrazyoff.github.io/modelo-portifolio/" target="_blank"><button><i
-                                        class="bi bi-eye"></i><span>Deploy</span></button></a>
-                            <a href="https://github.com/oCrazyoff/modelo-portifolio" target="_blank"><button><i
-                                        class="bi bi-github"></i><span>Git
-                                        Hub</span></button></a>
-                        </div>
+                    <div class="container efeito" id="projetos2">
+                        <article>
+                            <img src="images/projeto 4.png" alt="Imagem do projeto 4">
+                            <div class="txt-projeto">
+                                <h5>Waly Flix</h5>
+                                <p>
+                                    O meu projeto Walyflix é uma plataforma de streaming de filmes.
+                                    O site é totalmente responsivo para celulares e possui validações no front e
+                                    back-end.
+                                    A segurança foi reforçada contra SQL Injection, CSRF e XSS, garantindo proteção dos
+                                    dados.
+                                    Além disso, há separação entre administradores e usuários comuns, e o código é
+                                    gerenciado com Git e GitHub para organização e controle de versão.
+                                </p>
+                                <div class="tags">
+                                    <p id="html">HTML</p>
+                                    <p id="css">CSS</p>
+                                    <p id="js">JAVA SCRIPT</p>
+                                    <p id="github">GIT HUB</p>
+                                    <p id="git">GIT</p>
+                                    <p id="php">PHP</p>
+                                    <p id="mysql">MY SQL</p>
+                                </div>
+                                <div class="btn-projetos">
+                                    <a href="http://bancophp.kesug.com/index.php" target="_blank">
+                                        <button>
+                                            <i class="bi bi-eye"></i>
+                                            <span>Deploy</span>
+                                        </button>
+                                    </a>
+                                    <a href="https://github.com/walyssonDev/walyflix" target="_blank">
+                                        <button>
+                                            <i class="bi bi-github"></i>
+                                            <span>Git Hub</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="txt-projeto">
+                                <h5>Em Breve</h5>
+                                <p>
+                                    Este é outro projeto de exemplo usando texto de placeholder. Ele demonstra como o
+                                    layout
+                                    ficará com conteúdo
+                                    real. O site é responsivo e se adapta a qualquer dispositivo.
+                                </p>
+                                <div class="tags">
+                                    <p id="html">HTML</p>
+                                    <p id="css">CSS</p>
+                                    <p id="js">JAVA SCRIPT</p>
+                                    <p id="github">GIT HUB</p>
+                                    <p id="subform">SUBMIT FORM</p>
+                                    <p id="git">GIT</p>
+                                </div>
+                                <div class="btn-projetos">
+                                    <a href="#" target="_blank">
+                                        <button>
+                                            <i class="bi bi-eye"></i>
+                                            <span>Deploy</span>
+                                        </button>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <button>
+                                            <i class="bi bi-github"></i>
+                                            <span>Git Hub</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="https://geekflare.com/wp-content/uploads/2023/03/img-placeholder.png"
+                                alt="Imagem do placeholder">
+                        </article>
+                        <article>
+                            <img src="https://geekflare.com/wp-content/uploads/2023/03/img-placeholder.png"
+                                alt="Imagem do placeholder">
+                            <div class="txt-projeto">
+                                <h5>Em Breve</h5>
+                                <p>
+                                    Este é mais um projeto de exemplo usando texto de placeholder. Ele demonstra como o
+                                    layout ficará com
+                                    conteúdo real. O site é completamente responsivo, oferecendo uma experiência
+                                    consistente
+                                    em todas as telas.
+                                </p>
+                                <div class="tags">
+                                    <p id="html">HTML</p>
+                                    <p id="css">CSS</p>
+                                    <p id="git">GIT</p>
+                                    <p id="github">GIT HUB</p>
+                                    <p id="js">JAVA SCRIPT</p>
+                                    <p id="sform">STATIC FORM</p>
+                                </div>
+                                <div class="btn-projetos">
+                                    <a href="#" target="_blank">
+                                        <button>
+                                            <i class="bi bi-eye"></i>
+                                            <span>Deploy</span>
+                                        </button>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <button>
+                                            <i class="bi bi-github"></i>
+                                            <span>Git Hub</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                    <img src="images/projeto 2.jpeg" alt="Imagem do segundo projeto">
-                </article>
-                <article>
-                    <img src="images/projeto 3.jpeg" alt="Imagem do terceiro projeto">
-                    <div class="txt-projeto">
-                        <h5>Meu Portifólio</h5>
-                        <p>
-                            No meu próprio portfólio, apliquei todos os conhecimentos adquiridos em vários projetos e
-                            estudos, demonstrando minhas habilidades em front-end e a evolução contínua do meu trabalho.
-                            O portfólio é completamente responsivo, oferecendo uma experiência consistente em todas as
-                            telas.
-                        </p>
-                        <div class="tags">
-                            <p id="html">HTML</p>
-                            <p id="css">CSS</p>
-                            <p id="git">GIT</p>
-                            <p id="github">GIT HUB</p>
-                            <p id="js">JAVA SCRIPT</p>
-                            <p id="sform">STATIC FORM</p>
-                        </div>
-                        <div class="btn-projetos">
-                            <a href="https://github.com/oCrazyoff/meu-portifolio" target="_blank"><button><i
-                                        class="bi bi-github"></i><span>Git
-                                        Hub</span></button></a>
-                        </div>
-                    </div>
-                </article>
+                </div>
+            </div>
+            <div class="btn-carrossel">
+                <button id="pagina1" onclick="trocarPagina(1)"></button>
+                <button id="pagina2" onclick="trocarPagina(2)"></button>
             </div>
         </div>
     </section>

@@ -96,6 +96,10 @@ html {
     background-color: rgb(46, 95, 149);
 }
 
+.tags #mysql {
+    background-color: rgb(221, 115, 26);
+}
+
 .tags #git {
     background-color: rgb(255, 17, 0);
 }
@@ -483,6 +487,45 @@ header .menu nav a:hover::before {
 
 #projetos .btn-projetos a {
     text-decoration: none;
+}
+
+#projetos .btn-carrossel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    padding: .5em;
+}
+
+#projetos .btn-carrossel button {
+    border-radius: 50%;
+    padding: .5em;
+    border: 1px solid #1f1c1c;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+#projetos .btn-carrossel button:first-child {
+    background-color: #1f1c1c;
+}
+
+#projetos .btn-carrossel button:focus {
+    outline: none;
+}
+
+.carrossel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 200%;
+}
+
+.carrossel .container {
+    flex: 0 0 50%;
 }
 
 /* contato */
