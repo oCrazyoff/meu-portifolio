@@ -118,7 +118,7 @@ html {
 
 /* cabeçalho */
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -188,7 +188,7 @@ header .menu nav a:hover::before {
 
 /* hero */
 #hero {
-    height: 100vh;
+    height: calc(100dvh - 5em);
 }
 
 #hero .interface {
@@ -294,13 +294,13 @@ header .menu nav a:hover::before {
 /* sobre mim */
 #sobre {
     scroll-margin-top: 5em;
-    background: radial-gradient(circle, rgba(51, 53, 51, 1) 16%, rgba(32, 32, 32, 1) 51%);
+    background: radial-gradient(circle, rgba(73, 80, 87, 1) 40%, rgba(33, 37, 41, 1) 83%);
 }
 
 #sobre .titulo {
     text-align: left;
-    border-bottom: 2px solid var(--amarelo);
     width: 50%;
+    margin-bottom: .5em;
 }
 
 #sobre .container {
@@ -322,7 +322,7 @@ header .menu nav a:hover::before {
 
 #sobre .txt-sobre p span {
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 #sobre .txt-sobre button {
@@ -336,14 +336,13 @@ header .menu nav a:hover::before {
     justify-content: center;
     gap: .5em;
     position: relative;
-    outline: 1px solid var(--amarelo);
     text-decoration: none;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     font-weight: 500;
     background-color: var(--preto);
-    border-radius: var(--borda-quadrada);
+    border-radius: var(--borda-redonda);
     font-size: 25px;
-    padding: .4em;
+    padding: .5em;
     cursor: pointer;
     color: var(--branco);
     overflow: hidden;
@@ -386,12 +385,34 @@ header .menu nav a:hover::before {
 /* projetos */
 #projetos {
     scroll-margin-top: 5em;
+    position: relative;
 }
 
 #projetos .container {
     display: flex;
     flex-direction: column;
     gap: 5em;
+}
+
+#projetos #btn-esquerda,
+#projetos #btn-direita {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: auto;
+    font-size: 2em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#projetos #btn-esquerda:focus,
+#projetos #btn-direita:focus {
+    outline: none;
+}
+
+#projetos #btn-direita {
+    left: 95%;
 }
 
 #projetos article {
@@ -912,15 +933,18 @@ footer {
     }
 
     /* hero */
+    #hero {
+        height: auto;
+    }
+
     #hero .interface {
         flex-direction: column-reverse;
-        justify-content: center;
+        padding: 10% 5%;
         height: 100%;
     }
 
     #hero .avatar img {
         height: 12em;
-        margin-top: 4em;
     }
 
     #hero .txt-hero {
@@ -987,6 +1011,11 @@ footer {
     /* projetos */
     #projetos {
         scroll-margin-top: 4em;
+    }
+
+    #projetos #btn-esquerda,
+    #projetos #btn-direita {
+        display: none;
     }
 
     #projetos .interface {
@@ -1091,27 +1120,5 @@ footer {
 
     #obrigado .container p {
         text-align: center;
-    }
-}
-
-@media (max-width: 1020px) and (orientation: landscape) {
-
-    /* hero */
-    #hero {
-        height: auto;
-    }
-
-    /* projetos */
-    #projetos .container article {
-        width: 50vw;
-    }
-}
-
-@media (max-height: 600px) {
-
-    /* hero */
-    #hero {
-        height: auto;
-        margin: 1em 0;
     }
 }
