@@ -9,7 +9,7 @@
 
     &:focus {
         outline: none;
-        opacity: .7;
+        opacity: .8;
     }
 }
 
@@ -113,6 +113,10 @@ header {
         justify-content: center;
         gap: 1rem;
 
+        & #menu-fechar {
+            display: none;
+        }
+
         & a {
             position: relative;
             display: flex;
@@ -152,6 +156,14 @@ header {
                 width: 50%;
             }
         }
+    }
+
+    & #btn-menu {
+        display: none;
+    }
+
+    & .overlay {
+        display: none;
     }
 }
 
@@ -260,7 +272,6 @@ header {
 #sobre {
     display: flex;
     align-items: center;
-    height: calc(100dvh - 5rem);
     background-color: var(--cinza-claro);
     position: relative;
 
@@ -291,6 +302,7 @@ header {
 
         & .container {
             display: flex;
+            flex-wrap: wrap;
             gap: 1rem;
             width: 100%;
 
@@ -353,23 +365,9 @@ header {
     }
 
     & img {
-        position: absolute;
-        bottom: 0;
-        right: 0;
         height: 100%;
-        z-index: 5;
-    }
-
-    &::after {
-        content: "";
-        height: 100%;
-        width: 35%;
-        background-color: var(--cor-principal);
-        position: absolute;
-        border-radius: 50% 0 0 10%;
-        bottom: 0;
         right: 0;
-        z-index: 0;
+        position: absolute;
     }
 }
 
@@ -610,7 +608,6 @@ header {
                     background-color: var(--cinza-claro);
                     border: none;
                     border-radius: var(--borda-redonda);
-                    font-size: 1.2rem;
                     padding: .5rem;
                     cursor: pointer;
                     position: relative;
@@ -619,6 +616,8 @@ header {
 
                     & span {
                         position: relative;
+                        font-size: 1.2rem;
+                        font-weight: bolder;
                         z-index: 5;
                     }
 
@@ -684,7 +683,7 @@ footer {
 }
 
 /* responsividade */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 
     /* geral */
     header,
@@ -695,12 +694,84 @@ footer {
 
     .tags {
         justify-content: center;
+
+        & p {
+            font-size: .8rem;
+        }
     }
 
     /* header */
     header {
+        & a {
+            font-size: 1rem;
+        }
+
         & nav {
-            display: none;
+            position: fixed;
+            background-color: var(--preto);
+            flex-direction: column;
+            justify-content: flex-start;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 0%;
+            visibility: hidden;
+            padding: 1rem;
+            z-index: 1000;
+            overflow-x: auto;
+            transition: .5s ease all;
+
+            & #menu-fechar {
+                display: block;
+                background-color: transparent;
+                border: none;
+                color: var(--cor-principal);
+                font-size: 2rem;
+                align-self: flex-start;
+                cursor: pointer;
+            }
+
+            & a {
+                font-size: 1.5rem;
+                width: 100%;
+                justify-content: flex-start;
+
+                &:hover {
+                    background-color: var(--preto-claro);
+                    padding: .5rem;
+                    border-radius: var(--borda-quadrada);
+                }
+            }
+
+            &.active {
+                width: 80%;
+                visibility: visible;
+            }
+        }
+
+        & #btn-menu {
+            display: block;
+            background-color: transparent;
+            border: none;
+            color: var(--cor-principal);
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+
+        & .overlay {
+            display: block;
+            position: fixed;
+            visibility: hidden;
+            left: 0;
+            top: 0;
+            background-color: #000000c9;
+            height: 100%;
+            width: 100%;
+            z-index: 500;
+
+            &.active {
+                visibility: visible;
+            }
         }
     }
 
@@ -713,49 +784,66 @@ footer {
         & .txt-hero {
             width: 100%;
             text-align: justify;
+            font-size: 1.1rem;
 
             & h2 {
-                font-size: 2.5rem;
+                font-size: 2rem;
                 text-align: center;
 
                 & span {
-                    font-size: 3rem;
+                    font-size: 2.8rem;
                 }
             }
 
             & a {
                 width: 100%;
+                padding: .5em;
             }
         }
 
         & img {
-            width: 80%;
+            width: 15rem;
         }
     }
 
     /* sobre */
     #sobre {
-        height: auto;
-
         & .txt-sobre {
             width: 100%;
             text-align: justify;
 
+            & h2 {
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            & .info {
+                font-size: 1.5rem;
+            }
+
+            & h3 {
+                font-size: 1.5rem;
+            }
+
             & .container {
-                overflow-x: auto;
                 height: auto;
+
+                & i {
+                    font-size: 2rem;
+                }
+            }
+
+            & p {
+                font-size: 1.2rem;
             }
 
             & a {
                 width: 100%;
+                padding: .5rem;
             }
         }
 
         & img {
-            display: none;
-        }
-
-        &::after {
             display: none;
         }
     }
@@ -766,9 +854,22 @@ footer {
         display: none;
     }
 
+    #projetos {
+
+        & h2,
+        span {
+            font-size: 2rem;
+        }
+    }
+
+
     /* contato */
     #contato {
         height: auto;
+
+        & h2 {
+            font-size: 2rem;
+        }
 
         & .container-contato {
             flex-direction: column;
@@ -777,6 +878,17 @@ footer {
             & .left {
                 width: 100%;
                 height: auto;
+
+                & p {
+                    font-size: 1.2rem;
+                }
+
+                & .links {
+
+                    & a {
+                        font-size: 1rem;
+                    }
+                }
             }
 
             & .right {

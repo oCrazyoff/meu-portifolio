@@ -42,12 +42,15 @@
         <a href="index.html">
             <h1><span>&lt</span>WALYSSON<span>&#47&gt</span></h1>
         </a>
-        <nav>
+        <nav id="menu">
+            <button id="menu-fechar" onclick="fecharMenu()"><i class="bi bi-x-lg"></i></button>
             <a href="#"><i class="bi bi-house-fill"></i> INÍCIO</a>
             <a href="#sobre"><i class="bi bi-person-fill"></i> SOBRE MIM</a>
             <a href="#projetos"><i class="bi bi-lightbulb-fill"></i> PROJETOS</a>
             <a href="#contato"><i class="bi bi-envelope-fill"></i> CONTATO</a>
         </nav>
+        <button id="btn-menu" onclick="abrirMenu()"><i class="bi bi-list"></i></button>
+        <div class="overlay"></div>
     </header>
     <section id="hero">
         <div class="txt-hero efeito">
@@ -102,7 +105,7 @@
     </section>
     <img class="borda" src="img/wave-haikei-baixo.svg" alt="Borda de ondas">
     <section class="efeito" id="projetos">
-        <h2>Meus <span>Projetos</span></h2>
+        <h2>Meus <span>Projetos!</span></h2>
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -265,6 +268,7 @@
     <script src="js/carrosel.js"></script>
     <script src="js/efeito.js"></script>
     <script src="js/efeito_digitar.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 
 </html>
