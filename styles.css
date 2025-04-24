@@ -867,7 +867,6 @@ footer {
         }
     }
 
-
     /* contato */
     #contato {
         height: auto;
@@ -901,6 +900,11 @@ footer {
                 height: auto;
             }
         }
+    }
+
+    /* footer */
+    footer {
+        padding: 1rem;
     }
 
     /* obrigado */
