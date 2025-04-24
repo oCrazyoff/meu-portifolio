@@ -785,6 +785,7 @@ footer {
     #hero {
         height: auto;
         justify-content: center;
+        padding: 3rem 1rem;
         flex-direction: column-reverse;
 
         & .txt-hero {
