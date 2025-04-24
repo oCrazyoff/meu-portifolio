@@ -1,35 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obrigado pelo contato</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JP85XFHNL"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-0JP85XFHNL');
     </script>
+    <style>
+        .container-barra {
+            width: 100%;
+            background-color: var(--cinza-claro);
+            border-radius: 20px;
+            height: 12px;
+            overflow: hidden;
+        }
+
+        .barra-progresso {
+            width: 0;
+            height: 100%;
+            background-color: var(--cor-principal);
+            transition: width 3s ease;
+        }
+    </style>
 </head>
 
 <body>
     <section id="obrigado">
-        <div class="interface">
-            <div class="container">
-                <div class="txt-obrigado">
-                    <h1 class="titulo">OBRIGADO PELO <span>CONTATO!</span></h1>
-                    <p>
-                        Responderei assim que possível.
-                    </p>
-                    <a href="https://www.walysson.com.br/"><button>VOLTAR</button></a>
-                </div>
+        <img src="img/img_obrigado.png" alt="Dev estudando">
+        <div class="txt-obrigado">
+            <h1 class="titulo">OBRIGADO PELO <span>CONTATO!</span></h1>
+            <p>Responderei assim que possível.</p>
+            <div class="container-barra">
+                <div class="barra-progresso" id="barra"></div>
             </div>
+        </div>
+        </div>
+        <img id="canto" src="img/img_canto.png" alt="imagem de ondas">
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const barra = document.getElementById("barra");
+            barra.style.width = "100%";
+            setTimeout(() => {
+                window.location.href = "https://www.walysson.com.br";
+            }, 3000);
+        });
+    </script>
 </body>
 
 </html>
