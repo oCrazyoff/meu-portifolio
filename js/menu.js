@@ -17,5 +17,7 @@ overlay.addEventListener('click', () => {
 });
 
 links.forEach(link => {
-    link.addEventListener('click', fecharMenu());
+    link.addEventListener('click', () => {
+        fecharMenu();
+    });
 });
