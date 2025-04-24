@@ -15,6 +15,7 @@
     <meta property="og:url" content="https://www.walysson.com.br">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,8 +50,8 @@
         </nav>
     </header>
     <section id="hero">
-        <div class="txt-hero">
-            <h2>Ola, eu sou o <br> <span>Walysson!</span></h2>
+        <div class="txt-hero efeito">
+            <h2>Ola, eu sou o <br> <span id="digita">Walysson!</span></h2>
             <p>
                 Sou desenvolvedor web full-stack apaixonado por criar soluções completas, desde interfaces intuitivas e
                 responsivas até sistemas robustos no back-end. Com habilidades em HTML, CSS, JavaScript, PHP e MySQL,
@@ -69,25 +70,26 @@
                     class="bi bi-arrow-up-right-square"></i>
             </a>
         </div>
-        <img src="img/foto.jpg" alt="Foto do Walysson">
+        <img class="efeito" src="img/foto.jpg" alt="Foto do Walysson">
     </section>
+    <img class="borda" src="img/wave-haikei.svg" alt="Borda de ondas">
     <section id="sobre">
-        <div class="txt-sobre">
+        <div class="txt-sobre efeito">
             <h2>Sobre Mim!</h2>
-            <div class="info">
+            <div class="info efeito">
                 <p><span>Idade: </span> 20</p>
                 <p><span>Endereço: </span> Igarapava-SP</p>
                 <p><span>Email: </span> walyssonribeiro3@gmail.com</p>
             </div>
             <h3>Habilidades</h3>
             <div class="container">
-                <i class="fa-brands fa-php" style="color: #8892BF;"></i>
-                <i class="fa-brands fa-html5" style="color: #E34F26;"></i>
-                <i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>
-                <i class="fa-brands fa-js" style="color: #F7DF1E;"></i>
-                <i class="fa-solid fa-database" style="color: #4479A1;"></i>
-                <i class="fa-brands fa-git-alt" style="color: #F05032;"></i>
-                <i class="fa-brands fa-github" style="color: #181717;"></i>
+                <i class="fa-brands fa-php efeito" style="color: #8892BF;"></i>
+                <i class="fa-brands fa-html5 efeito" style="color: #E34F26;"></i>
+                <i class="fa-brands fa-css3-alt efeito" style="color: #1572B6;"></i>
+                <i class="fa-brands fa-js efeito" style="color: #F7DF1E;"></i>
+                <i class="fa-solid fa-database efeito" style="color: #4479A1;"></i>
+                <i class="fa-brands fa-git-alt efeito" style="color: #F05032;"></i>
+                <i class="fa-brands fa-github efeito" style="color: #181717;"></i>
             </div>
             <p>
                 Olá! Meu nome é Walysson e sou um desenvolvedor web full-stack apaixonado por tecnologia. Atualmente,
@@ -96,9 +98,10 @@
             </p>
             <a href="#contato"><span>Contato</span> <i class="bi bi-telephone"></i></a>
         </div>
-        <img src="img/foto-sobre.png" alt="Foto de Walysson">
+        <img class="efeito" src="img/foto-sobre.png" alt="Foto de Walysson">
     </section>
-    <section id="projetos">
+    <img class="borda" src="img/wave-haikei-baixo.svg" alt="Borda de ondas">
+    <section class="efeito" id="projetos">
         <h2>Meus <span>Projetos</span></h2>
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -176,9 +179,9 @@
                     <div class="txt-projeto">
                         <h4>Planet Clicker</h4>
                         <p>
-                            Meu projeto Planet Clicker é um jogo incremental desenvolvido em JavaScript. Nele, o jogador
-                            clica para evoluir planetas, desbloquear melhorias e aumentar seus ganhos. Apesar de
-                            simples, o jogo possui diversas mecânicas e foi essencial para meu aprofundamento na
+                            O Planet Clicker é um jogo clicker feito em JavaScript. Nele, o jogador
+                            clica para ganhar planetas, desbloquear melhorias e aumentar seus ganhos. O jogo possui
+                            diversas mecânicas e foi essencial para meu aprofundamento na
                             linguagem e na lógica de programação.
                         </p>
                         <div class="container-btn">
@@ -189,7 +192,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/prj_ecoflow.png" alt="EcoFlow home page">
+                    <img src="img/prj_portfolio.jpeg" alt="EcoFlow home page">
                     <div class="txt-projeto">
                         <h4>Meu Portifólio</h4>
                         <p>
@@ -213,9 +216,10 @@
         <!-- Paginação -->
         <div class="swiper-pagination"></div>
     </section>
+    <img class="borda" src="img/wave-haikei.svg" alt="Borda de ondas">
     <section id="contato">
-        <h2>Fale <span>Comigo!</span></h2>
-        <div class="container-contato">
+        <h2 class="efeito">Fale <span>Comigo!</span></h2>
+        <div class="container-contato efeito">
             <div class="left">
                 <h5>Meios de contato</h5>
                 <p>Responderei assim que possivel</p>
@@ -258,39 +262,9 @@
     <footer>
         <p>Feito por Walysson © 2025</p>
     </footer>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-            },
-        });
-    </script>
-
+    <script src="js/carrosel.js"></script>
+    <script src="js/efeito.js"></script>
+    <script src="js/efeito_digitar.js"></script>
 </body>
 
 </html>
