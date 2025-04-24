@@ -702,8 +702,10 @@ footer {
 
     /* header */
     header {
+        height: 3.5rem;
+
         & a {
-            font-size: 1rem;
+            font-size: .9rem;
         }
 
         & nav {
@@ -735,6 +737,11 @@ footer {
                 font-size: 1.5rem;
                 width: 100%;
                 justify-content: flex-start;
+
+                &::after,
+                &::before {
+                    display: none;
+                }
 
                 &:hover {
                     background-color: var(--preto-claro);
@@ -839,7 +846,7 @@ footer {
 
             & a {
                 width: 100%;
-                padding: .5rem;
+                padding: .4rem;
             }
         }
 
