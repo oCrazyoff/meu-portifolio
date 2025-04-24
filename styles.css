@@ -27,7 +27,7 @@ body {
 header,
 section,
 footer {
-    padding: 1rem 8rem;
+    padding: 1rem 7rem;
     scroll-margin-top: 5rem;
 }
 
@@ -272,6 +272,7 @@ header {
 #sobre {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--cinza-claro);
     position: relative;
 
@@ -365,9 +366,7 @@ header {
     }
 
     & img {
-        height: 100%;
-        right: 0;
-        position: absolute;
+        height: 25rem;
     }
 }
 
