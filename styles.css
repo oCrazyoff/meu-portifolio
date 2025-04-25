@@ -532,7 +532,7 @@ header {
             justify-content: space-between;
             height: 100%;
             width: 50%;
-            padding: 1rem;
+            padding: 2rem 1rem;
             background-color: var(--preto-claro);
 
             & p {
@@ -574,7 +574,7 @@ header {
         & .right {
             height: 100%;
             width: 50%;
-            padding: 1rem;
+            padding: 2rem 1rem;
             background-color: var(--preto);
 
             & form {
@@ -818,6 +818,7 @@ footer {
         & .txt-sobre {
             width: 100%;
             text-align: justify;
+            padding: 2rem 1rem;
 
             & h2 {
                 text-align: center;
