@@ -893,6 +893,20 @@ footer {
         span {
             font-size: 2rem;
         }
+
+        & .swiper {
+            & .swiper-wrapper {
+                & .swiper-slide {
+                    & .txt-projeto {
+                        & .tags {
+                            & p {
+                                font-size: .6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     /* contato */
