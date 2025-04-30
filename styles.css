@@ -38,7 +38,7 @@ footer {
 
     & p {
         padding: .5rem;
-        color: #fff;
+        color: #fff !important;
         border-radius: 1.5rem;
         font-weight: bold;
         cursor: default;
@@ -70,6 +70,11 @@ footer {
 
     & #github {
         background-color: #1f1c1c;
+    }
+
+    & #tailwind {
+        background-color: #38BDF8;
+        color: var(--preto) !important;
     }
 }
 
