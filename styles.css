@@ -13,24 +13,6 @@
     }
 }
 
-/* SCROLLBAR */
-::-webkit-scrollbar {
-    width: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-    background: rgb(20, 20, 20);
-
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--cor-principal);
-    min-height: .5rem;
-    border-radius: var(--borda-redonda);
-}
-
-
-
 html,
 body {
     scroll-behavior: smooth;
@@ -327,7 +309,7 @@ header {
                 display: flex;
                 width: fit-content;
                 gap: 1rem;
-                animation: scroll 8s linear infinite;
+                animation: scroll 10s linear infinite forwards;
 
                 & img {
                     width: 3rem;
