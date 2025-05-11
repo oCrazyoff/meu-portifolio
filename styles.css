@@ -24,10 +24,20 @@ body {
     width: 100%;
 }
 
+.interface {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 1% 5%;
+    width: 100%;
+    height: 100%;
+}
+
 header,
 section,
 footer {
-    padding: 1rem 7rem;
     scroll-margin-top: 5rem;
 }
 
@@ -95,13 +105,14 @@ header {
     width: 100%;
     height: 5rem;
     color: var(--branco);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--preto);
     border-bottom: 5px solid var(--cor-principal);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     z-index: 500;
+
+    & .interface {
+        justify-content: space-between;
+    }
 
     & a {
         text-decoration: none;
@@ -175,10 +186,11 @@ header {
 /* hero */
 #hero {
     height: calc(100dvh - 5em);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--branco);
+
+    & .interface {
+        justify-content: space-between;
+    }
 
     & .txt-hero {
         display: flex;
@@ -275,11 +287,12 @@ header {
 
 /* sobre */
 #sobre {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: var(--cinza-claro);
     position: relative;
+
+    & .interface {
+        justify-content: space-between;
+    }
 
     & .txt-sobre {
         display: flex;
@@ -398,6 +411,10 @@ header {
     padding-bottom: 2rem;
     background-color: var(--branco);
 
+    & .interface {
+        flex-direction: column;
+    }
+
     & h2 {
         font-size: 3rem;
         margin: 2rem 0;
@@ -410,6 +427,7 @@ header {
     }
 
     & .swiper {
+        width: 100%;
         padding: 1rem;
 
         & .swiper-wrapper {
@@ -525,6 +543,10 @@ header {
 /* contato */
 #contato {
     background-color: var(--cinza-claro);
+
+    & .interface {
+        flex-direction: column;
+    }
 
     & h2 {
         font-size: 2.5rem;
@@ -669,6 +691,7 @@ header {
 
 /* footer */
 footer {
+    padding: 1rem;
     background-color: #000;
     color: #fff;
     text-align-last: center;
@@ -710,12 +733,6 @@ footer {
 @media screen and (max-width: 800px) {
 
     /* geral */
-    header,
-    section,
-    footer {
-        padding: .5rem 1rem;
-    }
-
     .tags {
         justify-content: center;
 
@@ -808,9 +825,12 @@ footer {
     /* hero */
     #hero {
         height: auto;
-        justify-content: center;
-        padding: 3rem 1rem;
-        flex-direction: column-reverse;
+        padding: 2rem 0;
+
+        & .interface {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
 
         & .txt-hero {
             width: 100%;
