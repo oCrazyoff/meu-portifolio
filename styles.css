@@ -289,6 +289,7 @@ header {
 #sobre {
     background-color: var(--cinza-claro);
     position: relative;
+    scroll-margin-top: 10rem;
 
     & .interface {
         justify-content: space-between;
@@ -859,6 +860,8 @@ footer {
 
     /* sobre */
     #sobre {
+        scroll-margin-top: 5rem;
+
         & .txt-sobre {
             width: 100%;
             text-align: justify;
