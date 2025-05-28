@@ -19,33 +19,33 @@
         .container-barra {
             width: 100%;
             background-color: #d9d9d9;
-            border-radius: 20px;
-            height: 12px;
+            border-radius: 2rem;
+            height: 1rem;
             overflow: hidden;
-        }
 
-        .barra-progresso {
-            width: 0;
-            height: 100%;
-            background-color: #FFD60A;
-            transition: width 3s ease;
+            & .barra-progresso {
+                width: 0;
+                height: 100%;
+                background-color: #FFD60A;
+                transition: width 3s ease;
+            }
         }
     </style>
 </head>
 
 <body>
     <section id="obrigado">
-        <img src="img/img_obrigado.png" alt="Dev estudando">
-        <div class="txt-obrigado">
-            <h1 class="titulo">OBRIGADO PELO <span>CONTATO!</span></h1>
-            <p>Responderei assim que possível.</p>
-            <div class="container-barra">
-                <div class="barra-progresso" id="barra"></div>
+        <div class="interface">
+            <div class="txt-obrigado">
+                <h1 class="titulo">OBRIGADO PELO <span>CONTATO!</span></h1>
+                <p>Responderei assim que possível.</p>
+                <div class="container-barra">
+                    <div class="barra-progresso" id="barra"></div>
+                </div>
             </div>
+            <img src="img/img-obrigado.svg" alt="Dev estudando">
         </div>
-        <img id="canto" src="img/img_canto.png" alt="imagem de ondas">
     </section>
-
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
