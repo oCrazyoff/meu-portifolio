@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     font-family: "Roboto", sans-serif;
-    /* outline: 1px solid red; */
 }
 
 html {
@@ -489,7 +488,7 @@ header {
                 border-radius: .5rem;
                 overflow: hidden;
                 background-color: var(--branco);
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
                 transition: .3s ease all;
 
                 & .container-img {
@@ -926,6 +925,8 @@ footer {
                 }
 
                 & a {
+                    width: 100%;
+                    text-align: center;
                     font-size: 2rem;
                     color: var(--branco);
                 }
@@ -1070,9 +1071,11 @@ footer {
                 overflow: auto;
                 width: 100%;
                 padding: 1rem 0;
+                gap: 1rem;
 
                 & article {
-                    min-width: 20rem;
+                    justify-content: space-between;
+                    min-width: 18rem;
 
                     & .container-img {
                         .container-btn {
@@ -1081,8 +1084,11 @@ footer {
                     }
 
                     & .txt-projeto {
+
                         & #btn-mobile {
                             display: flex;
+                            align-items: center;
+                            justify-content: center;
                             padding: .5rem;
                             gap: 1rem;
 
