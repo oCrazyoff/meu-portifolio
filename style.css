@@ -91,6 +91,8 @@ header {
             justify-content: center;
 
             & a {
+                position: relative;
+                overflow: hidden;
                 text-decoration: none;
                 color: var(--preto);
                 font-size: 1.2rem;
@@ -98,6 +100,22 @@ header {
 
                 &:hover {
                     color: var(--azul);
+                }
+
+                &:hover::after {
+                    width: 80%;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0rem;
+                    width: 0;
+                    height: .1rem;
+                    background: var(--azul);
+                    transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
+                    transform: translateX(-50%);
                 }
             }
         }
