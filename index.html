@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Walysson - Projetos de desenvolvimento web e full-stack.">
+    <meta name="keywords" content="Walysson, portfólio, web development, design, projetos, frontend, programador">
+    <meta name="author" content="Walysson">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Portfólio do Walysson">
+    <meta property="og:description" content="Walysson - Projetos de desenvolvimento web e full-stack.">
+    <meta property="og:image" content="https://www.walysson.com.br/img/foto.jpg">
+    <meta property="og:url" content="https://www.walysson.com.br">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JP85XFHNL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0JP85XFHNL');
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Walysson</title>
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <a href="https://www.walysson.com.br">
+                <h1>Walysson</h1>
+            </a>
+            <nav>
+                <div id="btn-fechar-menu" onclick="toggleMenu()"><i class="bi bi-x-lg"></i></div>
+                <a href="#" onclick="toggleMenu()"><i class="bi bi-house"></i> Ínicio</a>
+                <a href="#sobre" onclick="toggleMenu()"><i class="bi bi-person"></i> Sobre</a>
+                <a href="#projetos" onclick="toggleMenu()"><i class="bi bi-folder"></i> Projetos</a>
+                <a href="#contato" onclick="toggleMenu()"><i class="bi bi-envelope"></i> Contato</a>
+            </nav>
+            <button id="btn-menu" onclick="toggleMenu()"><i class="bi bi-list"></i></button>
+            <div id="overlay" onclick="toggleMenu()"></div>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="interface">
+            <div class="txt-hero">
+                <div class="container-icons">
+                    <i class="bi bi-code"></i>
+                    <i class="bi bi-database" id="verde"></i>
+                    <i class="bi bi-globe2" id="roxo"></i>
+                </div>
+                <h2 id="digitar">Walysson</h2>
+                <h3>Desenvolvedor Full Stack</h3>
+                <p>Transformando ideias em soluções web inovadoras</p>
+                <div class="container-tags">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>Java Script</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Tailwind</span>
+                </div>
+                <div class="container-btn">
+                    <a href="#projetos"><i class="bi bi-folder"></i> Ver Projetos</a>
+                    <a href="doc/Curriculo.pdf" download="Curriculo.pdf" id="curriculo">
+                        <i class="bi bi-file-earmark-text"></i> Curriculo
+                    </a>
+                </div>
+            </div>
+            <div class="img-hero">
+                <img src="img/foto.jpg" alt="Imagem do Walysson">
+                <span></span>
+                <span id="bola-menor"></span>
+            </div>
+            <a href="#sobre" id="btn-baixo"><i class="bi bi-arrow-down-short"></i></a>
+        </div>
+    </section>
+    <section id="sobre">
+        <div class="interface">
+            <div class="titulo">
+                <h2>Sobre Mim</h2>
+            </div>
+            <div class="container-txt-card">
+                <div class="txt-sobre">
+                    <h3><i class="bi bi-heart"></i> Paixão por Programação</h3>
+                    <p>
+                        Sou um desenvolvedor full stack apaixonado por criar soluções web que fazem a diferença. Com
+                        mais de
+                        3 anos de experiência, dedico-me a transformar ideias complexas em aplicações elegantes e
+                        funcionais.
+                    </p>
+                    <p>
+                        Minha abordagem combina criatividade com código limpo, sempre focando na experiência do usuário
+                        e na
+                        performance. Acredito que a tecnologia deve ser acessível e intuitiva.
+                    </p>
+                    <h4><i class="bi bi-lightning-charge"></i> Sempre aprendendo, sempre evoluindo</h4>
+                </div>
+                <div class="card-sobre">
+                    <img src="img/foto-sobre.jpg" alt="Imagem de Walysson">
+                    <h3>Walysson</h3>
+                    <p>Full Stack Developer</p>
+                    <div class="container-info">
+                        <p>Experiência: <span>3+ anos</span></p>
+                        <p>Projetos: <span>20+</span></p>
+                        <p>Especialidade: <span>Web</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="tecnologias">
+                <h3>Tecnologias que Domino</h3>
+                <div class="container-cards">
+                    <article>
+                        <div class="topo">
+                            <img src="img/svg/php.svg" alt="PHP Logo">
+                            <h4>PHP</h4>
+                        </div>
+                        <p>Desenvolvimento backend robusto e escalável</p>
+                    </article>
+                    <article>
+                        <div class="topo">
+                            <img src="img/svg/mysql.svg" alt="MySQL Logo">
+                            <h4>MySQL</h4>
+                        </div>
+                        <p>Gerenciamento de banco de dados eficiente</p>
+                    </article>
+                    <article>
+                        <div class="topo">
+                            <img src="img/svg/js.svg" alt="Java Script Logo">
+                            <h4>Java Script</h4>
+                        </div>
+                        <p>Interatividade e dinamismo no frontend</p>
+                    </article>
+                    <article>
+                        <div class="topo">
+                            <img src="img/svg/html.svg" alt="HTML Logo">
+                            <h4>HTML</h4>
+                        </div>
+                        <p>Estruturas web semânticas e acessíveis</p>
+                    </article>
+                    <article>
+                        <div class="topo">
+                            <img src="img/svg/css.svg" alt="CSS Logo">
+                            <h4>CSS</h4>
+                        </div>
+                        <p>Design responsivo e interfaces elegantes</p>
+                    </article>
+                    <article>
+                        <div class="topo">
+                            <img src="img/svg/tailwind.svg" alt="Tailwind Logo">
+                            <h4>Tailwind</h4>
+                        </div>
+                        <p>Estilização moderna e eficiente</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projetos">
+        <div class="interface">
+            <div class="titulo">
+                <h2>Meus Projetos</h2>
+            </div>
+            <p id="descricao">
+                Alguns dos projetos que desenvolvi, demonstrando minhas habilidades em desenvolvimento full stack e
+                design de interfaces.
+            </p>
+            <div class="container-cards">
+                <article>
+                    <div class="container-img">
+                        <img src="img/projetos/ecoflow.jpeg" alt="Imagem do projeto EcoFlow">
+                        <div class="container-btn">
+                            <a href="https://ecoflow.kesug.com/" target="_blank"><i
+                                    class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                            <a href="https://github.com/oCrazyoff/ecoflow" target="_blank"><i class="bi bi-github"></i>
+                                GitHub</a>
+                        </div>
+                    </div>
+                    <div class="txt-projeto">
+                        <h3>EcoFlow</h3>
+                        <p>Sistema completo para gestão financeira com dashboard interativo</p>
+                        <div class="tags">
+                            <p>PHP</p>
+                            <p>MySQL</p>
+                            <p>Java Script</p>
+                            <p>CSS</p>
+                            <p>HTML</p>
+                        </div>
+                        <div id="btn-mobile">
+                            <a href="https://ecoflow.kesug.com/" target="_blank" id="deploy"><i
+                                    class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                            <a href="https://github.com/oCrazyoff/ecoflow" target="_blank"><i class="bi bi-github"></i>
+                                GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="container-img">
+                        <img src="img/projetos/rodrigo.png" alt="Imagem do projeto Rodrigo">
+                        <div class="container-btn">
+                            <a href="https://ocrazyoff.github.io/modelo-portifolio/" target="_blank"><i
+                                    class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                            <a href="https://github.com/oCrazyoff/modelo-portifolio" target="_blank"><i
+                                    class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="txt-projeto">
+                        <h3>Portfólio Rodrigo</h3>
+                        <p>Portfólio de exemplo para estudo</p>
+                        <div class="tags">
+                            <p>Tailwind</p>
+                            <p>Java Script</p>
+                            <p>CSS</p>
+                            <p>HTML</p>
+                        </div>
+                        <div id="btn-mobile">
+                            <a href="https://ocrazyoff.github.io/modelo-portifolio/" target="_blank" id="deploy"><i
+                                    class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                            <a href="https://github.com/oCrazyoff/modelo-portifolio" target="_blank"><i
+                                    class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="container-img">
+                        <img src="img/projetos/walyflix.png" alt="Imagem do projeto WalyFlix">
+                        <div class="container-btn">
+                            <a href="https://walyflix.kesug.com/" target="_blank"><i
+                                    class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                            <a href="https://github.com/walyssonDev/walyflix" target="_blank"><i
+                                    class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="txt-projeto">
+                        <h3>WalyFlix</h3>
+                        <p>Clone adaptado da Netflix funcional</p>
+                        <div class="tags">
+                            <p>PHP</p>
+                            <p>MySQL</p>
+                            <p>Java Script</p>
+                            <p>CSS</p>
+                            <p>HTML</p>
+                        </div>
+                        <div id="btn-mobile">
+                            <a href="https://walyflix.kesug.com/" target="_blank" id="deploy"><i
+                                    class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                            <a href="https://github.com/walyssonDev/walyflix" target="_blank"><i
+                                    class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="container-img">
+                        <img src="img/projetos/clicker.png" alt="Imagem do projeto Planet Clicker">
+                        <div class="container-btn">
+                            <a href="https://ocrazyoff.github.io/planet-clicker/" target="_blank"><i
+                                    class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                            <a href="https://github.com/oCrazyoff/planet-clicker" target="_blank"><i
+                                    class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="txt-projeto">
+                        <h3>Planet Clicker</h3>
+                        <p>Jogo clicker incremental sobre planetas</p>
+                        <div class="tags">
+                            <p>Java Script</p>
+                            <p>CSS</p>
+                            <p>HTML</p>
+                        </div>
+                        <div id="btn-mobile">
+                            <a href="https://ocrazyoff.github.io/planet-clicker/" target="_blank" id="deploy"><i
+                                    class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                            <a href="https://github.com/oCrazyoff/planet-clicker" target="_blank"><i
+                                    class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="container-img">
+                        <img src="img/projetos/agencia.jpeg" alt="Imagem do projeto Agência">
+                        <div class="container-btn">
+                            <a href="https://ocrazyoff.github.io/modelo-agencia/" target="_blank"><i
+                                    class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                            <a href="https://github.com/oCrazyoff/modelo-agencia" target="_blank"><i
+                                    class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="txt-projeto">
+                        <h3>Agência de Viagens</h3>
+                        <p>Landing Page modelo para uma Agência de Viagens</p>
+                        <div class="tags">
+                            <p>Java Script</p>
+                            <p>CSS</p>
+                            <p>HTML</p>
+                        </div>
+                        <div id="btn-mobile">
+                            <a href="https://ocrazyoff.github.io/modelo-agencia/" target="_blank" id="deploy"><i
+                                    class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                            <a href="https://github.com/oCrazyoff/modelo-agencia" target="_blank"><i
+                                    class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="container-img">
+                        <img src="img/projetos/portfolio.png" alt="Imagem do projeto Meu Portfólio">
+                        <div class="container-btn">
+                            <a href="https://github.com/oCrazyoff/meu-portifolio" target="_blank"><i
+                                    class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="txt-projeto">
+                        <h3>Meu Portfólio</h3>
+                        <p>Meu portfólio foi onde apliquei minhas habilidades de front-end</p>
+                        <div class="tags">
+                            <p>Java Script</p>
+                            <p>CSS</p>
+                            <p>HTML</p>
+                        </div>
+                        <div id="btn-mobile">
+                            <a href="https://github.com/oCrazyoff/meu-portifolio" target="_blank"><i
+                                    class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <div class="interface">
+            <div class="titulo">
+                <h2>Entre em Contato</h2>
+            </div>
+            <p id="descricao">
+                Está pronto para transformar sua ideia em realidade? Vamos conversar sobre seu próximo projeto!
+            </p>
+            <div class="container-form">
+                <form action="https://api.staticforms.xyz/submit" method="POST">
+                    <h2>Envie uma Mensagem</h2>
+                    <div class="input-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" placeholder="Conte-me sobre seu projeto"
+                            required></textarea>
+                    </div>
+                    <input type="hidden" name="accessKey" value="2cfdb8a0-1027-4846-bc61-71495b4e425a">
+                    <input type="hidden" name="redirectTo"
+                        value="https://ocrazyoff.github.io/meu-portifolio/obrigado.html">
+                    <button><i class="bi bi-send"></i> Enviar Mensagem</button>
+                </form>
+                <div class="container-info">
+                    <h2>Informações de Contato</h2>
+                    <div class="info-row">
+                        <i class="bi bi-envelope"></i>
+                        <div class="txt-info">
+                            <p>E-mail</p>
+                            <p id="info">walyssonribeiro3@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-row" id="tel">
+                        <i class="bi bi-telephone"></i>
+                        <div class="txt-info">
+                            <p>Telefone</p>
+                            <p id="info">+55 (16) 98115-1983</p>
+                        </div>
+                    </div>
+                    <div class="info-row" id="loc">
+                        <i class="bi bi-geo-alt"></i>
+                        <div class="txt-info">
+                            <p>Localização</p>
+                            <p id="info">Igarapava, SP - Brasil</p>
+                        </div>
+                    </div>
+                    <h2>Redes Sociais</h2>
+                    <div class="container-redes">
+                        <a href="https://www.linkedin.com/in/walysson-ribeiro-a92ba3260/" target="_blank" id="linkedin">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/oCrazyoff" target="_blank">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                    <div class="card-contato">
+                        <h2>Pronto para começar?</h2>
+                        <p>
+                            Vamos transformar sua ideia em uma solução web incrível. Entre em contato e vamos conversar
+                            sobre seu projeto!
+                        </p>
+                        <span><i class="bi bi-clock"></i> Resposta garantida em até 24h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="interface">
+            <div class="topo">
+                <div class="txt-topo">
+                    <h2>Walysson</h2>
+                    <p>Desenvolvedor Full Stack apaixonado por criar soluções web inovadoras</p>
+                </div>
+                <div class="navegacao">
+                    <h2>Navegação</h2>
+                    <nav>
+                        <a href="#">Início</a>
+                        <a href="#sobre">Sobre</a>
+                        <a href="#projetos">Projetos</a>
+                        <a href="#contato">Contato</a>
+                    </nav>
+                </div>
+                <div class="contato">
+                    <h2>Contato</h2>
+                    <p>walyssonribeiro3@gmail.com</p>
+                    <p>+55 (16) 98115-1983</p>
+                    <p>Igarapava, SP</p>
+                </div>
+            </div>
+            <div class="meio">
+                <p>
+                    Feito com <i class="bi bi-heart"></i> © 2025 Walysson.
+                </p>
+                <a href="#">Voltar ao topo <i class="bi bi-arrow-up-short"></i></a>
+            </div>
+            <div class="baixo">
+                <p>Desenvolvedor Full Stack | PHP • MySQL • JavaScript • HTML • CSS • Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

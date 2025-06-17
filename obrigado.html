@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="obrigado.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JP85XFHNL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0JP85XFHNL');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Obrigado</title>
+</head>
+
+<body>
+    <div class="interface">
+        <i id="check" class="bi bi-check-lg"></i>
+        <h1>Obrigado!</h1>
+        <p>
+            Sua mensagem foi enviada com sucesso! Recebi seu contato e retornarei em breve para conversarmos sobre seu
+            projeto!
+        </p>
+        <div class="container-card">
+            <h2>O que acontece agora?</h2>
+            <ul>
+                <li><i class="bi bi-1-circle"></i> Analisarei sua mensagem e necessidades do projeto</li>
+                <li><i class="bi bi-2-circle"></i> Entrarei em contato em até 24 horas</li>
+                <li><i class="bi bi-3-circle"></i> Agendaremos uma conversa para discutir os detalhes</li>
+            </ul>
+        </div>
+        <div class="container-btn">
+            <a href="https://www.walysson.com.br"><i class="bi bi-house"></i> Voltar</a>
+            <a href="https://www.linkedin.com/in/walysson-ribeiro-a92ba3260/" id="linkedin" target="_blank">Linkedin <i
+                    class="bi bi-arrow-right"></i></a>
+        </div>
+        <p>Você será redirecionado automaticamente em <span>10</span> segundos...</p>
+    </div>
+    <script>
+        let seconds = 10;
+        const span = document.querySelector('span');
+        const interval = setInterval(() => {
+            seconds--;
+            span.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = "https://www.walysson.com.br";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
