@@ -1088,12 +1088,12 @@ footer {
                 display: flex;
                 overflow: auto;
                 width: 100%;
-                padding: 1rem 0;
+                padding: 1rem .5rem;
                 gap: 1rem;
 
                 & article {
                     justify-content: space-between;
-                    min-width: 18rem;
+                    min-width: 19rem;
 
                     & .container-img {
                         .container-btn {
