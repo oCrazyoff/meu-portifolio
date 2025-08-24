@@ -767,6 +767,10 @@ header {
                             background-color: var(--azul);
                         }
 
+                        &#instagram {
+                            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+                        }
+
                         &:hover {
                             transform: scale(1.1);
                         }

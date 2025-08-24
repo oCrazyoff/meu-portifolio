@@ -1,3 +1,6 @@
+// pegando o ano atual
+document.getElementById("ano").textContent = new Date().getFullYear();
+
 // animação do header
 const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
