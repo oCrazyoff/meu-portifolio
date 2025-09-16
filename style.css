@@ -1167,3 +1167,24 @@ footer {
         }
     }
 }
+
+/* para telas muito pequenas */
+@media screen and (max-width: 320px) {
+    #sobre {
+        & .interface {
+            & .tecnologias {
+                & .container-cards {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    }
+
+    footer {
+        & .interface {
+            & .topo {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
