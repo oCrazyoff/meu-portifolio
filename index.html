@@ -350,7 +350,7 @@
                 Está pronto para transformar sua ideia em realidade? Vamos conversar sobre seu próximo projeto!
             </p>
             <div class="container-form">
-                <form action="https://api.staticforms.xyz/submit" method="POST">
+                <form id="form-contato" action="https://api.staticforms.xyz/submit" method="POST">
                     <h2>Envie uma Mensagem</h2>
                     <div class="input-group">
                         <label for="nome">Nome Completo</label>
@@ -366,9 +366,14 @@
                             required></textarea>
                     </div>
                     <input type="hidden" name="accessKey" value="2cfdb8a0-1027-4846-bc61-71495b4e425a">
-                    <input type="hidden" name="redirectTo"
-                        value="https://ocrazyoff.github.io/meu-portifolio/obrigado.html">
-                    <button><i class="bi bi-send"></i> Enviar Mensagem</button>
+                    <button id="btn-enviar">
+                        <span class="txt"><i class="bi bi-send"></i> Enviar Mensagem</span>
+                        <div class="loading">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
                 </form>
                 <div class="container-info">
                     <h2>Informações de Contato</h2>
