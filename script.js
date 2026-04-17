@@ -40,39 +40,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // animação botão formulário
 document.getElementById('form-contato').addEventListener('submit', function (event) {
-    // 1. Impede que a página recarregue imediatamente
+    // 1. Impede o recarregamento da página
     event.preventDefault();
 
     const form = event.target;
     const btn = document.getElementById('btn-enviar');
 
-    // 2. Inicia a animação de loading no botão
+    // 2. Inicia a animação
     btn.classList.add('is-loading');
 
-    // 3. Captura todos os dados preenchidos
+    // 3. Captura os dados e os converte para JSON (exigência do StaticForms para AJAX)
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData); // Transforma em um objeto {nome: "...", email: "..."}
 
-    // 4. Envia os dados para o action do form (StaticForms) silenciosamente
+    // 4. Envia os dados
     fetch(form.action, {
         method: 'POST',
-        body: formData,
         headers: {
-            'Accept': 'application/json' // Pede a resposta no formato JSON
-        }
+            'Content-Type': 'application/json', // Avisa a API que estamos enviando JSON
+            'Accept': 'application/json'        // Pede a resposta em JSON
+        },
+        body: JSON.stringify(data)              // Transforma o objeto em texto JSON
     })
         .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                // 5. Redireciona para a tela de obrigado após o sucesso
+        .then(result => {
+            if (result.success) {
+                // 5. Sucesso! Redireciona para a página de obrigado
                 window.location.href = '/obrigado';
             } else {
-                // Remove o loading e avisa se a API recusar o envio
-                alert('Ocorreu um erro ao enviar a mensagem. Tente novamente.');
+                // Se a API retornar erro (ex: accessKey inválida)
+                console.error('Erro da API:', result);
+                alert('Ocorreu um erro: ' + (result.message || 'Tente novamente.'));
                 btn.classList.remove('is-loading');
             }
         })
         .catch(error => {
-            // Remove o loading e avisa se houver queda de internet
+            // Erro de rede/internet
             console.error('Erro de conexão:', error);
             alert('Verifique sua conexão e tente novamente.');
             btn.classList.remove('is-loading');

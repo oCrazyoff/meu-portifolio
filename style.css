@@ -675,7 +675,7 @@ header {
           display: flex;
           justify-content: center;
           align-items: center;
-          min-height: 2rem;
+          height: 3rem;
           padding: 1rem;
           font-size: 1.1rem;
           border: none;
