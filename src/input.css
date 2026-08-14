@@ -13,16 +13,29 @@
 }
 
 @theme {
-    
+
     --font-space: "Space Grotesk", sans-serif;
     --font-jetbrains: "JetBrains Mono", monospace;
 
     --color-borda: #232323;
+    --color-cinza: #959595;
     --color-principal: #495DD4;
 }
 
 @layer components {
     .interface {
         @apply mx-auto max-w-[1280px] w-full px-3 lg:px-5 py-2;
+    }
+
+    .item-hero {
+        @apply flex flex-col;
+
+        & h3, p {
+            @apply whitespace-nowrap
+        }
+
+        & p {
+            @apply flex items-center text-xs text-cinza;
+        }
     }
 }
