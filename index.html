@@ -14,11 +14,13 @@
 
 <header class="h-15 p-2 border-b border-borda">
     <div class="interface flex items-center justify-between h-full gap-5">
+
         <div class="flex items-center justify-center gap-5">
             <img class="h-8 w-8 object-cover p-0.5 border border-borda" src="/img/eu.png"
                  alt="Uma foto do walysson">
             <p class="text-xs font-bold">W.RIBEIRO/FULL STACK</p>
         </div>
+
         <nav class="flex items-center justify-center gap-5 font-jetbrains font-light text-xs text-white/50">
             <a class="hover:text-principal" href="#">[ INICIO ]</a>
             <a class="hover:text-principal" href="#">[ PROJETOS ]</a>
@@ -26,6 +28,7 @@
             <a class="hover:text-principal" href="#">[ STACK ]</a>
             <a class="hover:text-principal" href="#">[ CONTATO ]</a>
         </nav>
+
     </div>
 </header>
 
@@ -33,7 +36,7 @@
     <div class="interface flex items-center justify-between gap-5">
 
         <div class="flex flex-col gap-10">
-            <h2 class="text-8xl font-bold">
+            <h2 class="text-8xl font-bold tracking-tight leading-20">
                 CONSTRUO <br>
                 <span class="text-principal">PRODUTOS</span> <br>
                 DIGITAIS REAIS
@@ -45,26 +48,52 @@
             </p>
         </div>
 
-        <div class="flex flex-col gap-5 border-l border-borda pl-10">
-            <div class="item-hero">
-                <h3>LOCALIZAÇÃO</h3>
-                <p>UBERABA, MG - BRASIL</p>
+        <div class="flex flex-col gap-10">
+
+            <div class="h-70 w-70 rounded-full border border-borda p-2 overflow-hidden">
+                <img class="rounded-full w-full h-full object-cover object-top hover:scale-110"
+                     src="/img/eu.png"
+                     alt="Imagem do walysson">
             </div>
 
-            <div class="item-hero">
-                <h3>EXPERIÊNCIA</h3>
-                <p>+3 ANOS ESTUDANDO E CRIANDO SISTEMAS</p>
-            </div>
+            <div class="flex flex-col gap-5 border-l border-borda pl-10">
+                <div class="item-hero">
+                    <h3>LOCALIZAÇÃO</h3>
+                    <p>UBERABA, MG - BRASIL</p>
+                </div>
 
-            <div class="item-hero">
-                <h3>STATUS</h3>
-                <p><i class="bi bi-dot text-green-500 scale-300 mr-2 animate-pulse"></i> DISPONIVEL PARA NOVOS PROJETOS
-                </p>
+                <div class="item-hero">
+                    <h3>EXPERIÊNCIA</h3>
+                    <p>+3 ANOS ESTUDANDO E CRIANDO SISTEMAS</p>
+                </div>
+
+                <div class="item-hero">
+                    <h3>STATUS</h3>
+                    <p><i class="bi bi-dot text-green-500 scale-300 mr-2 animate-pulse"></i> DISPONIVEL PARA NOVOS
+                        PROJETOS
+                    </p>
+                </div>
             </div>
         </div>
 
     </div>
 </section>
 
+<section>
+    <div class="interface">
+
+        <h2 class="flex items-center justify-between pb-3 mb-5 border-b border-borda text-2xl font-semibold italic">
+            TRABALHOS SELECIONADOS
+            <span class="text-xs text-cinza" id="qtd-itens"></span>
+        </h2>
+
+        <div class="grid grid-cols-3 gap-5" id="projetos-container">
+            <!--aqui vãos os projetos-->
+        </div>
+
+    </div>
+</section>
+
+<script src="/js/projetos.js"></script>
 </body>
 </html>

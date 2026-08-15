@@ -7,8 +7,11 @@
     }
 
     * {
-        @apply transition-colors duration-300;
-        /* outline: 1px solid red; */
+        @apply transition-colors transition-transform duration-300;
+    }
+
+    section {
+        @apply my-10;
     }
 }
 
