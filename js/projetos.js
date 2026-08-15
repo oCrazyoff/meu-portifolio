@@ -4,13 +4,13 @@ const projetos =
         // ecoflow
         {
             titulo: "EcoFlow",
-            descricao: "Sistema de gestão financeira feito com PHP",
+            descricao: "Sistema de gestão financeira para controle de receitas, despesas e organização financeira.",
             img: "/img/projetos/ecoflow.png",
             tags: [
                 "PHP",
                 "TailwindCSS",
                 "MySql",
-                "Java Script"
+                "JavaScript"
             ],
             github: "https://github.com/oCrazyoff/ecoflow",
             deploy: "https://ecoflow.kesug.com/"
@@ -19,13 +19,13 @@ const projetos =
         // cantina
         {
             titulo: "Cantina da ETEC",
-            descricao: "Sistema PDV feito para a cantina da Escola ETEC",
+            descricao: "Sistema PDV desenvolvido para automatizar as vendas e o controle da cantina da ETEC.",
             img: "/img/projetos/cantina.png",
             tags: [
                 "PHP",
                 "TailwindCSS",
                 "MySql",
-                "Java Script"
+                "JavaScript"
             ],
             github: null,
             deploy: "https://cantina-etec.kesug.com"
@@ -34,13 +34,13 @@ const projetos =
         // walyflix
         {
             titulo: "WalyFlix",
-            descricao: "Clone da Netflix funcional para estudo",
+            descricao: "Plataforma de streaming inspirada na Netflix, desenvolvida como projeto de estudo.",
             img: "/img/projetos/walyflix.png",
             tags: [
                 "PHP",
                 "TailwindCSS",
                 "MySql",
-                "Java Script"
+                "JavaScript"
             ],
             github: "https://github.com/oCrazyoff/walyflix",
             deploy: "https://walyflix.kesug.com/"
@@ -49,12 +49,12 @@ const projetos =
         // isainfo
         {
             titulo: "IsaInfo",
-            descricao: "Landing Page feita para um provedor de internet",
+            descricao: "Landing page institucional desenvolvida para apresentar os serviços de um provedor de internet.",
             img: "/img/projetos/isainfo.png",
             tags: [
                 "HTML",
                 "CSS",
-                "Java Script"
+                "JavaScript"
             ],
             github: "https://github.com/LeandroArantesDev/isainfo-site",
             deploy: "https://www.isainfofibra.com.br/"
@@ -63,12 +63,12 @@ const projetos =
         // site da etec
         {
             titulo: "Site da ETEC",
-            descricao: "Landing Page para a escola técnia Antônio Junqueira da Veiga",
+            descricao: "Site institucional desenvolvido para apresentar a escola, seus cursos e informações aos alunos.",
             img: "/img/projetos/etec.png",
             tags: [
                 "HTML",
                 "CSS",
-                "Java Script"
+                "JavaScript"
             ],
             github: "https://github.com/EtecIgarapava/site-etec",
             deploy: "https://etecigarapava.github.io/site-etec/"
@@ -77,12 +77,12 @@ const projetos =
         // planet clicker
         {
             titulo: "Planet Clicker",
-            descricao: "Jogo clicker feito com Java Script incremental sobre planetas",
+            descricao: "Jogo incremental de cliques baseado em planetas, desenvolvido para explorar lógica e interações com JavaScript.",
             img: "/img/projetos/planet.png",
             tags: [
                 "HTML",
                 "CSS",
-                "Java Script"
+                "JavaScript"
             ],
             github: "https://github.com/oCrazyoff/planet-clicker",
             deploy: "https://ocrazyoff.github.io/planet-clicker/"

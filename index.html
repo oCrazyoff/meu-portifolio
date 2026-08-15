@@ -2,13 +2,57 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Walysson - Projetos de desenvolvimento web e full-stack.">
+    <meta name="keywords" content="Walysson, portfólio, web development, design, projetos, frontend, programador">
+    <meta name="author" content="Walysson">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.walysson.com.br/">
+    <meta property="og:title" content="Portfólio do Walysson">
+    <meta property="og:description" content="Walysson - Projetos de desenvolvimento web e full-stack.">
+    <meta property="og:image" content="https://www.walysson.com.br/img/eu.png">
+    <meta property="og:url" content="https://www.walysson.com.br">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Walysson Ribeiro | Desenvolvedor Full Stack">
+    <meta name="twitter:description" content="Portfólio de Walysson Ribeiro, desenvolvedor Full Stack.">
+    <meta name="twitter:image" content="https://www.walysson.com.br/img/og-image.jpg">
+    <link rel="icon" href="/img/icone.png" type="image/png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JP85XFHNL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-0JP85XFHNL');
+    </script>
     <link href="/src/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <title>Walysson</title>
+    <title>Walysson | Desenvolvedor Full Stack</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Walysson",
+            "url": "https://www.walysson.com.br",
+            "jobTitle": "Desenvolvedor Full Stack",
+            "sameAs": [
+                "https://www.linkedin.com/in/walysson-ribeiro-a92ba3260/",
+                "https://github.com/oCrazyoff",
+                "https://www.instagram.com/walyssus/"
+            ]
+        }
+    </script>
 </head>
 <body class="bg-[#0A0A0A] text-white">
 
@@ -35,16 +79,22 @@
     <div class="interface flex flex-col-reverse lg:flex-row items-center justify-between gap-5">
 
         <div class="flex flex-col gap-5 lg:gap-10">
-            <h2 class="text-6xl lg:text-8xl text-center lg:text-left font-bold tracking-tight -leading-20">
-                CONSTRUO <br>
-                <span class="text-principal">PRODUTOS</span> <br>
-                DIGITAIS REAIS
-            </h2>
+            <h1 class="text-6xl lg:text-8xl text-center lg:text-left font-bold tracking-tight -leading-20">
+                TRANSFORMO <br>
+                <span class="text-principal">PROBLEMAS</span> <br>
+                EM SISTEMAS
+            </h1>
 
             <p class="text-xl w-full lg:w-2/3 text-cinza font-light">
-                Desenvolvedor Full Stack no interior de São Paulo. Transformo regras de negócio complexas em sistemas
-                que rodam em produção — do banco de dados à interface.
+                Desenvolvedor Full Stack e estudante de Sistemas da Informação. Transformo problemas e regras de negócio
+                em sistemas funcionais, do banco de dados à interface.
             </p>
+
+            <a class="uppercase bg-principal text-black max-w-max px-5 py-1 border hover:bg-transparent hover:border-principal hover:text-principal"
+               href="curriculo.pdf" target="_blank">
+                VER CURRÍCULO
+                <i class="bi bi-file-text"></i>
+            </a>
         </div>
 
         <div class="flex flex-col items-center justify-center gap-10 w-full lg:max-w-max">
@@ -63,13 +113,14 @@
 
                 <div class="item-hero">
                     <h3>EXPERIÊNCIA</h3>
-                    <p>+3 ANOS ESTUDANDO E CRIANDO SISTEMAS</p>
+                    <p>+3 ANOS PROGRAMANDO</p>
                 </div>
 
                 <div class="item-hero">
                     <h3>STATUS</h3>
-                    <p><i class="bi bi-dot text-green-500 scale-300 mr-2 animate-pulse"></i> DISPONIVEL PARA NOVOS
-                        PROJETOS
+                    <p>
+                        <i class="bi bi-dot text-green-500 scale-300 mr-2 animate-pulse"></i>
+                        DISPONÍVEL PARA PROJETOS
                     </p>
                 </div>
             </div>
@@ -81,7 +132,7 @@
 <section id="projetos">
     <div class="interface">
 
-        <h2 class="titulo">TRABALHOS SELECIONADOS <span id="qtd-itens"></span></h2>
+        <h2 class="titulo">PROJETOS SELECIONADOS <span id="qtd-itens"></span></h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-5" id="projetos-container">
             <!--aqui vãos os projetos-->
@@ -107,31 +158,32 @@
                 </h3>
 
                 <p class="text-lg text-cinza font-light">
-                    Sou desenvolvedor full stack em Igarapava-SP. Trabalho do modelo de dados até a interface, com foco
-                    em sistemas que precisam funcionar todo dia — caixa, estoque, finanças, catálogo.
+                    Sou desenvolvedor full stack e estudante de Sistemas da Informação, com foco na construção de
+                    sistemas web. Busco transformar necessidades reais em soluções funcionais, mantendo código
+                    organizado, regras de negócio claras e interfaces intuitivas.
                 </p>
 
                 <p>
                     <i class="bi bi-quote text-principal text-xl"></i>
-                    Prefiro soluções diretas a arquiteturas decorativas: banco bem modelado, regra de negócio clara e
-                    interface que qualquer pessoa usa sem manual.
+                    A ciência é o que sabemos, a arte é o que fazemos com isso. A programação é uma arte que combina
+                    ciência e engenharia
                     <i class="bi bi-quote text-principal text-xl rotate-90"></i>
                 </p>
 
                 <div class="info-sobre">
                     <div class="item">
-                        <p>+3</p>
+                        <p>03+</p>
                         <span>ANOS DE CÓDIGO</span>
                     </div>
 
                     <div class="item meio">
-                        <p>06</p>
-                        <span>PRODUTOS ENTREGUES</span>
+                        <p>06+</p>
+                        <span>PROJETOS DESENVOLVIDOS</span>
                     </div>
 
                     <div class="item">
-                        <p>100%</p>
-                        <span>EM PRODUÇÃO</span>
+                        <p>01</p>
+                        <span>SISTEMA EM USO REAL</span>
                     </div>
                 </div>
             </div>
@@ -147,23 +199,23 @@
 
             <p>PHP <span>PRINCIPAL</span></p>
             <p>MySql <span>RELACIONAL</span></p>
-            <p>JavaScript <span>ES6+</span></p>
+            <p>JavaScript <span>INTERATIVIDADE</span></p>
         </div>
 
         <div class="item">
-            <h2>// Interface</h2>
+            <h2>// Frontend & Interface</h2>
 
             <p>TailwindCSS <span>UTILITY FIRST</span></p>
             <p>HTML / CSS <span>SEMÂNTICA</span></p>
-            <p>UI Design <span>PROTOTIPAÇÃO</span></p>
+            <p>Responsividade <span>MOBILE FIRST</span></p>
         </div>
 
         <div class="item">
-            <h2>// Backend & Dados</h2>
+            <h2>// Engenharia & Ferramentas</h2>
 
-            <p>PHP <span>PRINCIPAL</span></p>
-            <p>MySql <span>RELACIONAL</span></p>
-            <p>JavaScript <span>ES6+</span></p>
+            <p>Git / GitHub <span>VERSIONAMENTO</span></p>
+            <p>Laravel <span>FRAMEWORK</span></p>
+            <p>Docker <span>CONTAINERS</span></p>
         </div>
     </div>
 </section>
@@ -171,7 +223,7 @@
 <section id="contato">
     <div class="interface">
 
-        <h2 class="titulo">CONTATO <span>MEUS LINKS</span></h2>
+        <h2 class="titulo">CONTATO <span>ONDE ME ENCONTRAR</span></h2>
 
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
 
@@ -186,9 +238,12 @@
             <div class="flex flex-col gap-5">
                 <p class="text-xs text-cinza">REDES</p>
 
-                <a class="hover:text-principal" href=""><i class="bi bi-linkedin"></i> Linkedin</a>
-                <a class="hover:text-principal" href=""><i class="bi bi-github"></i> GitHub</a>
-                <a class="hover:text-principal" href=""><i class="bi bi-instagram"></i> Instagram</a>
+                <a class="hover:text-principal" href="https://www.linkedin.com/in/walysson-ribeiro-a92ba3260"
+                   target="_blank"><i class="bi bi-linkedin"></i> Linkedin</a>
+                <a class="hover:text-principal" href="https://github.com/oCrazyoff" target="_blank"><i
+                        class="bi bi-github"></i> GitHub</a>
+                <a class="hover:text-principal" href="https://www.instagram.com/walyssus/" target="_blank"><i
+                        class="bi bi-instagram"></i> Instagram</a>
             </div>
 
             <div class="flex flex-col gap-5">
