@@ -12,7 +12,7 @@
 </head>
 <body class="bg-[#0A0A0A] text-white">
 
-<header class="h-15 p-2 border-b border-borda">
+<header class="fixed z-500 inset-0 bg-[#0A0A0A]/70 backdrop-blur-xl h-15 p-2 shadow-lg/30 border-b border-borda">
     <div class="interface flex items-center justify-between h-full gap-5">
 
         <div class="flex items-center justify-center gap-5">
@@ -21,34 +21,33 @@
             <p class="text-xs font-bold">W.RIBEIRO/FULL STACK</p>
         </div>
 
-        <nav class="flex items-center justify-center gap-5 font-jetbrains font-light text-xs text-white/50">
+        <nav class="hidden lg:flex items-center justify-center gap-5 font-jetbrains font-light text-xs text-white/50">
             <a class="hover:text-principal" href="#">[ INICIO ]</a>
-            <a class="hover:text-principal" href="#">[ PROJETOS ]</a>
-            <a class="hover:text-principal" href="#">[ SOBRE ]</a>
-            <a class="hover:text-principal" href="#">[ STACK ]</a>
-            <a class="hover:text-principal" href="#">[ CONTATO ]</a>
+            <a class="hover:text-principal" href="#projetos">[ PROJETOS ]</a>
+            <a class="hover:text-principal" href="#sobre">[ SOBRE ]</a>
+            <a class="hover:text-principal" href="#contato">[ CONTATO ]</a>
         </nav>
 
     </div>
 </header>
 
-<section class="pt-10">
-    <div class="interface flex items-center justify-between gap-5">
+<section class="pt-8 lg:pt-15">
+    <div class="interface flex flex-col-reverse lg:flex-row items-center justify-between gap-5">
 
-        <div class="flex flex-col gap-10">
-            <h2 class="text-8xl font-bold tracking-tight leading-20">
+        <div class="flex flex-col gap-5 lg:gap-10">
+            <h2 class="text-6xl lg:text-8xl text-center lg:text-left font-bold tracking-tight -leading-20">
                 CONSTRUO <br>
                 <span class="text-principal">PRODUTOS</span> <br>
                 DIGITAIS REAIS
             </h2>
 
-            <p class="text-xl w-1/2 text-cinza font-light">
+            <p class="text-xl w-full lg:w-2/3 text-cinza font-light">
                 Desenvolvedor Full Stack no interior de São Paulo. Transformo regras de negócio complexas em sistemas
                 que rodam em produção — do banco de dados à interface.
             </p>
         </div>
 
-        <div class="flex flex-col gap-10">
+        <div class="flex flex-col items-center justify-center gap-10 w-full lg:max-w-max">
 
             <div class="h-70 w-70 rounded-full border border-borda p-2 overflow-hidden">
                 <img class="rounded-full w-full h-full object-cover object-top hover:scale-110"
@@ -56,7 +55,7 @@
                      alt="Imagem do walysson">
             </div>
 
-            <div class="flex flex-col gap-5 border-l border-borda pl-10">
+            <div class="hidden lg:flex flex-col gap-5 border-l border-borda pl-10">
                 <div class="item-hero">
                     <h3>LOCALIZAÇÃO</h3>
                     <p>UBERABA, MG - BRASIL</p>
@@ -79,20 +78,137 @@
     </div>
 </section>
 
-<section>
+<section id="projetos">
     <div class="interface">
 
-        <h2 class="flex items-center justify-between pb-3 mb-5 border-b border-borda text-2xl font-semibold italic">
-            TRABALHOS SELECIONADOS
-            <span class="text-xs text-cinza" id="qtd-itens"></span>
-        </h2>
+        <h2 class="titulo">TRABALHOS SELECIONADOS <span id="qtd-itens"></span></h2>
 
-        <div class="grid grid-cols-3 gap-5" id="projetos-container">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5" id="projetos-container">
             <!--aqui vãos os projetos-->
         </div>
 
     </div>
 </section>
+
+<section id="sobre">
+    <div class="interface">
+
+        <h2 class="titulo">SOBRE <span>RETRATO / 01</span></h2>
+
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-15">
+            <div class="relative min-w-full lg:min-w-100 p-2 border border-borda">
+                <img src="/img/eu.png" alt="Imagem do Walysson">
+                <span class="absolute -bottom-3 right-1/2 lg:-right-5 translate-x-1/2 lg:translate-0 uppercase py-1 px-5 text-xs bg-principal text-black">Walysson Ribeiro Rosa</span>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <h3 class="text-5xl lg:text-6xl font-bold uppercase tracking-tight -leading-20">
+                    Código que resolve problema de gente real
+                </h3>
+
+                <p class="text-lg text-cinza font-light">
+                    Sou desenvolvedor full stack em Igarapava-SP. Trabalho do modelo de dados até a interface, com foco
+                    em sistemas que precisam funcionar todo dia — caixa, estoque, finanças, catálogo.
+                </p>
+
+                <p>
+                    <i class="bi bi-quote text-principal text-xl"></i>
+                    Prefiro soluções diretas a arquiteturas decorativas: banco bem modelado, regra de negócio clara e
+                    interface que qualquer pessoa usa sem manual.
+                    <i class="bi bi-quote text-principal text-xl rotate-90"></i>
+                </p>
+
+                <div class="info-sobre">
+                    <div class="item">
+                        <p>+3</p>
+                        <span>ANOS DE CÓDIGO</span>
+                    </div>
+
+                    <div class="item meio">
+                        <p>06</p>
+                        <span>PRODUTOS ENTREGUES</span>
+                    </div>
+
+                    <div class="item">
+                        <p>100%</p>
+                        <span>EM PRODUÇÃO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="interface info-geral">
+        <div class="item">
+            <h2>// Backend & Dados</h2>
+
+            <p>PHP <span>PRINCIPAL</span></p>
+            <p>MySql <span>RELACIONAL</span></p>
+            <p>JavaScript <span>ES6+</span></p>
+        </div>
+
+        <div class="item">
+            <h2>// Interface</h2>
+
+            <p>TailwindCSS <span>UTILITY FIRST</span></p>
+            <p>HTML / CSS <span>SEMÂNTICA</span></p>
+            <p>UI Design <span>PROTOTIPAÇÃO</span></p>
+        </div>
+
+        <div class="item">
+            <h2>// Backend & Dados</h2>
+
+            <p>PHP <span>PRINCIPAL</span></p>
+            <p>MySql <span>RELACIONAL</span></p>
+            <p>JavaScript <span>ES6+</span></p>
+        </div>
+    </div>
+</section>
+
+<section id="contato">
+    <div class="interface">
+
+        <h2 class="titulo">CONTATO <span>MEUS LINKS</span></h2>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <div class="flex flex-col gap-5 col-span-2">
+                <h3 class="text-5xl uppercase -leading-20 tracking-tight font-bold">Vamos construir alguma coisa?</h3>
+
+                <a class="text-xl font-light border-b border-principal max-w-max hover:text-principal"
+                   href="mailto:walyssonribeiro3@gmail.com">walyssonribeiro3@gmail.com</a>
+                <p class="text-cinza">+55 (16) 98115-1983</p>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <p class="text-xs text-cinza">REDES</p>
+
+                <a class="hover:text-principal" href=""><i class="bi bi-linkedin"></i> Linkedin</a>
+                <a class="hover:text-principal" href=""><i class="bi bi-github"></i> GitHub</a>
+                <a class="hover:text-principal" href=""><i class="bi bi-instagram"></i> Instagram</a>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <p class="text-xs text-cinza">LOCALIZAÇÃO</p>
+
+                <p>Uberaba, Minas Gerais</p>
+                <p>Brasil</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<footer class="border-t border-borda py-5">
+    <div class="interface flex items-center justify-between gap-5">
+        <p class="text-xs text-cinza uppercase">© 2026 Walysson Ribeiro Rosa</p>
+        <p class="text-xs text-cinza uppercase">Feito com precisão técnica</p>
+    </div>
+</footer>
 
 <script src="/js/projetos.js"></script>
 </body>

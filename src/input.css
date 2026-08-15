@@ -11,7 +11,7 @@
     }
 
     section {
-        @apply my-10;
+        @apply my-15 scroll-mt-20;
     }
 }
 
@@ -22,12 +22,20 @@
 
     --color-borda: #232323;
     --color-cinza: #959595;
-    --color-principal: #495DD4;
+    --color-principal: #ffa500;
 }
 
 @layer components {
     .interface {
         @apply mx-auto max-w-[1280px] w-full px-3 lg:px-5 py-2;
+    }
+
+    .titulo {
+        @apply flex items-center justify-between pb-3 mb-10 border-b border-borda text-2xl font-semibold italic;
+
+        & span {
+            @apply text-xs text-cinza not-italic;
+        }
     }
 
     .item-hero {
@@ -39,6 +47,46 @@
 
         & p {
             @apply flex items-center text-xs text-cinza;
+        }
+    }
+
+    .info-sobre {
+        @apply grid grid-cols-3;
+
+        & .item {
+            @apply flex flex-col items-center justify-center;
+
+            & p {
+                @apply text-4xl text-principal font-bold;
+            }
+
+            & span {
+                @apply text-xs text-cinza;
+            }
+
+            &.meio {
+                @apply border-x border-borda;
+            }
+        }
+    }
+
+    .info-geral {
+        @apply grid grid-cols-1 lg:grid-cols-3;
+
+        & .item {
+            @apply flex flex-col gap-5 border border-borda p-10 justify-center;
+
+            & h2 {
+                @apply text-principal uppercase;
+            }
+
+            & p {
+                @apply flex items-center justify-between;
+
+                & span {
+                    @apply text-xs text-cinza;
+                }
+            }
         }
     }
 }

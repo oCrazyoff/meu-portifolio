@@ -9,10 +9,11 @@ const projetos =
             tags: [
                 "PHP",
                 "TailwindCSS",
+                "MySql",
                 "Java Script"
             ],
             github: "https://github.com/oCrazyoff/ecoflow",
-            deploy: "https://ecoflow.kesug.com/?i=1"
+            deploy: "https://ecoflow.kesug.com/"
         },
 
         // cantina
@@ -23,10 +24,11 @@ const projetos =
             tags: [
                 "PHP",
                 "TailwindCSS",
+                "MySql",
                 "Java Script"
             ],
-            github: "https://github.com/oCrazyoff/cantina-etec",
-            deploy: null
+            github: null,
+            deploy: "https://cantina-etec.kesug.com"
         },
 
         // walyflix
@@ -37,11 +39,54 @@ const projetos =
             tags: [
                 "PHP",
                 "TailwindCSS",
+                "MySql",
                 "Java Script"
             ],
-            github: "https://github.com/oCrazyoff/cantina-etec",
-            deploy: null
-        }
+            github: "https://github.com/oCrazyoff/walyflix",
+            deploy: "https://walyflix.kesug.com/"
+        },
+
+        // isainfo
+        {
+            titulo: "IsaInfo",
+            descricao: "Landing Page feita para um provedor de internet",
+            img: "/img/projetos/isainfo.png",
+            tags: [
+                "HTML",
+                "CSS",
+                "Java Script"
+            ],
+            github: "https://github.com/LeandroArantesDev/isainfo-site",
+            deploy: "https://www.isainfofibra.com.br/"
+        },
+
+        // site da etec
+        {
+            titulo: "Site da ETEC",
+            descricao: "Landing Page para a escola técnia Antônio Junqueira da Veiga",
+            img: "/img/projetos/etec.png",
+            tags: [
+                "HTML",
+                "CSS",
+                "Java Script"
+            ],
+            github: "https://github.com/EtecIgarapava/site-etec",
+            deploy: "https://etecigarapava.github.io/site-etec/"
+        },
+
+        // planet clicker
+        {
+            titulo: "Planet Clicker",
+            descricao: "Jogo clicker feito com Java Script incremental sobre planetas",
+            img: "/img/projetos/planet.png",
+            tags: [
+                "HTML",
+                "CSS",
+                "Java Script"
+            ],
+            github: "https://github.com/oCrazyoff/planet-clicker",
+            deploy: "https://ocrazyoff.github.io/planet-clicker/"
+        },
     ];
 
 const container = document.getElementById("projetos-container");
@@ -59,7 +104,7 @@ projetos.forEach(projeto => {
         
         <div class="flex justify-between gap-2">
             <div class="flex flex-col gap-3">
-                <h2 class="text-2xl font-semibold uppercase">${projeto.titulo}</h2>
+                <h3 class="text-2xl font-semibold uppercase">${projeto.titulo}</h3>
                 
                 <p class="text-sm text-cinza">
                 ${projeto.descricao}
@@ -78,7 +123,7 @@ projetos.forEach(projeto => {
                 ` : ""}
 
                 ${projeto.deploy ? `
-                <a class="text-sm text-indigo-500 whitespace-nowrap border border-indigo-500 py-1 px-3 hover:bg-indigo-500 hover:text-white" 
+                <a class="text-sm text-principal whitespace-nowrap border border-principal py-1 px-3 hover:bg-principal hover:text-black" 
                 href="${projeto.deploy}" target="_blank"> VER SITE <i class="bi bi-arrow-up-right"></i></a>
                 ` : ""}
 
