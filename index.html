@@ -65,21 +65,58 @@
             <p class="text-xs font-bold">W.RIBEIRO/FULL STACK</p>
         </div>
 
-        <nav class="hidden lg:flex items-center justify-center gap-5 font-jetbrains font-light text-xs text-white/50">
+        <nav class="hidden lg:flex items-center justify-center gap-5 font-jetbrains font-light text-xs text-cinza">
             <a class="hover:text-principal" href="#">[ INICIO ]</a>
             <a class="hover:text-principal" href="#projetos">[ PROJETOS ]</a>
             <a class="hover:text-principal" href="#sobre">[ SOBRE ]</a>
             <a class="hover:text-principal" href="#contato">[ CONTATO ]</a>
         </nav>
 
+        <button onclick="toggleMenu()">
+            <i class="bi bi-list text-3xl text-principal"></i>
+        </button>
     </div>
 </header>
+
+<div class="fixed inset-0 translate-x-full z-700 flex flex-col justify-between gap-5 p-5 bg-[#0A0A0A]"
+     id="menu-mobile">
+    <div class="flex justify-between border-b border-borda pb-5">
+        <div class="flex gap-5">
+            <div class="h-15 w-15 border border-borda p-1 overflow-hidden">
+                <img class="w-full h-full object-cover object-top" src="/img/eu.png" alt="Walysson Ribeiro">
+            </div>
+
+            <div class="flex flex-col justify-center">
+                <h3 class="uppercase font-bold">Walysson Ribeiro Rosa</h3>
+                <p class="uppercase text-xs text-cinza">Full Stack</p>
+            </div>
+        </div>
+
+        <button onclick="toggleMenu()">
+            <i class="bi bi-x text-5xl"></i>
+        </button>
+    </div>
+
+    <nav class="flex flex-col justify-center items-end gap-10 font-jetbrains font-light text-4xl text-cinza">
+        <a class="hover:text-principal" href="#" onclick="toggleMenu()">[ INICIO ]</a>
+        <a class="hover:text-principal" href="#projetos" onclick="toggleMenu()">[ PROJETOS ]</a>
+        <a class="hover:text-principal" href="#sobre" onclick="toggleMenu()">[ SOBRE ]</a>
+        <a class="hover:text-principal" href="#contato" onclick="toggleMenu()">[ CONTATO ]</a>
+    </nav>
+
+    <div class="pt-5 border-t border-borda">
+        <p>
+            <i class="bi bi-dot text-green-500 scale-1000 mr-2 animate-pulse"></i>
+            DISPONÍVEL PARA PROJETOS
+        </p>
+    </div>
+</div>
 
 <section class="pt-8 lg:pt-15">
     <div class="interface flex flex-col-reverse lg:flex-row items-center justify-between gap-5">
 
         <div class="flex flex-col gap-5 lg:gap-10">
-            <h1 class="text-6xl lg:text-8xl text-center lg:text-left font-bold tracking-tight -leading-20">
+            <h1 class="text-5xl lg:text-8xl text-center lg:text-left font-bold tracking-tight -leading-20">
                 TRANSFORMO <br>
                 <span class="text-principal">PROBLEMAS</span> <br>
                 EM SISTEMAS
@@ -90,7 +127,7 @@
                 em sistemas funcionais, do banco de dados à interface.
             </p>
 
-            <a class="uppercase bg-principal text-black max-w-max px-5 py-1 border hover:bg-transparent hover:border-principal hover:text-principal"
+            <a class="uppercase bg-principal text-black text-center w-full lg:max-w-max px-5 py-1 border hover:bg-transparent hover:border-principal hover:text-principal"
                href="curriculo.pdf" target="_blank">
                 VER CURRÍCULO
                 <i class="bi bi-file-text"></i>
@@ -149,7 +186,7 @@
         <div class="flex flex-col lg:flex-row items-center justify-between gap-15">
             <div class="relative min-w-full lg:min-w-100 p-2 border border-borda">
                 <img src="/img/eu.png" alt="Imagem do Walysson">
-                <span class="absolute -bottom-3 right-1/2 lg:-right-5 translate-x-1/2 lg:translate-0 uppercase py-1 px-5 text-xs bg-principal text-black">Walysson Ribeiro Rosa</span>
+                <span class="absolute -bottom-3 right-1/2 lg:-right-5 translate-x-1/2 lg:translate-0 uppercase whitespace-nowrap py-1 px-5 text-xs bg-principal text-black">Walysson Ribeiro Rosa</span>
             </div>
 
             <div class="flex flex-col gap-5">
@@ -266,5 +303,6 @@
 </footer>
 
 <script src="/js/projetos.js"></script>
+<script src="/js/menu.js"></script>
 </body>
 </html>

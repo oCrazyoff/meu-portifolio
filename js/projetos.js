@@ -102,20 +102,20 @@ projetos.forEach(projeto => {
             <img class="w-full h-full object-cover hover:scale-105" src="${projeto.img}" alt="Print do projeto ${projeto.titulo}">
         </div>
         
-        <div class="flex justify-between gap-2">
-            <div class="flex flex-col gap-3">
+        <div class="flex justify-between gap-3">
+            <div class="flex flex-col gap-1">
                 <h3 class="text-2xl font-semibold uppercase">${projeto.titulo}</h3>
                 
                 <p class="text-sm text-cinza">
                 ${projeto.descricao}
                 </p>
                 
-                <div class="flex gap-3">
+                <div class="flex flex-wrap gap-2">
                     ${projeto.tags.map(tag => `<span class="text-xs text-cinza px-1.5 border border-borda">${tag}</span>`).join("")}
                 </div>
             </div>
             
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-3">
 
                 ${projeto.github ? `
                 <a class="text-sm whitespace-nowrap border border-borda py-1 px-3 hover:bg-white hover:text-black" 

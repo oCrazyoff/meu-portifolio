@@ -30,8 +30,12 @@
         @apply mx-auto max-w-[1280px] w-full px-3 lg:px-5 py-2;
     }
 
+    #menu-mobile.ativo {
+        @apply !translate-x-0;
+    }
+
     .titulo {
-        @apply flex items-center justify-between pb-3 mb-10 border-b border-borda text-2xl font-semibold italic;
+        @apply flex items-center justify-between pb-3 mb-10 border-b border-borda text-xl lg:text-2xl font-semibold italic;
 
         & span {
             @apply text-xs text-cinza not-italic;
@@ -61,7 +65,7 @@
             }
 
             & span {
-                @apply text-xs text-cinza;
+                @apply text-xs text-cinza text-center;
             }
 
             &.meio {
