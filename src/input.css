@@ -10,8 +10,12 @@
         @apply transition-colors transition-transform duration-300;
     }
 
+    ::selection {
+        @apply bg-principal/60 text-black;
+    }
+
     section {
-        @apply my-15 scroll-mt-20;
+        @apply my-15 scroll-mt-17;
     }
 }
 
