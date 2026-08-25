@@ -79,10 +79,10 @@
     }
 
     .info-geral {
-        @apply grid grid-cols-1 lg:grid-cols-3;
+        @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3;
 
         & .item {
-            @apply flex flex-col gap-5 border border-borda p-10 justify-center;
+            @apply flex flex-col gap-5 border border-borda p-10 md:p-5 lg:p-10 justify-center;
 
             & h2 {
                 @apply text-principal uppercase;
