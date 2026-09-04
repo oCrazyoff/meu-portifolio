@@ -1,100 +1,108 @@
 @import "tailwindcss";
 
 @layer base {
-    /* Aplica scroll suave e fonte globalmente */
-    html {
-        @apply scroll-smooth font-space;
-    }
+  /* Aplica scroll suave e fonte globalmente */
+  html {
+    @apply scroll-smooth font-space;
+  }
 
-    * {
-        @apply transition-colors transition-transform duration-300;
-    }
+  * {
+    @apply transition-colors transition-transform duration-300;
+  }
 
-    ::selection {
-        @apply bg-principal/60 text-black;
-    }
+  ::selection {
+    @apply bg-principal/60 text-black;
+  }
 
-    section {
-        @apply my-15 scroll-mt-17;
-    }
+  section {
+    @apply my-15 scroll-mt-17;
+  }
 }
 
 @theme {
+  --font-space: "Space Grotesk", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
 
-    --font-space: "Space Grotesk", sans-serif;
-    --font-jetbrains: "JetBrains Mono", monospace;
-
-    --color-borda: #232323;
-    --color-cinza: #959595;
-    --color-principal: #ffa500;
+  --color-borda: #232323;
+  --color-cinza: #959595;
+  --color-principal: #ffa500;
 }
 
 @layer components {
-    .interface {
-        @apply mx-auto max-w-[1280px] w-full px-3 lg:px-5 py-2;
+  .reveal {
+    @apply opacity-0 translate-y-12 transition-all duration-700 ease-out;
+  }
+
+  .reveal.active {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .interface {
+    @apply mx-auto max-w-[1280px] w-full px-3 lg:px-5 py-2;
+  }
+
+  #menu-mobile.ativo {
+    @apply !translate-x-0;
+  }
+
+  .titulo {
+    @apply flex items-center justify-between pb-3 mb-10 border-b border-borda text-xl lg:text-2xl font-semibold italic;
+
+    & span {
+      @apply text-xs text-cinza not-italic;
+    }
+  }
+
+  .item-hero {
+    @apply flex flex-col;
+
+    & h3,
+    p {
+      @apply whitespace-nowrap;
     }
 
-    #menu-mobile.ativo {
-        @apply !translate-x-0;
+    & p {
+      @apply flex items-center text-xs text-cinza;
     }
+  }
 
-    .titulo {
-        @apply flex items-center justify-between pb-3 mb-10 border-b border-borda text-xl lg:text-2xl font-semibold italic;
+  .info-sobre {
+    @apply grid grid-cols-3;
+
+    & .item {
+      @apply flex flex-col items-center justify-center;
+
+      & p {
+        @apply text-4xl text-principal font-bold;
+      }
+
+      & span {
+        @apply text-xs text-cinza text-center;
+      }
+
+      &.meio {
+        @apply border-x border-borda;
+      }
+    }
+  }
+
+  .info-geral {
+    @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3;
+
+    & .item {
+      @apply flex flex-col gap-5 border border-borda p-10 md:p-5 lg:p-10 justify-center;
+
+      & h2 {
+        @apply text-principal uppercase;
+      }
+
+      & p {
+        @apply flex items-center justify-between;
 
         & span {
-            @apply text-xs text-cinza not-italic;
+          @apply text-xs text-cinza;
         }
+      }
     }
-
-    .item-hero {
-        @apply flex flex-col;
-
-        & h3, p {
-            @apply whitespace-nowrap
-        }
-
-        & p {
-            @apply flex items-center text-xs text-cinza;
-        }
-    }
-
-    .info-sobre {
-        @apply grid grid-cols-3;
-
-        & .item {
-            @apply flex flex-col items-center justify-center;
-
-            & p {
-                @apply text-4xl text-principal font-bold;
-            }
-
-            & span {
-                @apply text-xs text-cinza text-center;
-            }
-
-            &.meio {
-                @apply border-x border-borda;
-            }
-        }
-    }
-
-    .info-geral {
-        @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3;
-
-        & .item {
-            @apply flex flex-col gap-5 border border-borda p-10 md:p-5 lg:p-10 justify-center;
-
-            & h2 {
-                @apply text-principal uppercase;
-            }
-
-            & p {
-                @apply flex items-center justify-between;
-
-                & span {
-                    @apply text-xs text-cinza;
-                }
-            }
-        }
-    }
+  }
 }

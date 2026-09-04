@@ -112,7 +112,7 @@
     </div>
 </div>
 
-<section class="pt-8 lg:pt-15">
+<section class="pt-8 lg:pt-15 reveal">
     <div class="interface flex flex-col-reverse md:flex-row lg:flex-row items-center justify-between gap-5 md:gap-10">
 
         <div class="flex flex-col gap-5 lg:gap-10">
@@ -166,7 +166,7 @@
     </div>
 </section>
 
-<section id="projetos">
+<section id="projetos" class="reveal delay-0 lg:delay-200">
     <div class="interface">
 
         <h2 class="titulo">PROJETOS SELECIONADOS <span id="qtd-itens"></span></h2>
@@ -178,7 +178,7 @@
     </div>
 </section>
 
-<section id="sobre">
+<section id="sobre" class="reveal">
     <div class="interface">
 
         <h2 class="titulo">SOBRE <span>RETRATO / 01</span></h2>
@@ -233,7 +233,7 @@
     </div>
 </section>
 
-<section>
+<section class="reveal">
     <div class="interface info-geral">
         <div class="item">
             <h2>// Backend</h2>
@@ -264,7 +264,7 @@
     </div>
 </section>
 
-<section id="contato">
+<section id="contato" class="reveal">
     <div class="interface">
 
         <h2 class="titulo">CONTATO <span>ONDE ME ENCONTRAR</span></h2>
@@ -312,7 +312,24 @@
 <script src="/js/projetos.js"></script>
 <script src="/js/menu.js"></script>
 <script>
+    // pegando o ano atual
     document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // animação reveal
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll('.reveal').forEach(section => {
+        observer.observe(section);
+    });
 </script>
 </body>
 </html>
