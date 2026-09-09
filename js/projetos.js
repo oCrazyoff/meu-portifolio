@@ -42,7 +42,6 @@ const projetos =
                 "MySql",
                 "JavaScript"
             ],
-            github: "https://github.com/oCrazyoff/walyflix",
             deploy: "https://walyflix.kesug.com/"
         },
 
@@ -60,18 +59,18 @@ const projetos =
             deploy: "https://www.isainfofibra.com.br/"
         },
 
-        // site da etec
+        // sgac
         {
-            titulo: "Site da ETEC",
-            descricao: "Site institucional desenvolvido para apresentar a escola, seus cursos e informações aos alunos.",
-            img: "/img/projetos/etec.png",
+            titulo: "sgac",
+            descricao: "É uma plataforma para gestão de voluntários, eventos e doações em atividades comunitárias.",
+            img: "/img/projetos/sgac.webp",
             tags: [
-                "HTML",
+                "PHP",
                 "CSS",
-                "JavaScript"
+                "JavaScript",
+                "MySql"
             ],
-            github: "https://github.com/EtecIgarapava/site-etec",
-            deploy: "https://etecigarapava.github.io/site-etec/"
+            github: "https://github.com/oCrazyoff/sgac"
         },
 
         // planet clicker
