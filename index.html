@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,8 +36,9 @@
     <link href="/src/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Walysson | Desenvolvedor Full Stack</title>
     <script type="application/ld+json">
@@ -54,282 +56,302 @@
         }
     </script>
 </head>
+
 <body class="bg-[#0A0A0A] text-white">
 
-<header class="fixed z-500 inset-0 bg-[#0A0A0A]/70 backdrop-blur-xl h-15 p-2 shadow-lg/30 border-b border-borda">
-    <div class="interface flex items-center justify-between h-full gap-5">
+    <header class="fixed z-500 inset-0 bg-[#0A0A0A]/70 backdrop-blur-xl h-15 p-2 shadow-lg/30 border-b border-borda">
+        <div class="interface flex items-center justify-between h-full gap-5">
 
-        <div class="flex items-center justify-center gap-5">
-            <img class="h-8 w-8 object-cover p-0.5 border border-borda" src="/img/eu-3.png"
-                 alt="Uma foto do walysson">
-            <p class="text-xs font-bold">W.RIBEIRO/FULL STACK</p>
+            <div class="flex items-center justify-center gap-5">
+                <img class="h-8 w-8 object-cover p-0.5 border border-borda" src="/img/eu-3.png"
+                    alt="Uma foto do walysson">
+                <p class="text-xs font-bold">W.RIBEIRO/FULL STACK</p>
+            </div>
+
+            <nav class="hidden lg:flex items-center justify-center gap-5 font-jetbrains font-light text-xs text-cinza">
+                <a class="hover:text-principal" href="#">[ INICIO ]</a>
+                <a class="hover:text-principal" href="#projetos">[ PROJETOS ]</a>
+                <a class="hover:text-principal" href="#sobre">[ SOBRE ]</a>
+                <a class="hover:text-principal" href="#contato">[ CONTATO ]</a>
+            </nav>
+
+            <button class="block lg:hidden" onclick="toggleMenu()">
+                <i class="bi bi-list text-3xl text-principal"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="fixed inset-0 translate-x-full z-700 flex flex-col justify-between gap-5 p-5 bg-[#0A0A0A]"
+        id="menu-mobile">
+        <div class="flex justify-between border-b border-borda pb-5">
+            <div class="flex gap-5">
+                <div class="h-15 w-15 border border-borda p-1 overflow-hidden">
+                    <img class="w-full h-full object-cover object-top" src="/img/eu-3.png" alt="Walysson Ribeiro">
+                </div>
+
+                <div class="flex flex-col justify-center">
+                    <h3 class="uppercase font-bold">Walysson Ribeiro Rosa</h3>
+                    <p class="uppercase text-xs text-cinza">Full Stack</p>
+                </div>
+            </div>
+
+            <button onclick="toggleMenu()">
+                <i class="bi bi-x text-5xl"></i>
+            </button>
         </div>
 
-        <nav class="hidden lg:flex items-center justify-center gap-5 font-jetbrains font-light text-xs text-cinza">
-            <a class="hover:text-principal" href="#">[ INICIO ]</a>
-            <a class="hover:text-principal" href="#projetos">[ PROJETOS ]</a>
-            <a class="hover:text-principal" href="#sobre">[ SOBRE ]</a>
-            <a class="hover:text-principal" href="#contato">[ CONTATO ]</a>
+        <nav class="flex flex-col justify-center items-end gap-10 font-jetbrains font-light text-4xl text-cinza">
+            <a class="hover:text-principal" href="#" onclick="toggleMenu()">[ INICIO ]</a>
+            <a class="hover:text-principal" href="#projetos" onclick="toggleMenu()">[ PROJETOS ]</a>
+            <a class="hover:text-principal" href="#sobre" onclick="toggleMenu()">[ SOBRE ]</a>
+            <a class="hover:text-principal" href="#contato" onclick="toggleMenu()">[ CONTATO ]</a>
         </nav>
 
-        <button class="block lg:hidden" onclick="toggleMenu()">
-            <i class="bi bi-list text-3xl text-principal"></i>
-        </button>
-    </div>
-</header>
-
-<div class="fixed inset-0 translate-x-full z-700 flex flex-col justify-between gap-5 p-5 bg-[#0A0A0A]"
-     id="menu-mobile">
-    <div class="flex justify-between border-b border-borda pb-5">
-        <div class="flex gap-5">
-            <div class="h-15 w-15 border border-borda p-1 overflow-hidden">
-                <img class="w-full h-full object-cover object-top" src="/img/eu-3.png" alt="Walysson Ribeiro">
-            </div>
-
-            <div class="flex flex-col justify-center">
-                <h3 class="uppercase font-bold">Walysson Ribeiro Rosa</h3>
-                <p class="uppercase text-xs text-cinza">Full Stack</p>
-            </div>
-        </div>
-
-        <button onclick="toggleMenu()">
-            <i class="bi bi-x text-5xl"></i>
-        </button>
-    </div>
-
-    <nav class="flex flex-col justify-center items-end gap-10 font-jetbrains font-light text-4xl text-cinza">
-        <a class="hover:text-principal" href="#" onclick="toggleMenu()">[ INICIO ]</a>
-        <a class="hover:text-principal" href="#projetos" onclick="toggleMenu()">[ PROJETOS ]</a>
-        <a class="hover:text-principal" href="#sobre" onclick="toggleMenu()">[ SOBRE ]</a>
-        <a class="hover:text-principal" href="#contato" onclick="toggleMenu()">[ CONTATO ]</a>
-    </nav>
-
-    <div class="pt-5 border-t border-borda">
-        <p class="flex items-center">
-            <i class="bi bi-dot text-green-500 text-5xl mr-1 animate-pulse"></i>
-            DISPONÍVEL PARA PROJETOS
-        </p>
-    </div>
-</div>
-
-<section class="pt-8 lg:pt-15 reveal">
-    <div class="interface flex flex-col-reverse md:flex-row lg:flex-row items-center justify-between gap-5 md:gap-10">
-
-        <div class="flex flex-col gap-5 lg:gap-10">
-            <h1 class="text-5xl lg:text-8xl text-center md:text-left lg:text-left font-bold tracking-tight -leading-20">
-                TRANSFORMO <br>
-                <span class="text-principal">PROBLEMAS</span> <br>
-                EM SISTEMAS
-            </h1>
-
-            <p class="text-xl w-full lg:w-2/3 text-cinza font-light">
-                Desenvolvedor Full Stack e estudante de Sistemas da Informação. Transformo ideias em aplicações web
-                funcionais, combinando código, arquitetura e experiência de usuário.
+        <div class="pt-5 border-t border-borda">
+            <p class="flex items-center">
+                <i class="bi bi-dot text-green-500 text-5xl mr-1 animate-pulse"></i>
+                DISPONÍVEL PARA PROJETOS
             </p>
-
-            <a class="uppercase bg-principal text-black text-center w-full lg:max-w-max px-5 py-1 border hover:bg-transparent hover:border-principal hover:text-principal"
-               href="curriculo.pdf" target="_blank">
-                VER CURRÍCULO
-                <i class="bi bi-file-text"></i>
-            </a>
         </div>
+    </div>
 
-        <div class="flex flex-col items-center justify-center gap-10 w-full lg:max-w-max">
+    <section class="pt-8 lg:pt-15 reveal">
+        <div
+            class="interface flex flex-col-reverse md:flex-row lg:flex-row items-center justify-between gap-5 md:gap-10">
 
-            <div class="h-60 lg:h-70 w-60 lg:w-70 rounded-full border border-borda p-2 overflow-hidden">
-                <img class="rounded-full w-full h-full object-cover object-top hover:scale-110"
-                     src="/img/eu-2.png"
-                     alt="Imagem do walysson">
+            <div class="flex flex-col gap-5 lg:gap-10">
+                <h1
+                    class="text-5xl lg:text-8xl text-center md:text-left lg:text-left font-bold tracking-tight -leading-20">
+                    TRANSFORMO <br>
+                    <span class="text-principal">PROBLEMAS</span> <br>
+                    EM SISTEMAS
+                </h1>
+
+                <p class="text-xl w-full lg:w-2/3 text-cinza font-light">
+                    Desenvolvedor Full Stack e estudante de Sistemas da Informação. Transformo ideias em aplicações web
+                    funcionais, combinando código, arquitetura e experiência de usuário.
+                </p>
+
+                <a class="uppercase bg-principal text-black text-center w-full lg:max-w-max px-5 py-1 border hover:bg-transparent hover:border-principal hover:text-principal"
+                    href="curriculo.pdf" target="_blank">
+                    VER CURRÍCULO
+                    <i class="bi bi-file-text"></i>
+                </a>
             </div>
 
-            <div class="hidden lg:flex flex-col gap-5 border-l border-borda pl-10">
-                <div class="item-hero">
-                    <h3>LOCALIZAÇÃO</h3>
-                    <p>UBERABA, MG - BRASIL</p>
+            <div class="flex flex-col items-center justify-center gap-10 w-full lg:max-w-max">
+
+                <div class="h-60 lg:h-70 w-60 lg:w-70 rounded-full border border-borda p-2 overflow-hidden">
+                    <img class="rounded-full w-full h-full object-cover object-top hover:scale-110" src="/img/eu-2.png"
+                        alt="Imagem do walysson">
                 </div>
 
-                <div class="item-hero">
-                    <h3>EXPERIÊNCIA</h3>
-                    <p>+3 ANOS PROGRAMANDO</p>
+                <div class="hidden lg:flex flex-col gap-5 border-l border-borda pl-10">
+                    <div class="item-hero">
+                        <h3>LOCALIZAÇÃO</h3>
+                        <p>UBERABA, MG - BRASIL</p>
+                    </div>
+
+                    <div class="item-hero">
+                        <h3>EXPERIÊNCIA</h3>
+                        <p>+3 ANOS PROGRAMANDO</p>
+                    </div>
+
+                    <div class="item-hero">
+                        <h3>STATUS</h3>
+                        <p>
+                            <i class="bi bi-dot text-green-500 scale-300 mr-2 animate-pulse"></i>
+                            DISPONÍVEL PARA PROJETOS
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projetos" class="reveal delay-100">
+        <div class="interface">
+
+            <h2 class="titulo">PROJETOS SELECIONADOS <span id="qtd-itens"></span></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projetos-container">
+                <!--aqui vãos os projetos-->
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sobre" class="reveal">
+        <div class="interface">
+
+            <h2 class="titulo">SOBRE <span>RETRATO / 01</span></h2>
+
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-15">
+                <div class="relative w-full md:w-50 lg:min-w-100 p-2 border border-borda">
+                    <img src="/img/eu.png" alt="Imagem do Walysson">
+                    <span
+                        class="absolute -bottom-3 right-1/2 translate-x-1/2 uppercase whitespace-nowrap py-1 px-5 text-sm font-semibold bg-principal text-black">Walysson
+                        Ribeiro Rosa</span>
                 </div>
 
-                <div class="item-hero">
-                    <h3>STATUS</h3>
-                    <p>
-                        <i class="bi bi-dot text-green-500 scale-300 mr-2 animate-pulse"></i>
-                        DISPONÍVEL PARA PROJETOS
+                <div class="flex flex-col gap-5">
+                    <h3 class="text-5xl lg:text-6xl font-bold uppercase tracking-tight -leading-20">
+                        Código que resolve problema de gente real
+                    </h3>
+
+                    <p class="text-lg text-cinza font-light">
+                        Sou desenvolvedor full stack e estudante de Sistemas da Informação, com foco na construção de
+                        sistemas web. Busco transformar necessidades reais em soluções funcionais, mantendo código
+                        organizado, regras de negócio claras e interfaces intuitivas.
                     </p>
-                </div>
-            </div>
-        </div>
 
-    </div>
-</section>
+                    <p>
+                        <i class="bi bi-quote text-principal text-xl"></i>
+                        Nosso principal objetivo não deve ser instruir um computador sobre o que fazer, mas explicar aos
+                        seres humanos o que queremos que um computador faça.
+                        <i class="bi bi-quote text-principal text-xl rotate-90"></i>
 
-<section id="projetos" class="reveal delay-100">
-    <div class="interface">
+                        <span class="font-thin">
+                            — Donald Knuth
+                        </span>
+                    </p>
 
-        <h2 class="titulo">PROJETOS SELECIONADOS <span id="qtd-itens"></span></h2>
+                    <div class="info-sobre">
+                        <div class="item">
+                            <p>03+</p>
+                            <span>ANOS DE CÓDIGO</span>
+                        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projetos-container">
-            <!--aqui vãos os projetos-->
-        </div>
+                        <div class="item meio">
+                            <p>06+</p>
+                            <span>PROJETOS DESENVOLVIDOS</span>
+                        </div>
 
-    </div>
-</section>
-
-<section id="sobre" class="reveal">
-    <div class="interface">
-
-        <h2 class="titulo">SOBRE <span>RETRATO / 01</span></h2>
-
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-15">
-            <div class="relative w-full md:w-50 lg:min-w-100 p-2 border border-borda">
-                <img src="/img/eu.png" alt="Imagem do Walysson">
-                <span class="absolute -bottom-3 right-1/2 translate-x-1/2 uppercase whitespace-nowrap py-1 px-5 text-sm font-semibold bg-principal text-black">Walysson Ribeiro Rosa</span>
-            </div>
-
-            <div class="flex flex-col gap-5">
-                <h3 class="text-5xl lg:text-6xl font-bold uppercase tracking-tight -leading-20">
-                    Código que resolve problema de gente real
-                </h3>
-
-                <p class="text-lg text-cinza font-light">
-                    Sou desenvolvedor full stack e estudante de Sistemas da Informação, com foco na construção de
-                    sistemas web. Busco transformar necessidades reais em soluções funcionais, mantendo código
-                    organizado, regras de negócio claras e interfaces intuitivas.
-                </p>
-
-                <p>
-                    <i class="bi bi-quote text-principal text-xl"></i>
-                    Nosso principal objetivo não deve ser instruir um computador sobre o que fazer, mas explicar aos
-                    seres humanos o que queremos que um computador faça.
-                    <i class="bi bi-quote text-principal text-xl rotate-90"></i>
-
-                    <span class="font-thin">
-                        — Donald Knuth
-                    </span>
-                </p>
-
-                <div class="info-sobre">
-                    <div class="item">
-                        <p>03+</p>
-                        <span>ANOS DE CÓDIGO</span>
-                    </div>
-
-                    <div class="item meio">
-                        <p>06+</p>
-                        <span>PROJETOS DESENVOLVIDOS</span>
-                    </div>
-
-                    <div class="item">
-                        <p>02</p>
-                        <span>SISTEMA EM USO REAL</span>
+                        <div class="item">
+                            <p>02</p>
+                            <span>SISTEMA EM USO REAL</span>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
+    </section>
 
-    </div>
-</section>
-
-<section class="reveal">
-    <div class="interface info-geral">
-        <div class="item">
-            <h2>// Backend</h2>
-
-            <p>PHP <span>PRINCIPAL</span></p>
-            <p>Laravel <span>FRAMEWORK</span></p>
-            <p>MySQL <span>BANCO RELACIONAL</span></p>
-            <p>Composer <span>DEPENDÊNCIAS</span></p>
-        </div>
-
-        <div class="item">
-            <h2>// Frontend</h2>
-
-            <p>HTML <span>SEMÂNTICA</span></p>
-            <p>CSS <span>ESTILIZAÇÃO</span></p>
-            <p>JavaScript <span>INTERATIVIDADE</span></p>
-            <p>Tailwind <span>MOBILE FIRST</span></p>
-        </div>
-
-        <div class="item">
-            <h2>// Ferramentas</h2>
-
-            <p>Git / GitHub <span>VERSIONAMENTO</span></p>
-            <p>Linux <span>AMBIENTE</span></p>
-            <p>Docker <span>CONTAINERS</span></p>
-            <p>IA <span>APLICAÇÕES</span></p>
-        </div>
-    </div>
-</section>
-
-<section id="contato" class="reveal">
-    <div class="interface">
-
-        <h2 class="titulo">CONTATO <span>ONDE ME ENCONTRAR</span></h2>
-
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
-
-            <div class="flex flex-col gap-5 col-span-2">
-                <h3 class="text-5xl uppercase -leading-20 tracking-tight font-bold">Vamos construir alguma coisa?</h3>
-
-                <a class="text-xl font-light border-b border-principal max-w-max hover:text-principal"
-                   href="mailto:walyssonribeiro3@gmail.com">walyssonribeiro3@gmail.com</a>
-                <a class="text-cinza hover:text-white" href="https://wa.me/5516981151983" target="_blank">+55 (16) 98115-1983</a>
+    <section class="reveal m-0 mx-3 lg:mx-5">
+        <div class="interface overflow-hidden relative">
+            <div class="absolute w-10 lg:w-20 h-full bg-gradient-to-r from-[#0A0A0A] to-transparent left-0 top-0 z-10">
             </div>
 
-            <div class="flex flex-col gap-5">
-                <p class="text-xs text-cinza">REDES</p>
+            <div id="carrossel" class="flex w-max items-center gap-8 animate-scroll"></div>
 
-                <a class="hover:text-principal" href="https://www.linkedin.com/in/walysson-ribeiro-a92ba3260"
-                   target="_blank"><i class="bi bi-linkedin"></i> Linkedin</a>
-                <a class="hover:text-principal" href="https://github.com/oCrazyoff" target="_blank"><i
-                        class="bi bi-github"></i> GitHub</a>
-                <a class="hover:text-principal" href="https://www.instagram.com/walyssus/" target="_blank"><i
-                        class="bi bi-instagram"></i> Instagram</a>
+            <div class="absolute w-10 lg:w-20 h-full bg-gradient-to-l from-[#0A0A0A] to-transparent right-0 top-0 z-10">
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="interface info-geral">
+            <div class="item">
+                <h2>// Backend</h2>
+
+                <p>PHP <span>PRINCIPAL</span></p>
+                <p>Laravel <span>FRAMEWORK</span></p>
+                <p>MySQL <span>BANCO RELACIONAL</span></p>
+                <p>Composer <span>DEPENDÊNCIAS</span></p>
             </div>
 
-            <div class="flex flex-col gap-5">
-                <p class="text-xs text-cinza">LOCALIZAÇÃO</p>
+            <div class="item">
+                <h2>// Frontend</h2>
 
-                <p>Uberaba, Minas Gerais</p>
-                <p>Brasil</p>
+                <p>HTML <span>SEMÂNTICA</span></p>
+                <p>CSS <span>ESTILIZAÇÃO</span></p>
+                <p>JavaScript <span>INTERATIVIDADE</span></p>
+                <p>Tailwind <span>MOBILE FIRST</span></p>
+            </div>
+
+            <div class="item">
+                <h2>// Ferramentas</h2>
+
+                <p>Git / GitHub <span>VERSIONAMENTO</span></p>
+                <p>Linux <span>AMBIENTE</span></p>
+                <p>Docker <span>CONTAINERS</span></p>
+                <p>IA <span>APLICAÇÕES</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="reveal">
+        <div class="interface">
+
+            <h2 class="titulo">CONTATO <span>ONDE ME ENCONTRAR</span></h2>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <div class="flex flex-col gap-5 col-span-2">
+                    <h3 class="text-5xl uppercase -leading-20 tracking-tight font-bold">Vamos construir alguma coisa?
+                    </h3>
+
+                    <a class="text-xl font-light border-b border-principal max-w-max hover:text-principal"
+                        href="mailto:walyssonribeiro3@gmail.com">walyssonribeiro3@gmail.com</a>
+                    <a class="text-cinza hover:text-white" href="https://wa.me/5516981151983" target="_blank">+55 (16)
+                        98115-1983</a>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="text-xs text-cinza">REDES</p>
+
+                    <a class="hover:text-principal" href="https://www.linkedin.com/in/walysson-ribeiro-a92ba3260"
+                        target="_blank"><i class="bi bi-linkedin"></i> Linkedin</a>
+                    <a class="hover:text-principal" href="https://github.com/oCrazyoff" target="_blank"><i
+                            class="bi bi-github"></i> GitHub</a>
+                    <a class="hover:text-principal" href="https://www.instagram.com/walyssus/" target="_blank"><i
+                            class="bi bi-instagram"></i> Instagram</a>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="text-xs text-cinza">LOCALIZAÇÃO</p>
+
+                    <p>Uberaba, Minas Gerais</p>
+                    <p>Brasil</p>
+                </div>
+
             </div>
 
         </div>
+    </section>
 
-    </div>
-</section>
+    <footer class="border-t border-borda py-1 md:py-3 lg:py-5">
+        <div class="interface flex flex-col md:flex-row lg:flex-row items-center justify-between gap-2 lg:gap-5">
+            <p class="text-xs text-cinza uppercase">© <span id="ano"></span> Walysson Ribeiro Rosa</p>
+            <p class="text-xs text-cinza uppercase">Feito com precisão técnica</p>
+        </div>
+    </footer>
 
-<footer class="border-t border-borda py-1 md:py-3 lg:py-5">
-    <div class="interface flex flex-col md:flex-row lg:flex-row items-center justify-between gap-2 lg:gap-5">
-        <p class="text-xs text-cinza uppercase">© <span id="ano"></span> Walysson Ribeiro Rosa</p>
-        <p class="text-xs text-cinza uppercase">Feito com precisão técnica</p>
-    </div>
-</footer>
+    <script src="/js/projetos.js"></script>
+    <script src="/js/tecnologias.js"></script>
+    <script src="/js/menu.js"></script>
+    <script>
+        // pegando o ano atual
+        document.getElementById('ano').textContent = new Date().getFullYear();
 
-<script src="/js/projetos.js"></script>
-<script src="/js/menu.js"></script>
-<script>
-    // pegando o ano atual
-    document.getElementById('ano').textContent = new Date().getFullYear();
-
-    // animação reveal
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
+        // animação reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15
         });
-    }, {
-        threshold: 0.15
-    });
 
-    document.querySelectorAll('.reveal').forEach(section => {
-        observer.observe(section);
-    });
-</script>
+        document.querySelectorAll('.reveal').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
+
 </html>

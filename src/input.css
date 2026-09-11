@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @layer base {
+
   /* Aplica scroll suave e fonte globalmente */
   html {
     @apply scroll-smooth font-space;
@@ -23,9 +24,21 @@
   --font-space: "Space Grotesk", sans-serif;
   --font-jetbrains: "JetBrains Mono", monospace;
 
+  --animate-scroll: scroll 50s linear infinite;
+
   --color-borda: #232323;
   --color-cinza: #959595;
   --color-principal: #ffa500;
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @layer components {
