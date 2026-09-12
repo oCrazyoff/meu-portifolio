@@ -9,7 +9,7 @@ const tecnologias = [
     },
     {
         nome: "CSS3",
-        icone: "https://cdn.simpleicons.org/css3"
+        icone: "https://simpleicons.org/icons/css.svg"
     },
     {
         nome: "JavaScript",
@@ -46,6 +46,10 @@ const tecnologias = [
     {
         nome: "Linux",
         icone: "https://cdn.simpleicons.org/linux"
+    },
+    {
+        nome: "Composer",
+        icone: "https://simpleicons.org/icons/composer.svg"
     },
 ];
 
