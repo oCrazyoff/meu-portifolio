@@ -6,6 +6,7 @@ const projetos =
             titulo: "EcoFlow",
             descricao: "Sistema de gestão financeira para controle de receitas, despesas e organização financeira.",
             img: "/img/projetos/ecoflow.png",
+            destaque: "em uso real",
             tags: [
                 "PHP",
                 "TailwindCSS",
@@ -14,21 +15,6 @@ const projetos =
             ],
             github: "https://github.com/oCrazyoff/ecoflow",
             deploy: "https://ecoflow.kesug.com/"
-        },
-
-        // cantina
-        {
-            titulo: "Cantina da ETEC",
-            descricao: "Sistema PDV desenvolvido para automatizar as vendas e o controle da cantina da ETEC.",
-            img: "/img/projetos/cantina.png",
-            tags: [
-                "PHP",
-                "TailwindCSS",
-                "MySql",
-                "JavaScript"
-            ],
-            github: null,
-            deploy: "https://cantina-etec.kesug.com"
         },
 
         // walyflix
@@ -45,18 +31,50 @@ const projetos =
             deploy: "https://walyflix.kesug.com/"
         },
 
-        // isainfo
+        // cantina
         {
-            titulo: "IsaInfo",
-            descricao: "Landing page institucional desenvolvida para apresentar os serviços de um provedor de internet.",
-            img: "/img/projetos/isainfo.png",
+            titulo: "Cantina da ETEC",
+            descricao: "Sistema PDV desenvolvido para automatizar as vendas e o controle da cantina da ETEC.",
+            img: "/img/projetos/cantina.png",
+            destaque: "em produção",
+            tags: [
+                "PHP",
+                "TailwindCSS",
+                "MySql",
+                "JavaScript"
+            ],
+            github: null,
+            deploy: "https://cantina-etec.kesug.com"
+        },
+
+        // lumina
+        {
+            titulo: "Lumina",
+            descricao: "Trabalho da faculdade para fazer um sistema web de recomendação de livros com base nos genêros.",
+            img: "/img/projetos/lumina.png",
+            destaque: "em desenvolvimento",
+            tags: [
+                "Java",
+                "Tailwind",
+                "Maven",
+                "MySql"
+            ],
+            github: "https://github.com/oCrazyoff/trabalho-mvc-java"
+        },
+
+        // planet clicker
+        {
+            titulo: "Planet Clicker",
+            descricao: "Jogo incremental de cliques baseado em planetas, desenvolvido para explorar lógica e interações com JavaScript.",
+            img: "/img/projetos/planet.png",
+            destaque: "no ar",
             tags: [
                 "HTML",
                 "CSS",
                 "JavaScript"
             ],
-            github: "https://github.com/LeandroArantesDev/isainfo-site",
-            deploy: "https://www.isainfofibra.com.br/"
+            github: "https://github.com/oCrazyoff/planet-clicker",
+            deploy: "https://ocrazyoff.github.io/planet-clicker/"
         },
 
         // sgac
@@ -72,20 +90,6 @@ const projetos =
             ],
             github: "https://github.com/oCrazyoff/sgac"
         },
-
-        // planet clicker
-        {
-            titulo: "Planet Clicker",
-            descricao: "Jogo incremental de cliques baseado em planetas, desenvolvido para explorar lógica e interações com JavaScript.",
-            img: "/img/projetos/planet.png",
-            tags: [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
-            github: "https://github.com/oCrazyoff/planet-clicker",
-            deploy: "https://ocrazyoff.github.io/planet-clicker/"
-        },
     ];
 
 const container = document.getElementById("projetos-container");
@@ -97,7 +101,8 @@ projetos.forEach(projeto => {
     card.className = "flex flex-col gap-5";
 
     card.innerHTML = `
-        <div class="h-60 p-2 border border-borda overflow-hidden">
+        <div class="h-60 p-2 border border-borda overflow-hidden relative">
+            ${projeto.destaque ? `<span class="uppercase absolute left-4 top-4 bg-principal text-sm px-3 py-1 shadow-md text-black z-10">${projeto.destaque}</span>` : ""}
             <img class="w-full h-full object-cover hover:scale-105" src="${projeto.img}" alt="Print do projeto ${projeto.titulo}">
         </div>
         
