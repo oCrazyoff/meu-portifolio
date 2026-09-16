@@ -55,7 +55,7 @@ const projetos =
             destaque: "em desenvolvimento",
             tags: [
                 "Java",
-                "Tailwind",
+                "TailwindCSS",
                 "Maven",
                 "MySql"
             ],
