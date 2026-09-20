@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @layer base {
-
   /* Aplica scroll suave e fonte globalmente */
   html {
     @apply scroll-smooth font-space;
