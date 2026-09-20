@@ -74,22 +74,7 @@ const tag_qtd_infra = document.getElementById("qtd-itens-infra").innerText = "TE
 infras.forEach(infra => {
     const card = document.createElement("div");
 
-    card.className = `
-    group flex flex-col gap-5 p-10
-    border-b border-borda
-    [&:last-child]:border-b-0
-    hover:bg-cinza/20
-
-    md:border-r
-    md:[&:nth-child(even)]:border-r-0
-    md:[&:nth-last-child(-n+2)]:border-b-0
-
-    lg:border-r
-    lg:border-b
-    lg:[&:nth-child(even)]:border-r
-    lg:[&:nth-child(3n)]:border-r-0
-    lg:[&:nth-last-child(-n+3)]:border-b-0
-    `;
+    card.className = "group flex flex-col gap-5 p-10 bg-[#0A0A0A] hover:bg-cinza/10";
 
     card.innerHTML = `
         <h2 class="uppercase font-bold">${infra.titulo}</h2>
