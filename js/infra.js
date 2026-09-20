@@ -69,7 +69,7 @@ const infras = [
 ];
 
 const container_infra = document.getElementById("infra-container");
-const tag_qtd_infra = document.getElementById("qtd-itens-infra").innerText = "HOME LAB / " + infras.length;
+const tag_qtd_infra = document.getElementById("qtd-itens-infra").innerText = "TECNOLOGIAS / 0" + infras.length;
 
 infras.forEach(infra => {
     const card = document.createElement("div");
