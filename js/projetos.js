@@ -44,7 +44,7 @@ const projetos =
                 "JavaScript"
             ],
             github: null,
-            deploy: "https://cantina-etec.kesug.com"
+            deploy: "https://cantinaetec.com.br/"
         },
 
         // lumina
