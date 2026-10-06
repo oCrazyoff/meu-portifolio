@@ -6,7 +6,12 @@ const projetosCompletos = [
         titulo: "EcoFlow",
         descricao: "Sistema completo de gestão financeira pessoal, com controle de rendas, despesas, categorias, relatórios e recursos baseados em Inteligência Artificial.",
         descricaoLonga: "O EcoFlow começou como um projeto de estudos para colocar em prática meus conhecimentos de PHP e MySQL. Conforme o sistema cresceu, passei a utilizá-lo para explorar conceitos mais avançados de desenvolvimento web, como organização de código, arquitetura, autenticação, segurança, integração com Inteligência Artificial e experiência do usuário. Depois de refazer boa parte do projeto, disponibilizei o sistema gratuitamente para amigos e conhecidos utilizarem no dia a dia. O feedback dessas pessoas passou a orientar novas funcionalidades e melhorias, fazendo com que o projeto deixasse de ser apenas um exercício de programação e se tornasse uma aplicação utilizada de forma real há mais de um ano. Até hoje continuo fazendo melhorias e corrigindo problemas com base no uso real do sistema.",
-        img: "/img/projetos/ecoflow.png",
+        imagens:[
+            "/img/projetos/ecoflow/1.png",
+            "/img/projetos/ecoflow/2.png",
+            "/img/projetos/ecoflow/3.png",
+            "/img/projetos/ecoflow/4.png",
+        ],
         destaque: "em uso real",
         categoria: "sistema",
         funcao: "Full Stack",
@@ -29,7 +34,14 @@ const projetosCompletos = [
         titulo: "WalyFlix",
         descricao: "Plataforma de streaming inspirada em serviços como a Netflix, com catálogo dinâmico, filmes, séries, autenticação e player de vídeo.",
         descricaoLonga: "O WalyFlix foi o primeiro projeto que desenvolvi depois de começar a estudar PHP e marcou uma etapa importante na minha evolução como desenvolvedor. A ideia era criar uma plataforma de streaming inspirada na Netflix para aprender, na prática, como trabalhar com banco de dados, sessões, autenticação e conteúdo dinâmico. O projeto começou com um catálogo simples de filmes e evoluiu para incluir séries, sistema de Minha Lista, páginas dinâmicas e integração com player de vídeo. Mesmo sendo originalmente um projeto de estudos, continuo voltando ao código para implementar melhorias e testar novas ideias, tornando o WalyFlix uma espécie de laboratório pessoal para desenvolvimento web.",
-        img: "/img/projetos/walyflix.png",
+        imagens:[
+            "/img/projetos/walyflix/1.png",
+            "/img/projetos/walyflix/2.png",
+            "/img/projetos/walyflix/3.png",
+            "/img/projetos/walyflix/4.png",
+            "/img/projetos/walyflix/5.png",
+            "/img/projetos/walyflix/6.png",
+        ],
         categoria: "web",
         funcao: "Full Stack",
         status: "Em Desenvolvimento",
@@ -52,7 +64,13 @@ const projetosCompletos = [
         titulo: "Cantina da ETEC",
         descricao: "Sistema de PDV desenvolvido sob medida para uma cantina escolar, com vendas rápidas, controle de estoque e painel administrativo.",
         descricaoLonga: "A Cantina da ETEC surgiu de uma necessidade real. Eu e um amigo percebemos que a cantina da escola precisava de uma solução própria para agilizar as vendas e facilitar o controle dos produtos. A partir disso, decidimos transformar o problema em um projeto real e desenvolvemos um sistema sob medida para a rotina da cantina. O sistema foi pensado para que as vendas pudessem ser registradas rapidamente durante os horários de maior movimento, enquanto o painel administrativo permite acompanhar produtos, estoque e vendas. O projeto também marcou uma evolução importante na minha experiência profissional, pois deixou de ser apenas um projeto de estudo e passou a ser um sistema utilizado por um cliente real em produção.",
-        img: "/img/projetos/cantina.png",
+        imagens:[
+            "/img/projetos/cantina/1.png",
+            "/img/projetos/cantina/2.png",
+            "/img/projetos/cantina/3.png",
+            "/img/projetos/cantina/4.png",
+            "/img/projetos/cantina/5.png"
+        ],
         destaque: "em produção",
         categoria: "sistema",
         funcao: "Full Stack",
@@ -75,7 +93,14 @@ const projetosCompletos = [
         titulo: "Lumina",
         descricao: "Sistema web de recomendação de livros baseado em gêneros literários, desenvolvido como projeto acadêmico utilizando Java e arquitetura MVC.",
         descricaoLonga: "O Lumina foi desenvolvido como um trabalho acadêmico e representou meu primeiro contato mais aprofundado com desenvolvimento web utilizando Java. O projeto consiste em uma plataforma capaz de recomendar livros de acordo com os gêneros escolhidos pelo usuário, além de permitir o gerenciamento de livros e usuários. Trabalhei no projeto em conjunto com um colega, dividindo ideias, planejamento e desenvolvimento. Durante sua construção, tive contato com conceitos de arquitetura MVC, Servlets, Maven e integração entre aplicação web e banco de dados. Mais do que o sistema final, o projeto foi importante para ampliar minha experiência para além do ecossistema PHP e entender como diferentes tecnologias podem ser utilizadas para resolver problemas semelhantes.",
-        img: "/img/projetos/lumina.png",
+        imagens:[
+            "/img/projetos/lumina/1.png",
+            "/img/projetos/lumina/2.png",
+            "/img/projetos/lumina/3.png",
+            "/img/projetos/lumina/4.png",
+            "/img/projetos/lumina/5.png",
+            "/img/projetos/lumina/6.png"
+        ],
         destaque: "em desenvolvimento",
         categoria: "sistema",
         funcao: "Full Stack",
@@ -97,7 +122,11 @@ const projetosCompletos = [
         titulo: "Planet Clicker",
         descricao: "Jogo incremental desenvolvido em JavaScript puro, com progressão por planetas, upgrades e sistema de salvamento local.",
         descricaoLonga: "O Planet Clicker foi um dos primeiros projetos em que me propus a estudar JavaScript de forma mais profunda. Sempre gostei de jogos incrementais e decidi transformar esse interesse em um projeto próprio para entender como criar lógica de progressão, interações e sistemas de recompensa diretamente no navegador. O jogo utiliza JavaScript puro para controlar toda a lógica, desde os cliques e upgrades até a progressão entre planetas. Mesmo sendo um projeto relativamente simples, ele foi importante para desenvolver minha capacidade de estruturar lógica no front-end e entender melhor a manipulação do DOM e o armazenamento de dados no navegador. Até hoje volto ao projeto ocasionalmente para implementar pequenas melhorias e experimentar novas ideias.",
-        img: "/img/projetos/planet.png",
+        imagens:[
+            "/img/projetos/planet/1.png",
+            "/img/projetos/planet/2.png",
+            "/img/projetos/planet/3.png",
+        ],
         destaque: "no ar",
         categoria: "jogo",
         funcao: "Front-end",
@@ -120,7 +149,13 @@ const projetosCompletos = [
         titulo: "SGAC",
         descricao: "Plataforma para gerenciamento de voluntários, eventos e doações, desenvolvida em equipe como projeto acadêmico.",
         descricaoLonga: "O SGAC foi desenvolvido em equipe durante a faculdade para um projeto do ENTEC. A proposta era criar uma plataforma capaz de centralizar o gerenciamento de voluntários, eventos e doações de iniciativas comunitárias. Participei diretamente da programação junto com outros três integrantes, enquanto os demais membros da equipe ficaram responsáveis por planejamento, documentação e apresentação. Trabalhar em um projeto com várias pessoas foi uma experiência importante para entender melhor divisão de responsabilidades, desenvolvimento colaborativo e organização de um sistema maior. O projeto também me ajudou a perceber a importância de transformar requisitos abstratos em funcionalidades concretas e de manter o código organizado mesmo quando várias pessoas estão trabalhando na mesma aplicação.",
-        img: "/img/projetos/sgac.webp",
+        imagens:[
+            "/img/projetos/sgac/1.webp",
+            "/img/projetos/sgac/2.webp",
+            "/img/projetos/sgac/3.webp",
+            "/img/projetos/sgac/4.webp",
+            "/img/projetos/sgac/5.webp"
+        ],
         categoria: "sistema",
         funcao: "Full Stack",
         status: "Finalizado",
@@ -142,7 +177,11 @@ const projetosCompletos = [
         titulo: "Homelab ZimaOS",
         descricao: "Servidor doméstico baseado em ZimaOS para hospedar serviços, aplicações, armazenamento e automações em uma infraestrutura própria.",
         descricaoLonga: "Meu homelab começou como uma forma de reaproveitar um notebook antigo e acabou se tornando uma infraestrutura própria para executar diversos projetos e serviços. Utilizo o ZimaOS como base para administrar containers, armazenamento e aplicações, transformando o equipamento em um pequeno servidor doméstico. Nele mantenho serviços como automações, armazenamento de arquivos, gerenciamento de mídia, servidores de jogos e outras aplicações que utilizo no meu dia a dia. A experiência também me levou a estudar conceitos que normalmente não aparecem tanto no desenvolvimento web tradicional, como Docker, redes, DNS, volumes, permissões, portas, gerenciamento de recursos e acesso remoto com Tailscale. O homelab funciona, na prática, como um ambiente pessoal onde posso testar tecnologias, hospedar projetos e aprender sobre infraestrutura enquanto resolvo problemas reais.",
-        img: "/img/projetos/homelab.png",
+        imagens:[
+            "/img/projetos/homelab/1.png",
+            "/img/projetos/homelab/2.png",
+            "/img/projetos/homelab/3.png",
+        ],
         destaque: "em uso real",
         categoria: "infraestrutura",
         funcao: "DevOps / Infra",
@@ -165,7 +204,11 @@ const projetosCompletos = [
         titulo: "Bot de IA com n8n",
         descricao: "Assistente pessoal baseado em Inteligência Artificial, desenvolvido com n8n para automatizar tarefas e interagir por diferentes canais.",
         descricaoLonga: "Este projeto nasceu da ideia de criar um assistente pessoal capaz de fazer mais do que simplesmente responder mensagens. Utilizando o n8n como plataforma de automação, desenvolvi uma estrutura que conecta modelos de Inteligência Artificial a diferentes serviços e canais de comunicação como o Telegram. O bot consegue interpretar mensagens, manter contexto das conversas, utilizar memórias e executar ferramentas para realizar diferentes tarefas. A arquitetura também foi pensada para permitir a troca de modelos de IA conforme a necessidade, utilizando APIs e provedores como o OpenRouter. Durante o desenvolvimento, passei a trabalhar com conceitos de agentes, memória, contexto, automação de workflows, integração de APIs e processamento de mensagens. O projeto continua evoluindo conforme novas ideias e necessidades aparecem, funcionando também como meu laboratório pessoal para experimentar aplicações práticas de IA.",
-        img: "/img/projetos/n8n.png",
+        imagens:[
+            "/img/projetos/n8n/1.png",
+            "/img/projetos/n8n/2.png",
+            "/img/projetos/n8n/3.png",
+        ],
         destaque: "em uso real",
         categoria: "ia",
         funcao: "Automação / I.A.",
@@ -222,12 +265,15 @@ const btnContainer = document.querySelector("#categorias .btn-container");
 function criarCardProjeto(projeto, indice) {
     const numero = String(indice + 1).padStart(2, "0");
 
+    // Verifica se há um array de imagens, senão usa a imagem única como array
+    const imagens = projeto.imagens || [projeto.img];
+
     return `
         <div class="card-projeto group cursor-pointer flex flex-col gap-5 bg-fundo p-5 hover:bg-cinza/20" data-id="${projeto.id}" data-categoria="${projeto.categoria}">
             <div class="relative h-56 lg:h-64 p-2 overflow-hidden bg-fundo">
                 <span class="absolute top-4 left-4 text-xs text-white bg-cinza px-2 rounded-full z-10 font-jetbrains">${numero}</span>
                 <img class="w-full h-full object-cover object-top group-hover:scale-105"
-                    src="${projeto.img}" alt="Print do projeto ${projeto.titulo}">
+                    src="${imagens[0] || projeto.img}" alt="Print do projeto ${projeto.titulo}">
             </div>
 
             <div class="flex flex-col gap-2">
@@ -317,6 +363,7 @@ renderizarProjetos();
 // ==========================================
 
 let modalAberto = false;
+let carrosselTimer;
 
 function abrirModal(id) {
     const projeto = projetosCompletos.find(p => p.id === id);
@@ -325,10 +372,36 @@ function abrirModal(id) {
     const modal = document.getElementById("modal-projeto");
     const conteudo = document.getElementById("modal-conteudo");
 
+    // Verifica se há um array de imagens, senão usa a imagem única como array
+    const imagens = projeto.imagens || [projeto.img];
+
     conteudo.innerHTML = `
-        <!-- Imagem -->
-        <div class="w-full overflow-hidden border border-borda">
-            <img class="w-full h-auto object-cover" src="${projeto.img}" alt="Print do projeto ${projeto.titulo}">
+        <!-- Carrossel -->
+        <div class="w-full relative overflow-hidden border border-borda group select-none touch-pan-y" id="carrossel-container">
+            
+            <!-- Trilha das imagens -->
+            <div class="flex transition-transform duration-300 ease-out cursor-grab active:cursor-grabbing" id="carrossel-track">
+                ${imagens.map(img => `
+                    <img class="w-full h-auto object-cover shrink-0" src="${img}" alt="Print do projeto">
+                `).join("")}
+            </div>
+
+            <!-- Botões de Navegação (só aparecem se tiver mais de 1 imagem) -->
+            ${imagens.length > 1 ? `
+                <button id="btn-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 text-white w-8 h-8 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button id="btn-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 text-white w-8 h-8 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+
+                <!-- Paginação (Bolinhas) -->
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2" id="carrossel-dots">
+                    ${imagens.map((_, i) => `
+                        <button class="w-2 h-2 rounded-full transition-colors dot-item ${i === 0 ? 'bg-principal' : 'bg-cinza/50'}" data-index="${i}"></button>
+                    `).join("")}
+                </div>
+            ` : ''}
         </div>
 
         <!-- texto -->
@@ -405,11 +478,175 @@ function abrirModal(id) {
     modal.classList.add("flex");
     document.body.classList.add("overflow-hidden");
 
+    // carrossel
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.classList.add("overflow-hidden");
+
+    if (!modalAberto) {
+        history.pushState({ modal: "aberto" }, "", "");
+        modalAberto = true;
+    }
+
+    // CHAME AQUI, depois que o modal já está visível na tela:
+    iniciarCarrossel();
+
     // insere o estado no histórico ao abrir
     if (!modalAberto) {
         history.pushState({ modal: "aberto" }, "", "");
         modalAberto = true;
     }
+}
+
+// ==========================================
+// carrossel
+// ==========================================
+function iniciarCarrossel() {
+    const track = document.getElementById("carrossel-track");
+    if (!track) return;
+
+    const slides = Array.from(track.children);
+    if (slides.length <= 1) return; // Não precisa de carrossel para 1 imagem
+
+    const btnPrev = document.getElementById("btn-prev");
+    const btnNext = document.getElementById("btn-next");
+    const dots = Array.from(document.querySelectorAll(".dot-item"));
+
+    let currentIndex = 0;
+    let isDragging = false;
+    let startPos = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let animationID;
+
+    // Garante que o navegador não tente arrastar a imagem como arquivo nativo
+    slides.forEach(img => {
+        img.setAttribute("draggable", "false");
+    });
+
+    // --- LÓGICA DE AUTOPLAY ---
+    function iniciarAutoPlay() {
+        clearInterval(carrosselTimer);
+        carrosselTimer = setInterval(() => {
+            currentIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
+            setPositionByIndex();
+        }, 3000);
+    }
+
+    // CORRIGIDO: Agora usa a largura de apenas um slide (uma imagem), não do track todo!
+    function setPositionByIndex() {
+        const slideWidth = slides[0].offsetWidth || track.parentElement.offsetWidth;
+        currentTranslate = currentIndex * -slideWidth;
+        prevTranslate = currentTranslate;
+        track.style.transform = `translateX(${currentTranslate}px)`;
+
+        // Esconde ou exibe botões nos limites
+        if (btnPrev && btnNext) {
+            btnPrev.style.display = currentIndex === 0 ? 'none' : 'flex';
+            btnNext.style.display = currentIndex === slides.length - 1 ? 'none' : 'flex';
+        }
+
+        // Atualiza bolinhas (paginação)
+        dots.forEach((dot, i) => {
+            dot.className = `w-2 h-2 rounded-full transition-colors dot-item ${i === currentIndex ? 'bg-principal' : 'bg-cinza/50'}`;
+        });
+    }
+
+    // Ações de clique (Reiniciam o autoplay)
+    if (btnPrev) {
+        btnPrev.addEventListener("click", (e) => { 
+            e.stopPropagation();
+            if (currentIndex > 0) { currentIndex--; setPositionByIndex(); iniciarAutoPlay(); }
+        });
+    }
+    if (btnNext) {
+        btnNext.addEventListener("click", (e) => { 
+            e.stopPropagation();
+            if (currentIndex < slides.length - 1) { currentIndex++; setPositionByIndex(); iniciarAutoPlay(); }
+        });
+    }
+    dots.forEach((dot, i) => dot.addEventListener("click", (e) => { 
+        e.stopPropagation();
+        currentIndex = i; 
+        setPositionByIndex(); 
+        iniciarAutoPlay(); 
+    }));
+
+    // --- LÓGICA DE ARRASTAR (MOUSE E TOUCH) ---
+    track.addEventListener("mousedown", dragStart);
+    track.addEventListener("touchstart", dragStart, { passive: true });
+    
+    // Ouvimos no window/document para garantir que o gesto continue mesmo se o usuário tirar o dedo de cima do modal rápido demais
+    window.addEventListener("mouseup", dragEnd);
+    window.addEventListener("touchend", dragEnd);
+    window.addEventListener("mousemove", drag);
+    window.addEventListener("touchmove", drag, { passive: false }); // touchmove precisa capturar precisamente
+
+    function getPositionX(e) {
+        return e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+    }
+
+    function dragStart(e) {
+        isDragging = true;
+        clearInterval(carrosselTimer); // Pausa o autoplay
+        startPos = getPositionX(e);
+        animationID = requestAnimationFrame(animation);
+        track.classList.remove("transition-transform", "duration-300");
+    }
+
+    function drag(e) {
+        if (!isDragging) return;
+        
+        const currentPosition = getPositionX(e);
+        currentTranslate = prevTranslate + currentPosition - startPos;
+        
+        // Evita que o usuário arraste infinitamente para além das pontas (efeito elástico)
+        const slideWidth = slides[0].offsetWidth;
+        const maxTranslate = 0;
+        const minTranslate = (slides.length - 1) * -slideWidth;
+        
+        if (currentTranslate > maxTranslate) {
+            currentTranslate = maxTranslate + (currentTranslate - maxTranslate) * 0.3;
+        } else if (currentTranslate < minTranslate) {
+            currentTranslate = minTranslate + (currentTranslate - minTranslate) * 0.3;
+        }
+    }
+
+    function dragEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        cancelAnimationFrame(animationID);
+        track.classList.add("transition-transform", "duration-300");
+
+        const movedBy = currentTranslate - prevTranslate;
+        const slideWidth = slides[0].offsetWidth;
+
+        // Se o usuário arrastar mais do que 20% da largura da imagem, muda de slide
+        const threshold = slideWidth * 0.2;
+
+        if (movedBy < -threshold && currentIndex < slides.length - 1) {
+            currentIndex += 1;
+        } else if (movedBy > threshold && currentIndex > 0) {
+            currentIndex -= 1;
+        }
+
+        setPositionByIndex();
+        iniciarAutoPlay(); // Retoma o autoplay
+    }
+
+    function animation() {
+        if (isDragging) {
+            track.style.transform = `translateX(${currentTranslate}px)`;
+            requestAnimationFrame(animation);
+        }
+    }
+
+    // Ajusta o carrossel em redimensionamentos de tela
+    window.addEventListener('resize', setPositionByIndex);
+
+    // Inicialização
+    setPositionByIndex();
+    iniciarAutoPlay();
 }
 
 function fecharModal(veioDoPopState = false) {
@@ -418,7 +655,8 @@ function fecharModal(veioDoPopState = false) {
     modal.classList.remove("flex");
     document.body.classList.remove("overflow-hidden");
 
-    // remove o histórico fantasma se o usuário fechou no "X", clicando fora ou no ESC
+    clearInterval(carrosselTimer); // parar o timer rodando no fundo
+
     if (modalAberto) {
         modalAberto = false;
         if (!veioDoPopState) {

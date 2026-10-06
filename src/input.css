@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @layer base {
-
   /* Aplica scroll suave e fonte globalmente */
   html {
     @apply scroll-smooth font-space;
@@ -20,7 +19,7 @@
   }
 
   ::selection {
-    @apply bg-principal/60 text-black;
+    @apply bg-principal/80 text-black;
   }
 
   section {
@@ -37,7 +36,7 @@
   --color-borda: #232323;
   --color-cinza: #959595;
   --color-principal: #ffa500;
-  --color-fundo: #0A0A0A;
+  --color-fundo: #0a0a0a;
 
   @keyframes scroll {
     from {

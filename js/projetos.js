@@ -5,7 +5,7 @@ const projetos =
         {
             titulo: "EcoFlow",
             descricao: "Sistema de gestão financeira para controle de receitas, despesas e organização financeira.",
-            img: "/img/projetos/ecoflow.png",
+            img: "/img/projetos/ecoflow/1.png",
             destaque: "em uso real",
             tags: [
                 "PHP",
@@ -20,7 +20,7 @@ const projetos =
         {
             titulo: "WalyFlix",
             descricao: "Plataforma de streaming inspirada na Netflix, desenvolvida como projeto de estudo.",
-            img: "/img/projetos/walyflix.png",
+            img: "/img/projetos/walyflix/1.png",
             tags: [
                 "PHP",
                 "TailwindCSS",
@@ -34,7 +34,7 @@ const projetos =
         {
             titulo: "Cantina da ETEC",
             descricao: "Sistema PDV desenvolvido para automatizar as vendas e o controle da cantina da ETEC.",
-            img: "/img/projetos/cantina.png",
+            img: "/img/projetos/cantina/1.png",
             destaque: "em produção",
             tags: [
                 "PHP",
