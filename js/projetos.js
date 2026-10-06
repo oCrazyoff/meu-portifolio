@@ -13,7 +13,6 @@ const projetos =
                 "MySql",
                 "JavaScript"
             ],
-            github: "https://github.com/oCrazyoff/ecoflow",
             deploy: "https://ecoflow.kesug.com/"
         },
 
@@ -45,51 +44,7 @@ const projetos =
             ],
             github: null,
             deploy: "https://cantinaetec.com.br/"
-        },
-
-        // lumina
-        {
-            titulo: "Lumina",
-            descricao: "Trabalho da faculdade para fazer um sistema web de recomendação de livros com base nos genêros.",
-            img: "/img/projetos/lumina.png",
-            destaque: "em desenvolvimento",
-            tags: [
-                "Java",
-                "TailwindCSS",
-                "Maven",
-                "MySql"
-            ],
-            github: "https://github.com/oCrazyoff/trabalho-mvc-java"
-        },
-
-        // planet clicker
-        {
-            titulo: "Planet Clicker",
-            descricao: "Jogo incremental de cliques baseado em planetas, desenvolvido para explorar lógica e interações com JavaScript.",
-            img: "/img/projetos/planet.png",
-            destaque: "no ar",
-            tags: [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
-            github: "https://github.com/oCrazyoff/planet-clicker",
-            deploy: "https://ocrazyoff.github.io/planet-clicker/"
-        },
-
-        // sgac
-        {
-            titulo: "sgac",
-            descricao: "É uma plataforma para gestão de voluntários, eventos e doações em atividades comunitárias.",
-            img: "/img/projetos/sgac.webp",
-            tags: [
-                "PHP",
-                "CSS",
-                "JavaScript",
-                "MySql"
-            ],
-            github: "https://github.com/oCrazyoff/sgac"
-        },
+        }
     ];
 
 const container = document.getElementById("projetos-container");

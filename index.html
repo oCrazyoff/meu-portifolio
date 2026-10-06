@@ -381,7 +381,8 @@
                 }
             });
         }, {
-            threshold: 0.15
+            threshold: 0.01,           // Dispara assim que 1% do topo entrar na tela
+            rootMargin: "0px 0px -50px 0px" // Dá um respiro sutil de 50px antes de acionar
         });
 
         document.querySelectorAll('.reveal').forEach(section => {

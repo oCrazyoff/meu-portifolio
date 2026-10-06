@@ -85,12 +85,8 @@
         </div>
     </section>
 
-    <div class="interface reveal delay-50">
-        <hr class="border-0 border-t border-borda">
-    </div>
-
     <section class="reveal delay-100">
-        <div class="interface">
+        <div class="interface border-t border-borda pt-10">
             <div id="categorias" class="flex flex-wrap items-center justify-between gap-5 mb-10">
                 <div class="btn-container flex flex-wrap gap-2">
                     <!-- preenchido dinamicamente pelo JS -->
@@ -99,7 +95,7 @@
                 <p id="contador-itens" class="text-xs text-cinza font-jetbrains uppercase">0 / ITENS</p>
             </div>
 
-            <div id="container-projetos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-borda gap-[1.5px]">
+            <div id="container-projetos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-borda gap-[1.5px]">
                 <!-- preenchido pelo JS -->
             </div>
         </div>
@@ -131,7 +127,8 @@
                 }
             });
         }, {
-            threshold: 0.15
+            threshold: 0.01,           // Dispara assim que 1% do topo entrar na tela
+            rootMargin: "0px 0px -50px 0px" // Dá um respiro sutil de 50px antes de acionar
         });
 
         document.querySelectorAll('.reveal').forEach(section => {

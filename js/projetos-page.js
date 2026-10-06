@@ -20,7 +20,6 @@ const projetosCompletos = [
             "Dashboard com gráficos e I.A.",
             "Autenticação de usuários"
         ],
-        github: "https://github.com/oCrazyoff/ecoflow",
         deploy: "https://ecoflow.kesug.com/"
     },
 
@@ -224,7 +223,7 @@ function criarCardProjeto(projeto, indice) {
     const numero = String(indice + 1).padStart(2, "0");
 
     return `
-        <div class="card-projeto group cursor-pointer flex flex-col gap-5 bg-fundo p-5 hover:bg-borda" data-id="${projeto.id}" data-categoria="${projeto.categoria}">
+        <div class="card-projeto group cursor-pointer flex flex-col gap-5 bg-fundo p-5 hover:bg-cinza/20" data-id="${projeto.id}" data-categoria="${projeto.categoria}">
             <div class="relative h-56 lg:h-64 p-2 overflow-hidden bg-fundo">
                 <span class="absolute top-4 left-4 text-xs text-white bg-cinza px-2 rounded-full z-10 font-jetbrains">${numero}</span>
                 <img class="w-full h-full object-cover object-top group-hover:scale-105"
@@ -240,10 +239,10 @@ function criarCardProjeto(projeto, indice) {
                 <p class="text-sm text-cinza leading-relaxed">${projeto.descricao}</p>
             </div>
 
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between gap-2">
                 <div class="flex flex-wrap items-center gap-2">
                     ${projeto.tags.map(tag => `
-                        <span class="text-xs text-cinza bg-transparent border border-borda px-1 group-hover:underline group-hover:text-white">
+                        <span class="text-xs text-cinza bg-transparent border border-borda px-1 group-hover:underline group-hover:text-white group-hover:border-transparent">
                             ${tag}
                         </span>
                     `).join("")}
@@ -317,6 +316,8 @@ renderizarProjetos();
 // MODAL
 // ==========================================
 
+let modalAberto = false;
+
 function abrirModal(id) {
     const projeto = projetosCompletos.find(p => p.id === id);
     if (!projeto) return;
@@ -345,12 +346,12 @@ function abrirModal(id) {
             <p class="text-cinza text-base leading-relaxed mt-4">${projeto.descricaoLonga}</p>
 
             <!-- Info grid: Função | Status | Ano -->
-            <div class="grid grid-cols-3 border border-borda mt-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 border border-borda mt-8">
                 <div class="flex flex-col gap-1 p-4 lg:p-5">
                     <span class="text-[10px] uppercase tracking-widest text-cinza font-jetbrains">Função</span>
                     <span class="text-sm font-bold uppercase font-jetbrains">${projeto.funcao}</span>
                 </div>
-                <div class="flex flex-col gap-1 p-4 lg:p-5 border-x border-borda">
+                <div class="flex flex-col gap-1 p-4 lg:p-5 border-y lg:border-x lg:border-y-0 border-borda">
                     <span class="text-[10px] uppercase tracking-widest text-cinza font-jetbrains">Status</span>
                     <span class="text-sm font-bold uppercase font-jetbrains">${projeto.status}</span>
                 </div>
@@ -403,13 +404,27 @@ function abrirModal(id) {
     modal.classList.remove("hidden");
     modal.classList.add("flex");
     document.body.classList.add("overflow-hidden");
+
+    // insere o estado no histórico ao abrir
+    if (!modalAberto) {
+        history.pushState({ modal: "aberto" }, "", "");
+        modalAberto = true;
+    }
 }
 
-function fecharModal() {
+function fecharModal(veioDoPopState = false) {
     const modal = document.getElementById("modal-projeto");
     modal.classList.add("hidden");
     modal.classList.remove("flex");
     document.body.classList.remove("overflow-hidden");
+
+    // remove o histórico fantasma se o usuário fechou no "X", clicando fora ou no ESC
+    if (modalAberto) {
+        modalAberto = false;
+        if (!veioDoPopState) {
+            history.back();
+        }
+    }
 }
 
 // Clique nos cards → abre o modal (delegação de eventos)
@@ -426,4 +441,13 @@ document.getElementById("modal-projeto").addEventListener("click", (e) => {
 // Fechar com ESC
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") fecharModal();
+});
+
+// fechar com o botão voltar
+window.addEventListener("popstate", () => {
+    const modal = document.getElementById("modal-projeto");
+    if (!modal.classList.contains("hidden")) {
+        // Passa "true" para não executar o history.back() novamente
+        fecharModal(true);
+    }
 });
