@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@view-transition {
+  navigation: auto;
+}
+
 @layer base {
   /* Aplica scroll suave e fonte globalmente */
   html {

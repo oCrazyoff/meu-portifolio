@@ -16,18 +16,18 @@ const projetos =
             deploy: "https://ecoflow.kesug.com/"
         },
 
-        // walyflix
+        // homelab
         {
-            titulo: "WalyFlix",
-            descricao: "Plataforma de streaming inspirada na Netflix, desenvolvida como projeto de estudo.",
-            img: "/img/projetos/walyflix/1.png",
+            titulo: "HomeLab",
+            descricao: "Servidor doméstico baseado em ZimaOS para hospedar serviços e automações.",
+            img: "/img/projetos/homelab/1.png",
             tags: [
-                "PHP",
-                "TailwindCSS",
-                "MySql",
-                "JavaScript"
+                "Docker", 
+                "Linux", 
+                "Tailscale", 
+                "Self-hosting"
             ],
-            deploy: "https://walyflix.kesug.com/"
+            info: true
         },
 
         // cantina
@@ -83,6 +83,11 @@ projetos.forEach(projeto => {
                 ${projeto.deploy ? `
                 <a class="text-sm text-principal whitespace-nowrap border border-principal py-1 px-3 hover:bg-principal hover:text-black" 
                 href="${projeto.deploy}" target="_blank"> VER SITE <i class="bi bi-arrow-up-right"></i></a>
+                ` : ""}
+
+                 ${projeto.info ? `
+                <a class="text-sm text-principal whitespace-nowrap border border-principal py-1 px-3 hover:bg-principal hover:text-black" 
+                href="/projetos"> SABER MAIS <i class="bi bi-info-lg"></i></a>
                 ` : ""}
 
             </div>
