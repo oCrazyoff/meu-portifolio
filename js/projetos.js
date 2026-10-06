@@ -93,7 +93,6 @@ const projetos =
     ];
 
 const container = document.getElementById("projetos-container");
-const tag_qtd = document.getElementById("qtd-itens").innerText = projetos.length + " / ITENS";
 
 projetos.forEach(projeto => {
     const card = document.createElement("div");

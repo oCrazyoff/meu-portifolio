@@ -74,7 +74,7 @@ const tag_qtd_infra = document.getElementById("qtd-itens-infra").innerText = "TE
 infras.forEach(infra => {
     const card = document.createElement("div");
 
-    card.className = "group flex flex-col gap-5 p-10 bg-[#0A0A0A] hover:bg-cinza/10";
+    card.className = "group flex flex-col gap-5 p-10 bg-fundo hover:bg-borda";
 
     card.innerHTML = `
         <h2 class="uppercase font-bold">${infra.titulo}</h2>

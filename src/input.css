@@ -12,6 +12,13 @@
     /* outline: 1px solid red; */
   }
 
+  a,
+  button,
+  [role="button"],
+  img {
+    @apply transition-all duration-300 ease-out;
+  }
+
   ::selection {
     @apply bg-principal/60 text-black;
   }
@@ -30,6 +37,7 @@
   --color-borda: #232323;
   --color-cinza: #959595;
   --color-principal: #ffa500;
+  --color-fundo: #0A0A0A;
 
   @keyframes scroll {
     from {
@@ -118,5 +126,9 @@
         }
       }
     }
+  }
+
+  .btn-container button.atual {
+    @apply !bg-principal !text-fundo !border-principal;
   }
 }

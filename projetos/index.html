@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Walysson - Projetos de desenvolvimento web e full-stack.">
+    <meta name="keywords" content="Walysson, portfólio, web development, design, projetos, frontend, programador">
+    <meta name="author" content="Walysson">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.walysson.com.br/">
+    <meta property="og:title" content="Portfólio do Walysson">
+    <meta property="og:description" content="Walysson - Projetos de desenvolvimento web e full-stack.">
+    <meta property="og:image" content="https://www.walysson.com.br/img/eu.png">
+    <meta property="og:url" content="https://www.walysson.com.br">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Walysson Ribeiro | Desenvolvedor Full Stack">
+    <meta name="twitter:description" content="Portfólio de Walysson Ribeiro, desenvolvedor Full Stack.">
+    <meta name="twitter:image" content="https://www.walysson.com.br/img/og-image.jpg">
+    <link rel="icon" href="/img/icone.png" type="image/png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JP85XFHNL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-0JP85XFHNL');
+    </script>
+    <link href="/src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Walysson | Projetos</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Walysson",
+            "url": "https://www.walysson.com.br",
+            "jobTitle": "Desenvolvedor Full Stack",
+            "sameAs": [
+                "https://www.linkedin.com/in/walysson-ribeiro-a92ba3260/",
+                "https://github.com/oCrazyoff",
+                "https://www.instagram.com/walyssus/"
+            ]
+        }
+    </script>
+</head>
+
+<body class="bg-fundo text-white">
+
+    <header class="fixed z-500 inset-0 bg-fundo/70 backdrop-blur-xl h-15 p-2 shadow-lg/30 border-b border-borda">
+        <div class="interface flex items-center justify-between h-full gap-5">
+
+            <div class="flex items-center justify-center gap-5">
+                <img class="h-8 w-8 object-cover p-0.5 border border-borda" src="/img/eu-3.png"
+                    alt="Uma foto do walysson">
+                <p class="text-xs font-bold">W.RIBEIRO/FULL STACK</p>
+            </div>
+
+            <nav class="flex items-center justify-center gap-5 font-jetbrains font-light text-xs text-cinza">
+                <a class="hover:text-principal" href="/">[ <i class="bi bi-arrow-left"></i> VOLTAR ]</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="reveal pt-15">
+        <div class="interface flex flex-col gap-5">
+            <p class="text-principal text-xs uppercase">arquivos / projetos</p>
+            <h2 class="text-5xl lg:text-7xl font-semibold uppercase">Tudo que eu construí</h2>
+            <p class="text-lg text-cinza lg:w-1/2">
+                Sistemas em produção, sites para clientes, jogos, automações com IA e infraestrutura caseira. Clique em
+                um projeto para ver os detalhes.
+            </p>
+        </div>
+    </section>
+
+    <div class="interface reveal delay-50">
+        <hr class="border-0 border-t border-borda">
+    </div>
+
+    <section class="reveal delay-100">
+        <div class="interface">
+            <div id="categorias" class="flex flex-wrap items-center justify-between gap-5 mb-10">
+                <div class="btn-container flex flex-wrap gap-2">
+                    <!-- preenchido dinamicamente pelo JS -->
+                </div>
+
+                <p id="contador-itens" class="text-xs text-cinza font-jetbrains uppercase">0 / ITENS</p>
+            </div>
+
+            <div id="container-projetos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-borda gap-[1.5px]">
+                <!-- preenchido pelo JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal-projeto"
+        class="hidden fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm items-center justify-center p-3 lg:p-5">
+        <div class="relative bg-fundo border border-borda max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+            <button onclick="fecharModal()"
+                class="absolute top-4 right-4 text-cinza hover:text-white text-2xl z-10 cursor-pointer">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div id="modal-conteudo">
+                <!-- preenchido pelo JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/projetos-page.js"></script>
+    <script>
+        // animação reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        document.querySelectorAll('.reveal').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>

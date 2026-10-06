@@ -57,9 +57,9 @@
     </script>
 </head>
 
-<body class="bg-[#0A0A0A] text-white">
+<body class="bg-fundo text-white">
 
-    <header class="fixed z-500 inset-0 bg-[#0A0A0A]/70 backdrop-blur-xl h-15 p-2 shadow-lg/30 border-b border-borda">
+    <header class="fixed z-500 inset-0 bg-fundo/70 backdrop-blur-xl h-15 p-2 shadow-lg/30 border-b border-borda">
         <div class="interface flex items-center justify-between h-full gap-5">
 
             <div class="flex items-center justify-center gap-5">
@@ -82,8 +82,7 @@
         </div>
     </header>
 
-    <div class="fixed inset-0 translate-x-full z-700 flex flex-col justify-between gap-5 p-5 bg-[#0A0A0A]"
-        id="menu-mobile">
+    <div class="fixed inset-0 translate-x-full z-700 flex flex-col justify-between gap-5 p-5 bg-fundo" id="menu-mobile">
         <div class="flex justify-between border-b border-borda pb-5">
             <div class="flex gap-5">
                 <div class="h-15 w-15 border border-borda p-1 overflow-hidden">
@@ -183,7 +182,14 @@
     <section id="projetos" class="reveal delay-100">
         <div class="interface">
 
-            <h2 class="titulo">PROJETOS SELECIONADOS <span id="qtd-itens"></span></h2>
+            <h2 class="titulo">
+                PROJETOS SELECIONADOS
+                <span>
+                    <a class="flex items-center justify-center gap-2 text-cinza uppercase text-xs hover:text-principal hover:gap-5"
+                        href="projetos">todos os projetos
+                        <i class="bi bi-arrow-right"></i></a>
+                </span>
+            </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projetos-container">
                 <!--aqui vãos os projetos-->
@@ -252,12 +258,12 @@
     <!-- carrossel de tecnologias -->
     <section class="reveal m-0 mx-3 lg:mx-5">
         <div class="interface overflow-hidden relative">
-            <div class="absolute w-10 lg:w-20 h-full bg-gradient-to-r from-[#0A0A0A] to-transparent left-0 top-0 z-10">
+            <div class="absolute w-10 lg:w-20 h-full bg-gradient-to-r from-fundo to-transparent left-0 top-0 z-10">
             </div>
 
             <div id="carrossel" class="flex w-max items-center gap-8 animate-scroll"></div>
 
-            <div class="absolute w-10 lg:w-20 h-full bg-gradient-to-l from-[#0A0A0A] to-transparent right-0 top-0 z-10">
+            <div class="absolute w-10 lg:w-20 h-full bg-gradient-to-l from-fundo to-transparent right-0 top-0 z-10">
             </div>
         </div>
     </section>
@@ -304,7 +310,7 @@
                 de aplicações self-hosted e serviços de rede a integrações com inteligência artificial.
             </p>
 
-            <div id="infra-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-px bg-borda">
+            <div id="infra-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-[1.5px] bg-borda">
                 <!-- cards aqui -->
             </div>
 
