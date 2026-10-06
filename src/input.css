@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @layer base {
+
   /* Aplica scroll suave e fonte globalmente */
   html {
     @apply scroll-smooth font-space;
@@ -8,6 +9,7 @@
 
   * {
     @apply transition-colors transition-transform duration-300;
+    /* outline: 1px solid red; */
   }
 
   ::selection {
