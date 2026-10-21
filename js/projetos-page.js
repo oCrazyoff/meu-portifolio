@@ -6,7 +6,7 @@ const projetosCompletos = [
         titulo: "EcoFlow",
         descricao: "Sistema completo de gestão financeira pessoal, com controle de rendas, despesas, categorias, relatórios e recursos baseados em Inteligência Artificial.",
         descricaoLonga: "O EcoFlow começou como um projeto de estudos para colocar em prática meus conhecimentos de PHP e MySQL. Conforme o sistema cresceu, passei a utilizá-lo para explorar conceitos mais avançados de desenvolvimento web, como organização de código, arquitetura, autenticação, segurança, integração com Inteligência Artificial e experiência do usuário. Depois de refazer boa parte do projeto, disponibilizei o sistema gratuitamente para amigos e conhecidos utilizarem no dia a dia. O feedback dessas pessoas passou a orientar novas funcionalidades e melhorias, fazendo com que o projeto deixasse de ser apenas um exercício de programação e se tornasse uma aplicação utilizada de forma real há mais de um ano. Até hoje continuo fazendo melhorias e corrigindo problemas com base no uso real do sistema.",
-        imagens:[
+        imagens: [
             "/img/projetos/ecoflow/1.png",
             "/img/projetos/ecoflow/2.png",
             "/img/projetos/ecoflow/3.png",
@@ -34,7 +34,7 @@ const projetosCompletos = [
         titulo: "WalyFlix",
         descricao: "Plataforma de streaming inspirada em serviços como a Netflix, com catálogo dinâmico, filmes, séries, autenticação e player de vídeo.",
         descricaoLonga: "O WalyFlix foi o primeiro projeto que desenvolvi depois de começar a estudar PHP e marcou uma etapa importante na minha evolução como desenvolvedor. A ideia era criar uma plataforma de streaming inspirada na Netflix para aprender, na prática, como trabalhar com banco de dados, sessões, autenticação e conteúdo dinâmico. O projeto começou com um catálogo simples de filmes e evoluiu para incluir séries, sistema de Minha Lista, páginas dinâmicas e integração com player de vídeo. Mesmo sendo originalmente um projeto de estudos, continuo voltando ao código para implementar melhorias e testar novas ideias, tornando o WalyFlix uma espécie de laboratório pessoal para desenvolvimento web.",
-        imagens:[
+        imagens: [
             "/img/projetos/walyflix/1.png",
             "/img/projetos/walyflix/2.png",
             "/img/projetos/walyflix/3.png",
@@ -64,7 +64,7 @@ const projetosCompletos = [
         titulo: "Cantina da ETEC",
         descricao: "Sistema de PDV desenvolvido sob medida para uma cantina escolar, com vendas rápidas, controle de estoque e painel administrativo.",
         descricaoLonga: "A Cantina da ETEC surgiu de uma necessidade real. Eu e um amigo percebemos que a cantina da escola precisava de uma solução própria para agilizar as vendas e facilitar o controle dos produtos. A partir disso, decidimos transformar o problema em um projeto real e desenvolvemos um sistema sob medida para a rotina da cantina. O sistema foi pensado para que as vendas pudessem ser registradas rapidamente durante os horários de maior movimento, enquanto o painel administrativo permite acompanhar produtos, estoque e vendas. O projeto também marcou uma evolução importante na minha experiência profissional, pois deixou de ser apenas um projeto de estudo e passou a ser um sistema utilizado por um cliente real em produção.",
-        imagens:[
+        imagens: [
             "/img/projetos/cantina/1.png",
             "/img/projetos/cantina/2.png",
             "/img/projetos/cantina/3.png",
@@ -93,7 +93,7 @@ const projetosCompletos = [
         titulo: "Lumina",
         descricao: "Sistema web de recomendação de livros baseado em gêneros literários, desenvolvido como projeto acadêmico utilizando Java e arquitetura MVC.",
         descricaoLonga: "O Lumina foi desenvolvido como um trabalho acadêmico e representou meu primeiro contato mais aprofundado com desenvolvimento web utilizando Java. O projeto consiste em uma plataforma capaz de recomendar livros de acordo com os gêneros escolhidos pelo usuário, além de permitir o gerenciamento de livros e usuários. Trabalhei no projeto em conjunto com um colega, dividindo ideias, planejamento e desenvolvimento. Durante sua construção, tive contato com conceitos de arquitetura MVC, Servlets, Maven e integração entre aplicação web e banco de dados. Mais do que o sistema final, o projeto foi importante para ampliar minha experiência para além do ecossistema PHP e entender como diferentes tecnologias podem ser utilizadas para resolver problemas semelhantes.",
-        imagens:[
+        imagens: [
             "/img/projetos/lumina/1.png",
             "/img/projetos/lumina/2.png",
             "/img/projetos/lumina/3.png",
@@ -122,7 +122,7 @@ const projetosCompletos = [
         titulo: "Planet Clicker",
         descricao: "Jogo incremental desenvolvido em JavaScript puro, com progressão por planetas, upgrades e sistema de salvamento local.",
         descricaoLonga: "O Planet Clicker foi um dos primeiros projetos em que me propus a estudar JavaScript de forma mais profunda. Sempre gostei de jogos incrementais e decidi transformar esse interesse em um projeto próprio para entender como criar lógica de progressão, interações e sistemas de recompensa diretamente no navegador. O jogo utiliza JavaScript puro para controlar toda a lógica, desde os cliques e upgrades até a progressão entre planetas. Mesmo sendo um projeto relativamente simples, ele foi importante para desenvolver minha capacidade de estruturar lógica no front-end e entender melhor a manipulação do DOM e o armazenamento de dados no navegador. Até hoje volto ao projeto ocasionalmente para implementar pequenas melhorias e experimentar novas ideias.",
-        imagens:[
+        imagens: [
             "/img/projetos/planet/1.png",
             "/img/projetos/planet/2.png",
             "/img/projetos/planet/3.png",
@@ -149,7 +149,7 @@ const projetosCompletos = [
         titulo: "SGAC",
         descricao: "Plataforma para gerenciamento de voluntários, eventos e doações, desenvolvida em equipe como projeto acadêmico.",
         descricaoLonga: "O SGAC foi desenvolvido em equipe durante a faculdade para um projeto do ENTEC. A proposta era criar uma plataforma capaz de centralizar o gerenciamento de voluntários, eventos e doações de iniciativas comunitárias. Participei diretamente da programação junto com outros três integrantes, enquanto os demais membros da equipe ficaram responsáveis por planejamento, documentação e apresentação. Trabalhar em um projeto com várias pessoas foi uma experiência importante para entender melhor divisão de responsabilidades, desenvolvimento colaborativo e organização de um sistema maior. O projeto também me ajudou a perceber a importância de transformar requisitos abstratos em funcionalidades concretas e de manter o código organizado mesmo quando várias pessoas estão trabalhando na mesma aplicação.",
-        imagens:[
+        imagens: [
             "/img/projetos/sgac/1.webp",
             "/img/projetos/sgac/2.webp",
             "/img/projetos/sgac/3.webp",
@@ -171,13 +171,41 @@ const projetosCompletos = [
         github: "https://github.com/oCrazyoff/sgac"
     },
 
+    // isainfo
+    {
+        id: "isainfo",
+        titulo: "IsaInfo",
+        descricao: "Site institucional desenvolvido em equipe para uma provedora de internet, com foco na divulgação dos serviços e no contato direto com clientes pelo WhatsApp.",
+        descricaoLonga: "O IsaInfo foi desenvolvido em 2025 em parceria com um amigo, a partir de uma oportunidade real de negócio. Um proprietário de uma provedora de internet da nossa cidade precisava de um site para divulgar seus serviços e facilitar o contato com potenciais clientes, mas os orçamentos que havia recebido estavam acima do que pretendia investir. Vimos nessa oportunidade a possibilidade de oferecer uma solução mais acessível, conquistar nosso primeiro cliente nesse tipo de projeto e adquirir experiência prática com um trabalho real. Com base nas referências fornecidas pelo cliente, desenvolvemos o site de acordo com suas necessidades, priorizando a apresentação dos serviços e o direcionamento dos visitantes para o WhatsApp da empresa. Após a conclusão, o próprio cliente ficou responsável pela hospedagem em seu servidor. Esse projeto foi uma experiência importante para entender como transformar as necessidades de um cliente em uma solução funcional, trabalhar em parceria e entregar um produto que atendesse a um objetivo comercial concreto.",
+        imagens: [
+            "/img/projetos/isainfo/1.png",
+            "/img/projetos/isainfo/2.png",
+            "/img/projetos/isainfo/3.png",
+            "/img/projetos/isainfo/4.png"
+        ],
+        categoria: "website",
+        funcao: "Desenvolvedor Web",
+        status: "Finalizado",
+        ano: "2025",
+        tags: ["HTML", "CSS", "JavaScript"],
+        funcionalidades: [
+            "Apresentação dos serviços da provedora",
+            "Divulgação da empresa na internet",
+            "Redirecionamento para atendimento via WhatsApp",
+            "Interface baseada nas referências do cliente",
+            "Hospedagem no servidor do cliente"
+        ],
+        deploy: "https://www.isainfofibra.com.br",
+        github: "https://github.com/LeandroArantesDev/isainfo-site"
+    },
+
     // homelab
     {
         id: "homelab",
         titulo: "Homelab ZimaOS",
         descricao: "Servidor doméstico baseado em ZimaOS para hospedar serviços, aplicações, armazenamento e automações em uma infraestrutura própria.",
         descricaoLonga: "Meu homelab começou como uma forma de reaproveitar um notebook antigo e acabou se tornando uma infraestrutura própria para executar diversos projetos e serviços. Utilizo o ZimaOS como base para administrar containers, armazenamento e aplicações, transformando o equipamento em um pequeno servidor doméstico. Nele mantenho serviços como automações, armazenamento de arquivos, gerenciamento de mídia, servidores de jogos e outras aplicações que utilizo no meu dia a dia. A experiência também me levou a estudar conceitos que normalmente não aparecem tanto no desenvolvimento web tradicional, como Docker, redes, DNS, volumes, permissões, portas, gerenciamento de recursos e acesso remoto com Tailscale. O homelab funciona, na prática, como um ambiente pessoal onde posso testar tecnologias, hospedar projetos e aprender sobre infraestrutura enquanto resolvo problemas reais.",
-        imagens:[
+        imagens: [
             "/img/projetos/homelab/1.png",
             "/img/projetos/homelab/2.png",
             "/img/projetos/homelab/3.png",
@@ -204,7 +232,7 @@ const projetosCompletos = [
         titulo: "Bot de IA com n8n",
         descricao: "Assistente pessoal baseado em Inteligência Artificial, desenvolvido com n8n para automatizar tarefas e interagir por diferentes canais.",
         descricaoLonga: "Este projeto nasceu da ideia de criar um assistente pessoal capaz de fazer mais do que simplesmente responder mensagens. Utilizando o n8n como plataforma de automação, desenvolvi uma estrutura que conecta modelos de Inteligência Artificial a diferentes serviços e canais de comunicação como o Telegram. O bot consegue interpretar mensagens, manter contexto das conversas, utilizar memórias e executar ferramentas para realizar diferentes tarefas. A arquitetura também foi pensada para permitir a troca de modelos de IA conforme a necessidade, utilizando APIs e provedores como o OpenRouter. Durante o desenvolvimento, passei a trabalhar com conceitos de agentes, memória, contexto, automação de workflows, integração de APIs e processamento de mensagens. O projeto continua evoluindo conforme novas ideias e necessidades aparecem, funcionando também como meu laboratório pessoal para experimentar aplicações práticas de IA.",
-        imagens:[
+        imagens: [
             "/img/projetos/n8n/1.png",
             "/img/projetos/n8n/2.png",
             "/img/projetos/n8n/3.png",
@@ -554,28 +582,28 @@ function iniciarCarrossel() {
 
     // Ações de clique (Reiniciam o autoplay)
     if (btnPrev) {
-        btnPrev.addEventListener("click", (e) => { 
+        btnPrev.addEventListener("click", (e) => {
             e.stopPropagation();
             if (currentIndex > 0) { currentIndex--; setPositionByIndex(); iniciarAutoPlay(); }
         });
     }
     if (btnNext) {
-        btnNext.addEventListener("click", (e) => { 
+        btnNext.addEventListener("click", (e) => {
             e.stopPropagation();
             if (currentIndex < slides.length - 1) { currentIndex++; setPositionByIndex(); iniciarAutoPlay(); }
         });
     }
-    dots.forEach((dot, i) => dot.addEventListener("click", (e) => { 
+    dots.forEach((dot, i) => dot.addEventListener("click", (e) => {
         e.stopPropagation();
-        currentIndex = i; 
-        setPositionByIndex(); 
-        iniciarAutoPlay(); 
+        currentIndex = i;
+        setPositionByIndex();
+        iniciarAutoPlay();
     }));
 
     // --- LÓGICA DE ARRASTAR (MOUSE E TOUCH) ---
     track.addEventListener("mousedown", dragStart);
     track.addEventListener("touchstart", dragStart, { passive: true });
-    
+
     // Ouvimos no window/document para garantir que o gesto continue mesmo se o usuário tirar o dedo de cima do modal rápido demais
     window.addEventListener("mouseup", dragEnd);
     window.addEventListener("touchend", dragEnd);
@@ -596,15 +624,15 @@ function iniciarCarrossel() {
 
     function drag(e) {
         if (!isDragging) return;
-        
+
         const currentPosition = getPositionX(e);
         currentTranslate = prevTranslate + currentPosition - startPos;
-        
+
         // Evita que o usuário arraste infinitamente para além das pontas (efeito elástico)
         const slideWidth = slides[0].offsetWidth;
         const maxTranslate = 0;
         const minTranslate = (slides.length - 1) * -slideWidth;
-        
+
         if (currentTranslate > maxTranslate) {
             currentTranslate = maxTranslate + (currentTranslate - maxTranslate) * 0.3;
         } else if (currentTranslate < minTranslate) {
