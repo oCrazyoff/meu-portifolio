@@ -5,6 +5,7 @@
 }
 
 @layer base {
+
   /* Aplica scroll suave e fonte globalmente */
   html {
     @apply scroll-smooth font-space;
@@ -23,11 +24,11 @@
   }
 
   ::selection {
-    @apply bg-principal/80 text-black;
+    @apply bg-principal text-black;
   }
 
   section {
-    @apply my-15 scroll-mt-17;
+    @apply scroll-mt-15;
   }
 }
 
@@ -35,20 +36,19 @@
   --font-space: "Space Grotesk", sans-serif;
   --font-jetbrains: "JetBrains Mono", monospace;
 
-  --animate-scroll: scroll 50s linear infinite;
+  --animate-blink: blink 1s steps(1) infinite;
 
   --color-borda: #232323;
   --color-cinza: #959595;
-  --color-principal: #ffa500;
+  --color-principal: #ffa400;
   --color-fundo: #0a0a0a;
+  --color-card: #111111;
+  --color-superficie: #1a1a1a;
+  --color-claro: #f2f2f2;
 
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(-50%);
+  @keyframes blink {
+    50% {
+      opacity: 0;
     }
   }
 }
@@ -63,75 +63,155 @@
   }
 
   .interface {
-    @apply mx-auto max-w-[1280px] w-full px-3 lg:px-5 py-2;
+    @apply mx-auto max-w-[1280px] w-full px-4 lg:px-12;
   }
 
   #menu-mobile.ativo {
     @apply !translate-x-0;
   }
 
+  /* logo "W" */
+  .logo {
+    @apply flex items-center gap-3 font-jetbrains text-xs font-bold uppercase tracking-wider;
+
+    & span.marca {
+      @apply flex items-center justify-center size-6 bg-principal text-black font-space text-sm font-bold;
+    }
+
+    & em {
+      @apply not-italic text-principal;
+    }
+  }
+
+  /* "01 // PROJETOS SELECIONADOS" */
+  .rotulo {
+    @apply font-jetbrains text-[11px] uppercase tracking-widest text-principal;
+  }
+
   .titulo {
-    @apply flex items-center justify-between pb-3 mb-10 border-b border-borda text-xl lg:text-2xl font-semibold italic;
+    @apply font-bold uppercase tracking-tight leading-[0.95] text-4xl md:text-5xl lg:text-6xl;
+  }
 
-    & span {
-      @apply text-xs text-cinza not-italic;
+  .tag {
+    @apply font-jetbrains text-[11px] px-2 py-1 border border-borda text-white/80;
+  }
+
+  .btn-principal,
+  .btn-contorno {
+    @apply inline-flex items-center justify-center gap-3 px-5 py-3 font-jetbrains text-xs font-bold uppercase tracking-wider border;
+  }
+
+  .btn-principal {
+    @apply bg-principal border-principal text-black hover:bg-transparent hover:text-principal;
+  }
+
+  .btn-contorno {
+    @apply border-borda text-white hover:border-principal hover:text-principal;
+  }
+
+  .link-sublinhado {
+    @apply inline-flex items-center gap-3 pb-2 border-b border-principal font-jetbrains text-xs font-bold uppercase tracking-wider hover:gap-5 hover:text-principal;
+  }
+
+  /* moldura com cantos laranjas */
+  .cantos {
+    @apply relative;
+
+    &::before,
+    &::after {
+      content: "";
+      @apply absolute size-8 border-principal pointer-events-none;
+    }
+
+    &::before {
+      @apply -top-2 -left-2 border-t-2 border-l-2;
+    }
+
+    &::after {
+      @apply -bottom-2 -right-2 border-b-2 border-r-2;
     }
   }
 
-  .item-hero {
-    @apply flex flex-col;
-
-    & h3,
-    p {
-      @apply whitespace-nowrap;
-    }
-
-    & p {
-      @apply flex items-center text-xs text-cinza;
-    }
-  }
-
-  .info-sobre {
-    @apply grid grid-cols-3;
+  .numeros {
+    @apply grid grid-cols-1 sm:grid-cols-3 border-y border-borda;
 
     & .item {
-      @apply flex flex-col items-center justify-center;
+      @apply flex flex-col gap-3 py-8 sm:py-10 px-4 lg:px-12 border-borda not-last:border-b sm:not-last:border-b-0 sm:not-last:border-r;
 
       & p {
-        @apply text-4xl text-principal font-bold;
+        @apply text-5xl font-bold tracking-tight;
       }
 
       & span {
-        @apply text-xs text-cinza text-center;
-      }
-
-      &.meio {
-        @apply border-x border-borda;
+        @apply font-jetbrains text-[11px] uppercase tracking-widest text-cinza;
       }
     }
   }
 
-  .info-geral {
-    @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3;
+  .habilidades {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-3;
 
     & .item {
-      @apply flex flex-col gap-5 border border-borda p-10 md:p-5 lg:p-10 justify-center;
+      @apply flex flex-col gap-4 bg-white border border-black/10 p-5;
 
-      & h2 {
-        @apply text-principal uppercase;
+      & h3 {
+        @apply font-jetbrains text-xs font-bold uppercase;
       }
 
-      & p {
-        @apply flex items-center justify-between;
+      & ul {
+        @apply flex flex-col gap-2 text-sm text-black/80;
+      }
 
-        & span {
-          @apply text-xs text-cinza;
-        }
+      & li {
+        @apply flex items-center gap-3 before:size-1.5 before:bg-principal before:content-[''];
       }
     }
+  }
+
+  .contato-card {
+    @apply flex flex-col gap-2 p-5 border border-fundo;
+
+    & span {
+      @apply font-jetbrains text-[11px] uppercase tracking-widest;
+    }
+
+    & p {
+      @apply text-lg font-medium break-all;
+    }
+  }
+
+  /* link do menu: ganha [ chaves ] e cor principal quando a seção está na tela */
+  .link-nav {
+    @apply hover:text-principal;
+
+    &::before {
+      content: "[ ";
+    }
+
+    &::after {
+      content: " ]";
+    }
+
+    &::before,
+    &::after {
+      @apply opacity-0 transition-opacity duration-300;
+    }
+
+    &.ativo {
+      @apply text-principal;
+
+      &::before,
+      &::after {
+        @apply opacity-100;
+      }
+    }
+  }
+
+  .link-mobile.ativo {
+    @apply text-principal;
   }
 
   .btn-container button.atual {
-    @apply !bg-principal !text-fundo !border-principal;
+    @apply !bg-principal !text-black !border-principal;
   }
 }

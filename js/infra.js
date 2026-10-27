@@ -69,22 +69,19 @@ const infras = [
 ];
 
 const container_infra = document.getElementById("infra-container");
-const tag_qtd_infra = document.getElementById("qtd-itens-infra").innerText = "TECNOLOGIAS / 0" + infras.length;
 
+// cada item vira uma linha do "docker ps" no terminal
 infras.forEach(infra => {
-    const card = document.createElement("div");
+    const linha = document.createElement("tr");
 
-    card.className = "group flex flex-col gap-5 p-10 bg-fundo hover:bg-borda";
+    linha.className = "border-t border-borda hover:bg-superficie";
+    linha.title = infra.texto;
 
-    card.innerHTML = `
-        <h2 class="uppercase font-bold">${infra.titulo}</h2>
-
-        <p class="text-sm text-cinza">${infra.texto}</p>
-
-        <div class="flex gap-2">
-            ${infra.tags.map(tag => `<span class="text-xs text-cinza px-1.5 border border-borda group-hover:border-principal group-hover:text-principal">${tag}</span>`).join("")}
-        </div>
+    linha.innerHTML = `
+        <td class="py-3 pr-4 font-bold">${infra.titulo.toLowerCase().replace(/[^a-z0-9]+/g, "-")}</td>
+        <td class="py-3 pr-4 text-cinza">${infra.tags.slice(0, 2).join(" + ").toLowerCase()}</td>
+        <td class="py-3 text-green-500 whitespace-nowrap">● up</td>
     `;
 
-    container_infra.appendChild(card);
+    container_infra.appendChild(linha);
 })

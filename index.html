@@ -59,315 +59,320 @@
 
 <body class="bg-fundo text-white">
 
-    <header class="fixed z-500 inset-0 bg-fundo/70 backdrop-blur-xl h-15 p-2 shadow-lg/30 border-b border-borda">
+    <header class="fixed z-500 inset-x-0 top-0 h-15 bg-fundo/80 backdrop-blur-xl border-b border-borda">
         <div class="interface flex items-center justify-between h-full gap-5">
 
-            <div class="flex items-center justify-center gap-5">
-                <img class="h-8 w-8 object-cover p-0.5 border border-borda" src="/img/eu-3.png"
-                    alt="Uma foto do walysson">
-                <p class="text-xs font-bold">W.RIBEIRO/FULL STACK</p>
-            </div>
+            <a class="logo" href="#">
+                <span class="marca">W</span>
+                <p>W.Ribeiro<em>/</em>Full Stack</p>
+            </a>
 
-            <nav class="hidden lg:flex items-center justify-center gap-5 font-jetbrains font-light text-xs text-cinza">
-                <a class="hover:text-principal" href="#">[ INICIO ]</a>
-                <a class="hover:text-principal" href="#projetos">[ PROJETOS ]</a>
-                <a class="hover:text-principal" href="#sobre">[ SOBRE ]</a>
-                <a class="hover:text-principal" href="#infra">[ INFRA ]</a>
-                <a class="hover:text-principal" href="#contato">[ CONTATO ]</a>
+            <nav class="hidden lg:flex items-center gap-8 font-jetbrains text-xs uppercase tracking-wider">
+                <a class="link-nav ativo" href="#" data-secao="inicio">Início</a>
+                <a class="link-nav" href="#projetos" data-secao="projetos">Projetos</a>
+                <a class="link-nav" href="#sobre" data-secao="sobre">Sobre</a>
+                <a class="link-nav" href="#infra" data-secao="infra">Infra</a>
+                <a class="link-nav" href="#contato" data-secao="contato">Contato</a>
             </nav>
 
-            <button class="block lg:hidden" onclick="toggleMenu()">
+            <button class="block lg:hidden" onclick="toggleMenu()" aria-label="Abrir menu">
                 <i class="bi bi-list text-3xl text-principal"></i>
             </button>
         </div>
     </header>
 
-    <div class="fixed inset-0 translate-x-full z-700 flex flex-col justify-between gap-5 p-5 bg-fundo" id="menu-mobile">
-        <div class="flex justify-between border-b border-borda pb-5">
-            <div class="flex gap-5">
-                <div class="h-15 w-15 border border-borda p-1 overflow-hidden">
-                    <img class="w-full h-full object-cover object-top" src="/img/eu-3.png" alt="Walysson Ribeiro">
-                </div>
-
-                <div class="flex flex-col justify-center">
-                    <h3 class="uppercase font-bold">Walysson Ribeiro Rosa</h3>
-                    <p class="uppercase text-xs text-cinza">Full Stack</p>
-                </div>
+    <div class="fixed inset-0 translate-x-full z-700 flex flex-col justify-between gap-5 p-4 bg-fundo" id="menu-mobile">
+        <div class="flex items-center justify-between border-b border-borda pb-4">
+            <div class="logo">
+                <span class="marca">W</span>
+                <p>W.Ribeiro<em>/</em>Full Stack</p>
             </div>
 
-            <button onclick="toggleMenu()">
-                <i class="bi bi-x text-5xl"></i>
+            <button onclick="toggleMenu()" aria-label="Fechar menu">
+                <i class="bi bi-x text-4xl"></i>
             </button>
         </div>
 
-        <nav class="flex flex-col justify-center items-end gap-10 font-jetbrains font-light text-3xl text-cinza">
-            <a class="hover:text-principal" href="#" onclick="toggleMenu()">[ INICIO ]</a>
-            <a class="hover:text-principal" href="#projetos" onclick="toggleMenu()">[ PROJETOS ]</a>
-            <a class="hover:text-principal" href="#sobre" onclick="toggleMenu()">[ SOBRE ]</a>
-            <a class="hover:text-principal" href="#infra" onclick="toggleMenu()">[ INFRA ]</a>
-            <a class="hover:text-principal" href="#contato" onclick="toggleMenu()">[ CONTATO ]</a>
+        <nav class="flex flex-col items-start gap-8 text-4xl font-bold uppercase tracking-tight">
+            <a class="link-mobile hover:text-principal" href="#" data-secao="inicio" onclick="toggleMenu()"><span
+                    class="rotulo mr-3">00</span>Início</a>
+            <a class="link-mobile hover:text-principal" href="#projetos" data-secao="projetos" onclick="toggleMenu()"><span
+                    class="rotulo mr-3">01</span>Projetos</a>
+            <a class="link-mobile hover:text-principal" href="#sobre" data-secao="sobre" onclick="toggleMenu()"><span
+                    class="rotulo mr-3">02</span>Sobre</a>
+            <a class="link-mobile hover:text-principal" href="#infra" data-secao="infra" onclick="toggleMenu()"><span
+                    class="rotulo mr-3">03</span>Infra</a>
+            <a class="link-mobile hover:text-principal" href="#contato" data-secao="contato" onclick="toggleMenu()"><span
+                    class="rotulo mr-3">04</span>Contato</a>
         </nav>
 
-        <div class="pt-5 border-t border-borda">
-            <p class="flex items-center justify-center">
-                <span class="relative flex h-2 w-2 mr-2 items-center justify-center">
+        <div class="pt-4 border-t border-borda">
+            <p class="flex items-center font-jetbrains text-xs uppercase tracking-wider">
+                <span class="relative flex h-2 w-2 mr-3 items-center justify-center">
                     <span
                         class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
                     <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
                 </span>
-                DISPONÍVEL PARA PROJETOS
+                Disponível para projetos
             </p>
         </div>
     </div>
 
-    <section class="pt-8 lg:pt-15 reveal">
-        <div
-            class="interface flex flex-col-reverse md:flex-row lg:flex-row items-center justify-between gap-5 md:gap-10">
+    <!-- hero -->
+    <section id="inicio" class="pt-15 reveal">
+        <div class="interface flex flex-col-reverse lg:flex-row items-center justify-between gap-10 py-16 lg:py-24">
 
-            <div class="flex flex-col gap-5 lg:gap-10">
-                <h1
-                    class="text-5xl lg:text-8xl text-center md:text-left lg:text-left font-bold tracking-tight -leading-20">
-                    TRANSFORMO <br>
-                    <span class="text-principal">PROBLEMAS</span> <br>
-                    EM SISTEMAS
-                </h1>
-
-                <p class="text-xl w-full lg:w-2/3 text-cinza font-light">
-                    Desenvolvedor Full Stack e estudante de Sistemas da Informação. Transformo ideias em aplicações web
-                    funcionais, combinando código, arquitetura e experiência de usuário.
-                </p>
-
-                <a class="uppercase bg-principal text-black text-center w-full lg:max-w-max px-5 py-1 border hover:bg-transparent hover:border-principal hover:text-principal"
-                    href="curriculo.pdf" target="_blank">
-                    VER CURRÍCULO
-                    <i class="bi bi-file-text"></i>
-                </a>
-            </div>
-
-            <div class="flex flex-col items-center justify-center gap-10 w-full lg:max-w-max">
-
-                <div class="h-60 lg:h-70 w-60 lg:w-70 rounded-full border border-borda p-2 overflow-hidden">
-                    <img class="rounded-full w-full h-full object-cover object-top hover:scale-110" src="/img/eu-2.png"
-                        alt="Imagem do walysson">
+            <div class="flex flex-col gap-8 w-full lg:max-w-2xl">
+                <div class="flex flex-wrap items-center gap-3 font-jetbrains text-[11px] uppercase tracking-widest">
+                    <span class="flex items-center gap-2 px-3 py-1.5 border border-borda rounded-full">
+                        <span class="relative flex h-2 w-2 items-center justify-center">
+                            <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+                        </span>
+                        Disponível para projetos
+                    </span>
+                    <span class="text-cinza">// Uberaba, MG — BR</span>
                 </div>
 
-                <div class="hidden lg:flex flex-col gap-5 border-l border-borda pl-10">
-                    <div class="item-hero">
-                        <h3>LOCALIZAÇÃO</h3>
-                        <p>UBERABA, MG - BRASIL</p>
-                    </div>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-tight leading-[0.9]">
+                    Transformo <br>
+                    problemas em <br>
+                    <span class="text-principal">sistemas.</span>
+                </h1>
 
-                    <div class="item-hero">
-                        <h3>EXPERIÊNCIA</h3>
-                        <p>+3 ANOS PROGRAMANDO</p>
-                    </div>
+                <p class="text-lg text-white/70 max-w-xl">
+                    Sou Walysson Ribeiro, desenvolvedor Full Stack e estudante de Sistemas de Informação. Crio
+                    aplicações
+                    web unindo código organizado, regras de negócio claras e interfaces intuitivas.
+                </p>
 
-                    <div class="item-hero">
-                        <h3>STATUS</h3>
-                        <p>
-                            <span class="relative flex h-2 w-2 mr-2 items-center justify-center">
-                                <span
-                                    class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                                <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-                            </span>
-                            DISPONÍVEL PARA PROJETOS
-                        </p>
-                    </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a class="btn-principal" href="#projetos">
+                        Ver projetos <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a class="btn-contorno" href="curriculo.pdf" target="_blank">
+                        <i class="bi bi-download"></i> Currículo
+                    </a>
+                </div>
+            </div>
+
+            <div class="cantos w-64 sm:w-72 aspect-[4/5] shrink-0">
+                <div class="relative w-full h-full overflow-hidden bg-superficie">
+                    <img class="w-full h-full object-cover object-top" src="/img/eu.png" alt="Foto do Walysson">
+                    <p class="absolute bottom-4 left-4 px-3 py-2 bg-fundo border border-borda font-jetbrains text-xs">
+                        &gt; whoami <span class="text-principal">walysson</span>
+                    </p>
                 </div>
             </div>
 
         </div>
+
+        <div class="numeros">
+            <div class="item">
+                <p class="text-principal">03+</p>
+                <span>Anos programando</span>
+            </div>
+            <div class="item">
+                <p>10</p>
+                <span>Projetos publicados</span>
+            </div>
+            <div class="item">
+                <p>02</p>
+                <span>Sistemas em uso real</span>
+            </div>
+        </div>
     </section>
 
-    <section id="projetos" class="reveal delay-100">
+    <!-- projetos -->
+    <section id="projetos" class="reveal py-20 lg:py-28">
         <div class="interface">
 
-            <h2 class="titulo">
-                PROJETOS SELECIONADOS
-                <span>
-                    <a class="flex items-center justify-center gap-1 lg:gap-2 text-cinza uppercase text-xs group hover:gap-5"
-                        href="projetos">
-                        <p class="group-hover:text-principal">todos <span class="hidden lg:inline group-hover:text-principal"> os projetos</span></p>
-                        <i class="bi bi-arrow-right group-hover:text-principal"></i></a>
-                </span>
-            </h2>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+                <div class="flex flex-col gap-4">
+                    <p class="rotulo">01 // Projetos selecionados</p>
+                    <h2 class="titulo">Coisas que estão <br> rodando por aí</h2>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projetos-container">
+                <a class="link-sublinhado self-start md:self-auto" href="projetos">
+                    Todos os projetos (10) <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="projetos-container">
                 <!--aqui vãos os projetos-->
             </div>
 
         </div>
     </section>
 
-    <section id="sobre" class="reveal">
-        <div class="interface">
+    <!-- sobre -->
+    <section id="sobre" class="bg-claro text-fundo py-20 lg:py-28">
+        <div class="interface reveal flex flex-col gap-14">
 
-            <h2 class="titulo">SOBRE <span>RETRATO / 01</span></h2>
-
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-15">
-                <div class="relative w-full md:w-50 lg:min-w-100 p-2 border border-borda">
-                    <img src="/img/eu.png" alt="Imagem do Walysson">
-                    <span
-                        class="absolute -bottom-3 right-1/2 translate-x-1/2 uppercase whitespace-nowrap py-1 px-5 text-sm font-semibold bg-principal text-black">Walysson
-                        Ribeiro Rosa</span>
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+                <div class="relative w-full max-w-64 aspect-square shrink-0 mr-3 mt-3">
+                    <span class="absolute -top-2 -right-2 w-full h-full bg-principal"></span>
+                    <div class="relative w-full h-full border-2 border-fundo bg-[#ddd] overflow-hidden">
+                        <img class="w-full h-full object-cover object-top" src="/img/eu-2.png" alt="Foto do Walysson">
+                        <span
+                            class="absolute bottom-2 left-2 px-2 py-1 bg-fundo text-white font-jetbrains text-[11px] font-bold">
+                            Walysson Ribeiro Rosa
+                        </span>
+                    </div>
                 </div>
 
                 <div class="flex flex-col gap-5">
-                    <h3 class="text-5xl lg:text-6xl font-bold uppercase tracking-tight -leading-20">
-                        Código que resolve problema de gente real
-                    </h3>
+                    <p class="rotulo !text-[#8a5a00]">02 // Sobre mim</p>
+                    <h2 class="titulo">Código para humanos <br> lerem.</h2>
 
-                    <p class="text-lg text-cinza font-light">
-                        Sou desenvolvedor full stack e estudante de Sistemas da Informação, com foco na construção de
-                        sistemas web. Busco transformar necessidades reais em soluções funcionais, mantendo código
-                        organizado, regras de negócio claras e interfaces intuitivas.
+                    <p class="text-black/70 leading-relaxed max-w-3xl">
+                        Programo há mais de 3 anos, com foco em PHP e Laravel no back-end e interfaces mobile-first com
+                        Tailwind no front. Gosto de entender o problema antes de escrever a primeira linha — e de deixar
+                        o código claro para quem vem depois.
                     </p>
 
-                    <p>
-                        <i class="bi bi-quote text-principal text-xl"></i>
-                        Nosso principal objetivo não deve ser instruir um computador sobre o que fazer, mas explicar aos
-                        seres humanos o que queremos que um computador faça.
-                        <i class="bi bi-quote text-principal text-xl rotate-90"></i>
-
-                        <span class="font-thin">
-                            — Donald Knuth
-                        </span>
+                    <p class="text-black/70 leading-relaxed max-w-3xl">
+                        Fora dos projetos de clientes, mantenho minha própria infraestrutura em casa, com serviços
+                        self-hosted, automações e integrações com IA.
                     </p>
-
-                    <div class="info-sobre">
-                        <div class="item">
-                            <p>03+</p>
-                            <span>ANOS DE CÓDIGO</span>
-                        </div>
-
-                        <div class="item meio">
-                            <p>06+</p>
-                            <span>PROJETOS DESENVOLVIDOS</span>
-                        </div>
-
-                        <div class="item">
-                            <p>02</p>
-                            <span>SISTEMA EM USO REAL</span>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-        </div>
-    </section>
+            <div class="habilidades">
+                <div class="item">
+                    <h3>// Backend</h3>
+                    <ul>
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                        <li>MySQL</li>
+                        <li>Composer</li>
+                    </ul>
+                </div>
 
-    <!-- carrossel de tecnologias -->
-    <section class="reveal m-0 mx-3 lg:mx-5">
-        <div class="interface overflow-hidden relative">
-            <div class="absolute w-10 lg:w-20 h-full bg-gradient-to-r from-fundo to-transparent left-0 top-0 z-10">
+                <div class="item">
+                    <h3>// Frontend</h3>
+                    <ul>
+                        <li>HTML semântico</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <h3>// Ferramentas</h3>
+                    <ul>
+                        <li>Git / GitHub</li>
+                        <li>Linux</li>
+                        <li>Docker</li>
+                        <li>Aplicações com IA</li>
+                    </ul>
+                </div>
             </div>
 
-            <div id="carrossel" class="flex w-max items-center gap-8 animate-scroll"></div>
-
-            <div class="absolute w-10 lg:w-20 h-full bg-gradient-to-l from-fundo to-transparent right-0 top-0 z-10">
-            </div>
-        </div>
-    </section>
-
-    <section class="reveal">
-        <div class="interface info-geral">
-            <div class="item">
-                <h2>// Backend</h2>
-
-                <p>PHP <span>PRINCIPAL</span></p>
-                <p>Laravel <span>FRAMEWORK</span></p>
-                <p>MySQL <span>BANCO RELACIONAL</span></p>
-                <p>Composer <span>DEPENDÊNCIAS</span></p>
-            </div>
-
-            <div class="item">
-                <h2>// Frontend</h2>
-
-                <p>HTML <span>SEMÂNTICA</span></p>
-                <p>CSS <span>ESTILIZAÇÃO</span></p>
-                <p>JavaScript <span>INTERATIVIDADE</span></p>
-                <p>Tailwind <span>MOBILE FIRST</span></p>
-            </div>
-
-            <div class="item">
-                <h2>// Ferramentas</h2>
-
-                <p>Git / GitHub <span>VERSIONAMENTO</span></p>
-                <p>Linux <span>AMBIENTE</span></p>
-                <p>Docker <span>CONTAINERS</span></p>
-                <p>IA <span>APLICAÇÕES</span></p>
-            </div>
         </div>
     </section>
 
     <!-- infraestrutura e automação -->
-    <section id="infra" class="reveal">
-        <div class="interface">
-            <h2 class="titulo">INFRA & AUTOMAÇÃO <span id="qtd-itens-infra"></span></h2>
+    <section id="infra" class="reveal py-20 lg:py-28">
+        <div class="interface grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12">
 
-            <p class="text-cinza text-lg lg:text-xl">
-                Além do código, construo minha própria infraestrutura para hospedar serviços, experimentar tecnologias e
-                automatizar tarefas
-                de aplicações self-hosted e serviços de rede a integrações com inteligência artificial.
-            </p>
+            <div class="flex flex-col gap-5">
+                <p class="rotulo">03 // Infra & automação</p>
+                <h2 class="titulo">Eu hospedo <br> o que eu <br> construo.</h2>
+                <p class="text-white/70 leading-relaxed">
+                    Um homelab com ZimaOS e Docker roda meus serviços, automações com n8n e integrações de IA,
+                    acessíveis de qualquer lugar via Tailscale.
+                </p>
+                <a class="link-sublinhado self-start mt-3" href="/projetos?categoria=infraestrutura">
+                    Ver projetos de infra <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
 
-            <div id="infra-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-[1.5px] bg-borda">
-                <!-- cards aqui -->
+            <div class="self-start bg-card border border-borda font-jetbrains text-xs overflow-hidden">
+                <div class="flex items-center gap-4 px-4 py-3 border-b border-borda">
+                    <div class="flex gap-1.5">
+                        <span class="size-2.5 rounded-full bg-borda"></span>
+                        <span class="size-2.5 rounded-full bg-borda"></span>
+                        <span class="size-2.5 rounded-full bg-principal"></span>
+                    </div>
+                    <span class="text-cinza">walysson@zimaos: ~</span>
+                </div>
+
+                <div class="p-4 overflow-x-auto">
+                    <p class="mb-4 whitespace-nowrap"><span class="text-principal">$</span> docker ps --format "table
+                        {{.Names}}"</p>
+
+                    <table class="w-full min-w-md text-left">
+                        <thead class="text-[10px] uppercase tracking-widest text-cinza">
+                            <tr>
+                                <th class="font-normal pb-2">Serviço</th>
+                                <th class="font-normal pb-2">Função</th>
+                                <th class="font-normal pb-2">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="infra-container">
+                            <!-- linhas aqui -->
+                        </tbody>
+                    </table>
+
+                    <p class="mt-4"><span class="text-principal">$</span> <span
+                            class="inline-block w-2 h-3.5 align-middle bg-principal animate-blink"></span></p>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <section id="contato" class="reveal">
-        <div class="interface">
+    <!-- contato -->
+    <section id="contato" class="bg-principal text-fundo pt-20 lg:pt-28 pb-10">
+        <div class="interface reveal flex flex-col gap-12">
 
-            <h2 class="titulo">CONTATO <span>ONDE ME ENCONTRAR</span></h2>
-
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
-
-                <div class="flex flex-col gap-5 col-span-2">
-                    <h3 class="text-5xl uppercase -leading-20 tracking-tight font-bold">Vamos construir alguma coisa?
-                    </h3>
-
-                    <a class="text-xl font-light border-b border-principal max-w-max hover:text-principal"
-                        href="mailto:walyssonribeiro3@gmail.com">walyssonribeiro3@gmail.com</a>
-                    <a class="text-cinza hover:text-white" href="https://wa.me/5516981151983" target="_blank">+55 (16)
-                        98115-1983</a>
-                </div>
-
-                <div class="flex flex-col gap-5">
-                    <p class="text-xs text-cinza">REDES</p>
-
-                    <a class="hover:text-principal" href="https://www.linkedin.com/in/walysson-ribeiro-a92ba3260"
-                        target="_blank"><i class="bi bi-linkedin"></i> Linkedin</a>
-                    <a class="hover:text-principal" href="https://github.com/oCrazyoff" target="_blank"><i
-                            class="bi bi-github"></i> GitHub</a>
-                    <a class="hover:text-principal" href="https://www.instagram.com/walyssus/" target="_blank"><i
-                            class="bi bi-instagram"></i> Instagram</a>
-                </div>
-
-                <div class="flex flex-col gap-5">
-                    <p class="text-xs text-cinza">LOCALIZAÇÃO</p>
-
-                    <p>Uberaba, Minas Gerais</p>
-                    <p>Brasil</p>
-                </div>
-
+            <div class="flex flex-col gap-4">
+                <p class="rotulo !text-fundo">04 // Contato</p>
+                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-bold uppercase tracking-tight leading-[0.9]">
+                    Vamos construir <br> algo juntos?
+                </h2>
             </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <a class="contato-card bg-fundo text-white group" href="mailto:walyssonribeiro3@gmail.com">
+                    <span class="text-principal">E-mail</span>
+                    <p class="group-hover:text-principal">walyssonribeiro3@gmail.com</p>
+                </a>
+
+                <a class="contato-card bg-fundo text-white group" href="https://wa.me/5516981151983" target="_blank">
+                    <span class="text-principal">WhatsApp</span>
+                    <p class="group-hover:text-principal">+55 (16) 98115-1983</p>
+                </a>
+
+                <div class="contato-card">
+                    <span>Localização</span>
+                    <p>Uberaba, MG — Brasil</p>
+                </div>
+            </div>
+
+            <footer class="flex flex-col md:flex-row items-center justify-between gap-5 pt-6 border-t border-fundo">
+                <p class="font-jetbrains text-[11px] font-bold uppercase tracking-widest">© <span id="ano"></span>
+                    Walysson Ribeiro Rosa</p>
+
+                <div
+                    class="flex flex-wrap justify-center gap-2 font-jetbrains text-[11px] font-bold uppercase tracking-widest">
+                    <a class="px-3 py-2 border border-fundo hover:bg-fundo hover:text-principal"
+                        href="https://github.com/oCrazyoff" target="_blank">GitHub ↗</a>
+                    <a class="px-3 py-2 border border-fundo hover:bg-fundo hover:text-principal"
+                        href="https://www.linkedin.com/in/walysson-ribeiro-a92ba3260" target="_blank">LinkedIn ↗</a>
+                    <a class="px-3 py-2 border border-fundo hover:bg-fundo hover:text-principal"
+                        href="https://www.instagram.com/walyssus/" target="_blank">Instagram ↗</a>
+                </div>
+            </footer>
 
         </div>
     </section>
-
-    <footer class="border-t border-borda py-1 md:py-3 lg:py-5">
-        <div class="interface flex flex-col md:flex-row lg:flex-row items-center justify-between gap-2 lg:gap-5">
-            <p class="text-xs text-cinza uppercase">© <span id="ano"></span> Walysson Ribeiro Rosa</p>
-            <p class="text-xs text-cinza uppercase">Feito com precisão técnica</p>
-        </div>
-    </footer>
 
     <script src="/js/projetos.js"></script>
     <script src="/js/infra.js"></script>
-    <script src="/js/tecnologias.js"></script>
     <script src="/js/menu.js"></script>
     <script>
         // pegando o ano atual
@@ -388,6 +393,25 @@
 
         document.querySelectorAll('.reveal').forEach(section => {
             observer.observe(section);
+        });
+
+        // marca no menu a seção que está no meio da tela
+        const linksNav = document.querySelectorAll('[data-secao]');
+
+        const observerNav = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    linksNav.forEach(link => {
+                        link.classList.toggle('ativo', link.dataset.secao === entry.target.id);
+                    });
+                }
+            });
+        }, {
+            rootMargin: "-50% 0px -50% 0px" // considera só a linha do meio da tela
+        });
+
+        document.querySelectorAll('section[id]').forEach(section => {
+            observerNav.observe(section);
         });
     </script>
 </body>

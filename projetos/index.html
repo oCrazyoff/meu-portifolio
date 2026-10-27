@@ -59,54 +59,69 @@
 
 <body class="bg-fundo text-white">
 
-    <header class="fixed z-500 inset-0 bg-fundo/70 backdrop-blur-xl h-15 p-2 shadow-lg/30 border-b border-borda">
+    <header class="fixed z-500 inset-x-0 top-0 h-15 bg-fundo/80 backdrop-blur-xl border-b border-borda">
         <div class="interface flex items-center justify-between h-full gap-5">
 
-            <div class="flex items-center justify-center gap-5">
-                <img class="h-8 w-8 object-cover p-0.5 border border-borda" src="/img/eu-3.png"
-                    alt="Uma foto do walysson">
-                <p class="text-xs font-bold">W.RIBEIRO/FULL STACK</p>
-            </div>
+            <a class="logo" href="/">
+                <span class="marca">W</span>
+                <p>W.Ribeiro<em>/</em>Full Stack</p>
+            </a>
 
-            <nav class="flex items-center justify-center gap-5 font-jetbrains font-light text-xs text-cinza">
-                <a class="hover:text-principal" href="/">[ <i class="bi bi-arrow-left"></i> VOLTAR ]</a>
-            </nav>
+            <a class="btn-contorno !py-2" href="/">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </a>
         </div>
     </header>
 
     <section class="reveal pt-15">
-        <div class="interface flex flex-col gap-5">
-            <p class="text-principal text-xs uppercase">arquivos / projetos</p>
-            <h2 class="text-5xl lg:text-7xl font-semibold uppercase">Tudo que eu construí</h2>
-            <p class="text-lg text-cinza lg:w-1/2">
+        <div class="interface flex flex-col lg:flex-row lg:items-end justify-between gap-8 py-16 lg:py-20">
+            <div class="flex flex-col gap-5">
+                <p class="font-jetbrains text-xs text-cinza">~/ arquivos / <span class="text-principal">projetos</span></p>
+                <h1 class="text-5xl sm:text-6xl lg:text-8xl font-bold uppercase tracking-tight leading-[0.9]">
+                    Tudo que eu <br>
+                    <span class="text-principal">construí.</span>
+                </h1>
+            </div>
+
+            <p class="text-white/70 leading-relaxed lg:max-w-sm">
                 Sistemas em produção, sites para clientes, jogos, automações com IA e infraestrutura caseira. Clique em
                 um projeto para ver os detalhes.
             </p>
         </div>
     </section>
 
-    <section class="reveal delay-100">
-        <div class="interface border-t border-borda pt-10">
-            <div id="categorias" class="flex flex-wrap items-center justify-between gap-5 mb-10">
+    <section class="reveal delay-100 pb-20 lg:pb-28">
+        <div id="categorias" class="sticky top-15 z-400 bg-fundo/80 backdrop-blur-xl border-y border-borda">
+            <div class="interface flex flex-wrap items-center justify-between gap-5 py-4">
                 <div class="btn-container flex flex-wrap gap-2">
                     <!-- preenchido dinamicamente pelo JS -->
                 </div>
 
-                <p id="contador-itens" class="text-xs text-cinza font-jetbrains uppercase">0 / ITENS</p>
+                <p id="contador-itens" class="font-jetbrains text-xs text-cinza uppercase tracking-wider">0 / ITENS</p>
             </div>
+        </div>
 
-            <div id="container-projetos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-borda gap-[1.5px]">
+        <div class="interface pt-8">
+            <div id="container-projetos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- preenchido pelo JS -->
             </div>
         </div>
     </section>
 
+    <footer class="border-t border-borda py-6">
+        <div class="interface flex flex-col md:flex-row items-center justify-between gap-5">
+            <p class="font-jetbrains text-[11px] text-cinza uppercase tracking-widest">© <span id="ano"></span> Walysson Ribeiro Rosa</p>
+            <a class="btn-principal" href="/#contato">Tem um projeto? Fale comigo</a>
+        </div>
+    </footer>
+
     <!-- Modal -->
     <div id="modal-projeto"
         class="hidden fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm items-center justify-center p-3 lg:p-5">
-        <div class="relative bg-fundo border border-borda max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="relative bg-card border border-borda max-w-3xl w-full max-h-[90vh] overflow-y-auto">
             <button onclick="fecharModal()"
-                class="absolute top-4 right-4 flex items-center justify-center rounded-full size-10 text-cinza hover:text-white hover:bg-borda/50 text-xl z-10 cursor-pointer">
+                class="absolute top-4 right-4 flex items-center justify-center size-10 bg-fundo border border-borda text-white hover:border-principal hover:text-principal text-lg z-10 cursor-pointer"
+                aria-label="Fechar">
                 <i class="bi bi-x-lg"></i>
             </button>
 
@@ -118,6 +133,9 @@
 
     <script src="/js/projetos-page.js"></script>
     <script>
+        // pegando o ano atual
+        document.getElementById('ano').textContent = new Date().getFullYear();
+
         // animação reveal
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {

@@ -290,38 +290,35 @@ const btnContainer = document.querySelector("#categorias .btn-container");
 // RENDERIZAR CARDS
 // ==========================================
 
-function criarCardProjeto(projeto, indice) {
-    const numero = String(indice + 1).padStart(2, "0");
+function criarCardProjeto(projeto) {
+    // número fixo do projeto na lista completa (não muda ao filtrar)
+    const numero = String(projetosCompletos.indexOf(projeto) + 1).padStart(2, "0");
 
     // Verifica se há um array de imagens, senão usa a imagem única como array
     const imagens = projeto.imagens || [projeto.img];
 
     return `
-        <div class="card-projeto group cursor-pointer flex flex-col gap-5 bg-fundo p-5 hover:bg-cinza/20" data-id="${projeto.id}" data-categoria="${projeto.categoria}">
-            <div class="relative h-56 lg:h-64 p-2 overflow-hidden bg-fundo">
-                <span class="absolute top-4 left-4 text-xs text-white bg-cinza px-2 rounded-full z-10 font-jetbrains">${numero}</span>
+        <div class="card-projeto group cursor-pointer flex flex-col bg-card border border-borda hover:border-principal/60" data-id="${projeto.id}" data-categoria="${projeto.categoria}">
+            <div class="relative h-56 overflow-hidden bg-superficie border-b border-borda">
+                <span class="absolute left-3 top-3 z-10 px-2 py-0.5 bg-principal text-black font-jetbrains text-[11px] font-bold">${numero}</span>
+                <span class="absolute right-3 top-3 z-10 px-2 py-0.5 bg-fundo border border-borda font-jetbrains text-[10px] uppercase tracking-widest">${projeto.categoria}</span>
                 <img class="w-full h-full object-cover object-top group-hover:scale-105"
                     src="${imagens[0] || projeto.img}" alt="Print do projeto ${projeto.titulo}">
             </div>
 
-            <div class="flex flex-col gap-2">
-                <div class="flex items-center justify-between">
-                    <h3 class="text-lg font-bold uppercase tracking-tight">${projeto.titulo}</h3>
+            <div class="flex flex-col gap-4 flex-1 p-5">
+                <div class="flex items-baseline justify-between gap-3">
+                    <h3 class="text-xl font-bold uppercase tracking-tight">${projeto.titulo}</h3>
                     <span class="text-xs text-cinza font-jetbrains">${projeto.ano}</span>
                 </div>
 
-                <p class="text-sm text-cinza leading-relaxed">${projeto.descricao}</p>
-            </div>
+                <p class="text-sm text-white/60 leading-relaxed">${projeto.descricao}</p>
 
-            <div class="flex items-center justify-between gap-2">
-                <div class="flex flex-wrap items-center gap-2">
-                    ${projeto.tags.map(tag => `
-                        <span class="text-xs text-cinza bg-transparent border border-borda px-1 group-hover:underline group-hover:text-white group-hover:border-transparent">
-                            ${tag}
-                        </span>
-                    `).join("")}
+                <div class="flex flex-wrap gap-2 mt-auto">
+                    ${projeto.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
                 </div>
-                <p class="flex items-center gap-2 text-principal text-xs uppercase transition-all duration-300 group-hover:gap-4">
+
+                <p class="flex items-center gap-2 pt-4 border-t border-borda text-principal font-jetbrains text-xs font-bold uppercase tracking-wider group-hover:gap-4">
                     detalhes <i class="bi bi-arrow-right"></i>
                 </p>
             </div>
@@ -335,12 +332,12 @@ function renderizarProjetos(categoria = "todos") {
         : projetosCompletos.filter(p => p.categoria.toLowerCase() === categoria.toLowerCase());
 
     containerProjetos.innerHTML = filtrados
-        .map((projeto, i) => criarCardProjeto(projeto, i))
+        .map(criarCardProjeto)
         .join("");
 
     // atualizar contador
     if (contadorItens) {
-        contadorItens.textContent = `${filtrados.length} / ITENS`;
+        contadorItens.innerHTML = `<span class="text-principal font-bold">${filtrados.length}</span> / ${projetosCompletos.length} ITENS`;
     }
 }
 
@@ -348,17 +345,17 @@ function renderizarProjetos(categoria = "todos") {
 // RENDERIZAR BOTÕES DE CATEGORIAS DINAMICAMENTE
 // ==========================================
 
-function renderizarCategorias() {
+function renderizarCategorias(categoriaInicial) {
     if (!btnContainer) return;
 
     // Busca todas as categorias dos projetos e extrai valores únicos
     const categoriasUnicas = [...new Set(projetosCompletos.map(p => p.categoria.toLowerCase()))];
     const todasCategorias = ["todos", ...categoriasUnicas];
 
-    btnContainer.innerHTML = todasCategorias.map((cat, index) => {
-        const isAtivo = index === 0 ? "atual" : "text-cinza";
+    btnContainer.innerHTML = todasCategorias.map(cat => {
+        const isAtivo = cat === categoriaInicial ? "atual" : "";
         return `
-            <button class="${isAtivo} text-xs uppercase px-4 py-1.5 border border-borda font-jetbrains hover:border-principal hover:text-principal">
+            <button class="${isAtivo} text-xs font-bold uppercase tracking-wider px-3 py-2 border border-borda font-jetbrains hover:border-principal hover:text-principal cursor-pointer">
                 ${cat}
             </button>
         `;
@@ -368,13 +365,8 @@ function renderizarCategorias() {
 
     botoes.forEach(botao => {
         botao.addEventListener("click", () => {
-            botoes.forEach(b => {
-                b.classList.remove("atual");
-                b.classList.add("text-cinza");
-            });
-
+            botoes.forEach(b => b.classList.remove("atual"));
             botao.classList.add("atual");
-            botao.classList.remove("text-cinza");
 
             const categoria = botao.textContent.trim().toLowerCase();
             renderizarProjetos(categoria);
@@ -382,9 +374,13 @@ function renderizarCategorias() {
     });
 }
 
+// categoria vinda da url (ex: /projetos?categoria=infraestrutura)
+const categoriaUrl = new URLSearchParams(location.search).get("categoria")?.toLowerCase();
+const categoriaInicial = projetosCompletos.some(p => p.categoria === categoriaUrl) ? categoriaUrl : "todos";
+
 // Renderizar botões e projetos na carga inicial
-renderizarCategorias();
-renderizarProjetos();
+renderizarCategorias(categoriaInicial);
+renderizarProjetos(categoriaInicial);
 
 // ==========================================
 // MODAL
@@ -405,7 +401,7 @@ function abrirModal(id) {
 
     conteudo.innerHTML = `
         <!-- Carrossel -->
-        <div class="w-full relative overflow-hidden border border-borda group select-none touch-pan-y" id="carrossel-container">
+        <div class="w-full relative overflow-hidden border-b border-borda group select-none touch-pan-y" id="carrossel-container">
             
             <!-- Trilha das imagens -->
             <div class="flex transition-transform duration-300 ease-out cursor-grab active:cursor-grabbing" id="carrossel-track">
@@ -416,27 +412,27 @@ function abrirModal(id) {
 
             <!-- Botões de Navegação (só aparecem se tiver mais de 1 imagem) -->
             ${imagens.length > 1 ? `
-                <button id="btn-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 text-white w-8 h-8 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer">
+                <button id="btn-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-fundo border border-borda text-white w-9 h-9 hover:border-principal hover:text-principal opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer">
                     <i class="bi bi-chevron-left"></i>
                 </button>
-                <button id="btn-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 text-white w-8 h-8 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer">
+                <button id="btn-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-fundo border border-borda text-white w-9 h-9 hover:border-principal hover:text-principal opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer">
                     <i class="bi bi-chevron-right"></i>
                 </button>
 
                 <!-- Paginação (Bolinhas) -->
                 <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2" id="carrossel-dots">
                     ${imagens.map((_, i) => `
-                        <button class="w-2 h-2 rounded-full transition-colors dot-item ${i === 0 ? 'bg-principal' : 'bg-cinza/50'}" data-index="${i}"></button>
+                        <button class="w-5 h-1 transition-colors dot-item ${i === 0 ? 'bg-principal' : 'bg-white/40'}" data-index="${i}"></button>
                     `).join("")}
                 </div>
             ` : ''}
         </div>
 
         <!-- texto -->
-        <div class="p-5">
+        <div class="p-5 lg:p-8">
 
             <!-- Categoria + Ano -->
-            <p class="text-principal text-xs uppercase tracking-widest font-jetbrains mt-3">
+            <p class="rotulo">
                 ${projeto.categoria} / ${projeto.ano}
             </p>
 
@@ -444,7 +440,7 @@ function abrirModal(id) {
             <h2 class="text-4xl lg:text-5xl font-bold uppercase tracking-tight mt-2">${projeto.titulo}</h2>
 
             <!-- Descrição longa -->
-            <p class="text-cinza text-base leading-relaxed mt-4">${projeto.descricaoLonga}</p>
+            <p class="text-white/70 text-base leading-relaxed mt-4">${projeto.descricaoLonga}</p>
 
             <!-- Info grid: Função | Status | Ano -->
             <div class="grid grid-cols-1 lg:grid-cols-3 border border-borda mt-8">
@@ -478,21 +474,21 @@ function abrirModal(id) {
             <!-- Tags -->
             <div class="flex flex-wrap gap-2 mt-8">
                 ${projeto.tags.map(tag => `
-                    <span class="text-xs px-3 py-1 border border-borda text-cinza">${tag}</span>
+                    <span class="tag">${tag}</span>
                 `).join("")}
             </div>
 
             <!-- Links -->
             <div class="flex flex-wrap gap-3 mt-8">
                 ${projeto.deploy ? `
-                    <a class="uppercase text-sm font-jetbrains border border-borda px-5 py-2 hover:bg-white hover:text-black"
+                    <a class="btn-principal"
                         href="${projeto.deploy}" target="_blank">
                         Ver Site <i class="bi bi-arrow-up-right"></i>
                     </a>
                 ` : ""}
 
                 ${projeto.github ? `
-                    <a class="uppercase text-sm font-jetbrains border border-borda px-5 py-2 hover:bg-white hover:text-black"
+                    <a class="btn-contorno"
                         href="${projeto.github}" target="_blank">
                         Código <i class="bi bi-code-slash"></i>
                     </a>
@@ -576,7 +572,7 @@ function iniciarCarrossel() {
 
         // Atualiza bolinhas (paginação)
         dots.forEach((dot, i) => {
-            dot.className = `w-2 h-2 rounded-full transition-colors dot-item ${i === currentIndex ? 'bg-principal' : 'bg-cinza/50'}`;
+            dot.className = `w-5 h-1 transition-colors dot-item ${i === currentIndex ? 'bg-principal' : 'bg-white/40'}`;
         });
     }
 
