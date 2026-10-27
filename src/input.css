@@ -135,7 +135,7 @@
     @apply grid grid-cols-1 sm:grid-cols-3 border-y border-borda;
 
     & .item {
-      @apply flex flex-col items-center gap-3 py-8 sm:py-10 px-4 lg:px-12 border-borda not-last:border-b sm:not-last:border-b-0 sm:not-last:border-r;
+      @apply flex flex-col items-start lg:items-center gap-3 py-8 sm:py-10 px-4 lg:px-12 border-borda not-last:border-b sm:not-last:border-b-0 sm:not-last:border-r;
 
       & p {
         @apply text-5xl font-bold tracking-tight;
