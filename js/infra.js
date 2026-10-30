@@ -79,7 +79,7 @@ infras.forEach(infra => {
 
     linha.innerHTML = `
         <td class="py-3 pr-4 font-bold">${infra.titulo.toLowerCase().replace(/[^a-z0-9]+/g, "-")}</td>
-        <td class="py-3 pr-4 text-cinza">${infra.tags.slice(0, 2).join(" + ").toLowerCase()}</td>
+        <td class="py-3 pr-4 text-cinza">${infra.tags.slice(0, 3).join(" + ").toLowerCase()}</td>
         <td class="py-3 text-green-500 whitespace-nowrap">● up</td>
     `;
 

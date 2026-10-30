@@ -258,7 +258,7 @@ const projetosCompletos = [
     // immich
     {
         id: "immich",
-        titulo: "Servidor de Fotos com Immich",
+        titulo: "Google Photos Caseiro (Immich)",
         descricao: "Sistema pessoal de armazenamento e organização de fotos e vídeos, hospedado localmente para centralizar as mídias da família.",
         descricaoLonga: "O Immich faz parte da minha infraestrutura pessoal e foi implementado para resolver um problema bastante comum: a grande quantidade de fotos e vídeos espalhados entre diferentes celulares e serviços de nuvem. Utilizando o Immich hospedado no meu próprio servidor, centralizei as mídias da minha família em um único ambiente, com acesso remoto e recursos de organização semelhantes aos encontrados em serviços como o Google Fotos. A solução me permitiu ter maior controle sobre os arquivos e sobre onde eles ficam armazenados, além de utilizar recursos de reconhecimento e organização de mídia. A implementação também envolveu configuração de armazenamento, containers Docker, permissões, rede e acesso remoto. Mais do que simplesmente instalar uma aplicação, o projeto me ensinou sobre a responsabilidade de manter dados pessoais em uma infraestrutura própria e sobre a importância de pensar em armazenamento, disponibilidade e backups.",
         imagens: [
@@ -316,7 +316,7 @@ const projetosCompletos = [
         id: "minecraft",
         titulo: "Servidor de Minecraft",
         descricao: "Servidor de Minecraft Java com Fabric hospedado em casa, onde amigos de Java e Bedrock jogam juntos, com whitelist e backups automáticos feitos pelo n8n.",
-        descricaoLonga: "O servidor de Minecraft nasceu como um projeto para jogar com meus amigos em um mundo só nosso, com controle total sobre mods, regras e acessos. Ele roda em Docker (imagem itzg com Fabric) em um notebook antigo, no ZimaOS, e por isso precisei usar mods de otimização, limitar a distância de renderização e ajustar memória e CPU para ter um jogo estável em um hardware modesto. Para quem joga de longe, usei o playit.gg para criar um túnel e liberar o acesso dos amigos sem expor o IP da minha casa. Com o Geyser e o Floodgate, jogadores de Bedrock também entram no mesmo servidor Java. Também usei mods como Voxy e LOD Server Support para o mundo carregar mais longe, além do SkinRestorer para as skins. Automatizei a administração com o n8n: um backup diário do mundo, que mantém os 7 mais recentes, e um fluxo de restauração do último backup. Esse backup se mostrou necessário quando o servidor sofreu um griefing e perdi parte do mundo, então a whitelist, que também controlo por um workflow do n8n, passou a ser tratada com mais cuidado. O projeto me ensinou sobre otimização de recursos, redes e tunelamento, automação e a importância de ter backups testados.",
+        descricaoLonga: "O servidor de Minecraft nasceu como um projeto para jogar com meus amigos em um mundo só nosso, com controle total sobre mods, regras e acessos. Ele roda em Docker (imagem itzg com Fabric) em um notebook antigo, no ZimaOS, e por isso precisei instalar mais um pente de memória de 4 gigas e usar mods de otimização, limitar a distância de renderização e ajustar memória e CPU para ter um jogo estável em um hardware modesto. Para quem joga de longe, usei o playit.gg para criar um túnel e liberar o acesso dos amigos sem expor o IP da minha casa. Com o Geyser e o Floodgate, jogadores de Bedrock também entram no mesmo servidor Java. Também usei mods como Voxy e LOD Server Support para o mundo carregar mais longe, além do SkinRestorer para as skins. Automatizei a administração com o n8n: um backup diário do mundo, que mantém os 7 mais recentes, e um fluxo de restauração do último backup. Esse backup se mostrou necessário quando o servidor sofreu um griefing e perdi parte do mundo, então a whitelist, que também controlo por um workflow do n8n, passou a ser tratada com mais cuidado. O projeto me ensinou sobre otimização de recursos, redes e tunelamento, automação e a importância de ter backups testados.",
         imagens: [
             "/img/projetos/minecraft/1.webp",
             "/img/projetos/minecraft/2.png",
@@ -332,7 +332,7 @@ const projetosCompletos = [
             "Servidor Minecraft Java com Fabric e mods de otimização",
             "Jogadores de Java e Bedrock no mesmo mundo (Geyser + Floodgate)",
             "Acesso dos amigos via túnel do playit.gg",
-            "Backup diário automático do mundo (mantém os 7 últimos)",
+            "Backup diário automático do mundo",
             "Restauração do backup pelo n8n",
             "Whitelist gerenciada por workflow",
             "Mods de LOD para enxergar mais longe",
