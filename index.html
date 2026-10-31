@@ -151,7 +151,7 @@
                     <a class="btn-principal" href="#projetos">
                         Ver projetos <i class="bi bi-arrow-right"></i>
                     </a>
-                    <a class="btn-contorno" href="curriculo.pdf" target="_blank">
+                    <a class="btn-contorno" href="curriculo.pdf" target="_blank" data-curriculo>
                         <i class="bi bi-download"></i> Currículo
                     </a>
                 </div>
@@ -375,6 +375,8 @@
     <script src="/js/projetos-inicio.js"></script>
     <script src="/js/infra.js"></script>
     <script src="/js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+    <script src="/js/curriculo.js"></script>
     <script>
         // pegando o ano atual
         document.getElementById('ano').textContent = new Date().getFullYear();
