@@ -214,4 +214,50 @@
   .btn-container button.atual {
     @apply !bg-principal !text-black !border-principal;
   }
+
+  /* balão de conversa da tabela de infra */
+  .balao {
+    @apply fixed z-50 max-w-72 px-4 py-3 bg-superficie border border-principal font-jetbrains text-xs text-claro leading-relaxed pointer-events-none;
+    opacity: 0;
+    scale: 0.95;
+    transform-origin: var(--rabo-x, 50%) 100%;
+    transition: opacity 0.2s ease-out, scale 0.2s ease-out;
+    box-shadow: 4px 4px 0 0 var(--color-principal);
+
+    & .balao-titulo {
+      @apply flex items-center gap-2 mb-1.5 text-[10px] uppercase tracking-widest text-principal;
+
+      &::before {
+        content: ">";
+      }
+    }
+
+    /* rabinho: triângulo laranja (borda) + triângulo do fundo por cima */
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: var(--rabo-x, 50%);
+      translate: -50% 0;
+      border-style: solid;
+      border-color: transparent;
+    }
+
+    &::before {
+      top: 100%;
+      border-width: 9px 9px 0 9px;
+      border-top-color: var(--color-principal);
+    }
+
+    &::after {
+      top: calc(100% - 1px);
+      border-width: 8px 8px 0 8px;
+      border-top-color: var(--color-superficie);
+    }
+
+    &.visivel {
+      opacity: 1;
+      scale: 1;
+    }
+  }
 }
